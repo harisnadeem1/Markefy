@@ -48,8 +48,28 @@ const DetailedServices = () => {
   ];
 
   return (
-    <section className="py-24 bg-white text-black overflow-hidden">
+    <section className="py-14 bg-white text-black overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+         <div className="text-center mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="space-y-4"
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              How We{' '}
+              <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
+                Transform
+              </span>{' '}
+              Your Business
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Discover our proven approach to delivering exceptional results. Each service is carefully crafted to meet your unique needs and drive measurable growth for your business.
+            </p>
+          </motion.div>
+        </div>
         {services.map((service, index) => (
           <div key={index} className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <motion.div

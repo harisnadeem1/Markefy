@@ -30,8 +30,9 @@ const HomePage = () => {
       
       <Hero onNotImplemented={handleNotImplemented} />
       <Services onNotImplemented={handleNotImplemented} />
-      <DetailedServices />
       <EngineeringFuture onNotImplemented={handleNotImplemented} />
+      <DetailedServices />
+
       <TangibleResults onNotImplemented={handleNotImplemented} />
       <Process onNotImplemented={handleNotImplemented} />
       <WhyChooseUs onNotImplemented={handleNotImplemented} />
