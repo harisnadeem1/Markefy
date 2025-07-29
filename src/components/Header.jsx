@@ -58,38 +58,72 @@ const Header = () => {
     ? '/logo/Markefy-black.png'
     : '/logo/Markefy-white.png';
 
+  // Modern slide-in animation from right
   const menuVariants = {
     closed: {
-      opacity: 0,
-      y: "-100%",
+      x: "100%",
       transition: {
-        duration: 0.3,
-        ease: "easeInOut"
+        type: "spring",
+        stiffness: 400,
+        damping: 40
       }
     },
     open: {
-      opacity: 1,
-      y: 0,
+      x: 0,
       transition: {
-        duration: 0.3,
-        ease: "easeInOut"
+        type: "spring",
+        stiffness: 400,
+        damping: 40
       }
     }
   };
 
+  // Backdrop animation
+  const backdropVariants = {
+    closed: {
+      opacity: 0,
+      transition: {
+        duration: 0.3
+      }
+    },
+    open: {
+      opacity: 1,
+      transition: {
+        duration: 0.3
+      }
+    }
+  };
+
+  // Staggered item animations
   const itemVariants = {
     closed: {
       opacity: 0,
-      y: 20
+      x: 20,
+      transition: {
+        duration: 0.2
+      }
     },
     open: (i) => ({
       opacity: 1,
-      y: 0,
+      x: 0,
       transition: {
-        delay: 0.1 + i * 0.1,
-        duration: 0.3
+        delay: 0.1 + i * 0.05,
+        duration: 0.3,
+        ease: "easeOut"
       }
     })
+  };
+
+  // Hamburger menu animation
+  const hamburgerVariants = {
+    closed: {
+      rotate: 0,
+      transition: { duration: 0.2 }
+    },
+    open: {
+      rotate: 180,
+      transition: { duration: 0.2 }
+    }
   };
 
   return (
@@ -123,12 +157,6 @@ const Header = () => {
             </div>
 
             <div className="hidden md:flex items-center space-x-4">
-               <Link to="/contact" className={`text-sm font-medium transition-colors ${textStyle}`}>
-                  Contact
-               </Link>
-               <button onClick={handleNotImplemented} className={`text-sm font-medium transition-colors ${textStyle}`}>
-                  Login
-               </button>
               <Link to="/contact">
                 <Button 
                   className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 py-2 text-sm"
@@ -140,113 +168,137 @@ const Header = () => {
             </div>
 
             <div className="md:hidden absolute right-0">
-              <button
+              <motion.button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`p-2 ${mobileIconStyle} z-[60] relative`}
+                className={`p-3 ${mobileIconStyle} z-[60] relative rounded-full hover:bg-white/10 transition-colors`}
+                variants={hamburgerVariants}
+                animate={isMenuOpen ? "open" : "closed"}
+                whileTap={{ scale: 0.95 }}
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
+              </motion.button>
             </div>
           </div>
         </nav>
       </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
-            initial="closed"
-            animate="open"
-            exit="closed"
-            variants={menuVariants}
-            className="fixed inset-0 bg-white z-[55] md:hidden"
-          >
-            {/* Header in menu */}
-            <div className="flex justify-center items-center h-20 px-4 border-b border-gray-100 relative">
-              <img 
-                src="/logo/Markefy-black.png"
-                alt="Markefy.ai Logo"
-                className="h-5 w-auto"
-              />
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="absolute right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
-              >
-                <X size={24} className="text-gray-700" />
-              </button>
-            </div>
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={backdropVariants}
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[55] md:hidden"
+              onClick={() => setIsMenuOpen(false)}
+            />
+            
+            {/* Slide-in Menu Panel */}
+            <motion.div
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={menuVariants}
+              className="fixed top-0 right-0 h-full w-80 bg-black z-[56] md:hidden shadow-2xl"
+            >
+              {/* Menu Header */}
+              <div className="flex justify-between items-center h-20 px-6 border-b border-gray-800">
+                <img 
+                  src="/logo/Markefy-white.png"
+                  alt="Markefy.ai Logo"
+                  className="h-5 w-auto"
+                />
+                <motion.button
+                  onClick={() => setIsMenuOpen(false)}
+                  className="p-2 hover:bg-gray-800 rounded-full transition-colors text-white"
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <X size={20} />
+                </motion.button>
+              </div>
 
-            {/* Menu Content */}
-            <div className="flex flex-col h-full pt-8 pb-20">
-              <div className="flex-1 px-6">
-                <nav className="space-y-1">
-                  {navLinks.map((item, i) => (
-                    <motion.div
-                      key={item.name}
-                      custom={i}
-                      variants={itemVariants}
-                      initial="closed"
-                      animate="open"
-                    >
-                      <Link
-                        to={item.path}
-                        onClick={() => setIsMenuOpen(false)}
-                        className="block py-4 text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors border-b border-gray-50"
+              {/* Menu Content */}
+              <div className="flex flex-col h-full">
+                {/* Navigation Links */}
+                <div className="flex-1 px-6 py-8">
+                  <nav className="space-y-2">
+                    {navLinks.map((item, i) => (
+                      <motion.div
+                        key={item.name}
+                        custom={i}
+                        variants={itemVariants}
+                        initial="closed"
+                        animate="open"
+                        exit="closed"
                       >
-                        {item.name}
-                      </Link>
-                    </motion.div>
-                  ))}
-                  
-                  <motion.div
+                        <Link
+                          to={item.path}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="block py-4 px-4 text-lg font-medium text-white hover:text-blue-400 hover:bg-gray-900 rounded-lg transition-all duration-200 group"
+                        >
+                          <span className="flex items-center justify-between">
+                            {item.name}
+                            <motion.span
+                              className="text-blue-400 opacity-0 group-hover:opacity-100"
+                              initial={{ x: -10 }}
+                              whileHover={{ x: 0 }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              →
+                            </motion.span>
+                          </span>
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </nav>
+
+                  {/* Decorative Elements */}
+                  <motion.div 
+                    className="mt-12 pt-8 border-t border-gray-800"
                     custom={navLinks.length}
                     variants={itemVariants}
                     initial="closed"
                     animate="open"
                   >
-                    <Link
-                      to="/contact"
-                      onClick={() => setIsMenuOpen(false)}
-                      className="block py-4 text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors border-b border-gray-50"
-                    >
-                      Contact
+                    <div className="text-gray-400 text-sm mb-4">
+                      Ready to transform your business?
+                    </div>
+                    <div className="flex space-x-4 mb-6">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                      <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse delay-100"></div>
+                      <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-200"></div>
+                    </div>
+                    
+                    {/* Get Started Button */}
+                    <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                      <Button 
+                        className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl py-4 text-lg font-semibold shadow-lg transition-all duration-300 hover:shadow-xl"
+                      >
+                        <span className="flex items-center justify-center">
+                          Get Started
+                          <motion.span
+                            className="ml-2"
+                            initial={{ x: 0 }}
+                            whileHover={{ x: 4 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            →
+                          </motion.span>
+                        </span>
+                      </Button>
                     </Link>
+                    
+                    <div className="text-center mt-4 text-gray-500 text-sm">
+                      Free consultation • No commitment
+                    </div>
                   </motion.div>
-
-                  <motion.div
-                    custom={navLinks.length + 1}
-                    variants={itemVariants}
-                    initial="closed"
-                    animate="open"
-                  >
-                    <button 
-                      onClick={handleNotImplemented}
-                      className="block py-4 text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors w-full text-left border-b border-gray-50"
-                    >
-                      Login
-                    </button>
-                  </motion.div>
-                </nav>
+                </div>
               </div>
-
-              {/* Bottom CTA */}
-              <motion.div 
-                className="px-6 pb-8"
-                custom={navLinks.length + 2}
-                variants={itemVariants}
-                initial="closed"
-                animate="open"
-              >
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                  <Button 
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-full py-4 text-lg font-medium"
-                  >
-                    Get Started
-                  </Button>
-                </Link>
-              </motion.div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>
