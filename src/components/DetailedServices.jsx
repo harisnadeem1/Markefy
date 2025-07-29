@@ -1,35 +1,48 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ShieldCheck, Truck, ArrowRight } from 'lucide-react';
-import { useToast } from '@/components/ui/use-toast';
+import { Code, Monitor, Search, Megaphone, ArrowRight } from 'lucide-react';
 
 const DetailedServices = () => {
-  const { toast } = useToast();
   const onNotImplemented = () => {
-    toast({
-      title: "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀",
-    });
+    alert("🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀");
   };
 
   const services = [
     {
-      icon: ShieldCheck,
-      category: "Web Development",
-      title: "Use the industry's most robust tech to reduce risk on the web.",
-      description: "Protect your digital assets with 360° security and AI that detects risks 4x more accurately than competitors.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
-      imageAlt: "Dashboard showing web security metrics",
+      icon: Code,
+      category: "Custom Software Development",
+      title: "Scalable and tailored software for your business needs",
+      description: "We develop custom software solutions designed to fit your exact workflows and goals. Whether it's an ERP system, automation tool, or a specialized business application, our software is built to be secure, reliable, and scalable. We ensure seamless integration with your existing systems and provide continuous support for long-term success.",
+      image: "/public/Services-Images/custom_software_development_markefy.jpg",
+      imageAlt: "Custom software development dashboard showing business analytics, workflow automation, and enterprise resource planning interface",
       order: 'text-first'
     },
     {
-      icon: Truck,
+      icon: Monitor,
+      category: "Website Design & Development",
+      title: "Fast, modern, and conversion-focused websites",
+      description: "We create visually stunning, fully responsive websites that work flawlessly across all devices. From corporate sites to eCommerce platforms, our websites are optimized for performance, SEO, and user experience. We focus on both design and functionality to make sure your site not only looks great but also drives results.",
+      image: "/public/Services-Images/web_design_development_markefy.jpg",
+      imageAlt: "Modern responsive website design showing mobile and desktop layouts with clean UI/UX design elements and fast loading performance",
+      order: 'image-first'
+    },
+    {
+      icon: Search,
       category: "SEO Optimization",
-      title: "Save time and cut costs with unparalleled visibility into your search rankings.",
-      description: "Drive efficiency with deep insights into website health, keyword location, and usage—all while automating SEO management workflows.",
-      image: "https://images.unsplash.com/photo-1560472354-b333cb936246?q=80&w=1974",
-      imageAlt: "Dashboard showing SEO and fleet management data",
+      title: "Boost rankings and attract the right audience",
+      description: "Our SEO strategies help your business dominate search results and attract customers who are ready to engage. We combine keyword research, technical optimization, content improvements, and link building to improve your search rankings. The result is a steady flow of targeted traffic that converts into sales and leads.",
+      image: "/public/Services-Images/seo_opitmzation_markefy.jpg",
+      imageAlt: "SEO analytics dashboard displaying search rankings, keyword performance, organic traffic growth, and website optimization metrics",
+      order: 'text-first'
+    },
+     {
+      icon: Megaphone,
+      category: "Ads Campaigns & Digital Marketing",
+      title: "Targeted ads that maximize your ROI",
+      description: "We design and manage high-ROI ad campaigns on Google, Facebook, Instagram, and more. Our process includes creative ad design, precise audience targeting, and ongoing optimization to ensure every dollar of your budget delivers measurable results. Whether you want leads, sales, or brand awareness, we've got you covered.",
+      image: "/public/Services-Images/digital-ad-campaign_markefy.jpg",
+      imageAlt: "Digital marketing campaign dashboard showing Google Ads, Facebook Ads, and Instagram advertising performance with ROI metrics and audience targeting",
       order: 'image-first'
     }
   ];
@@ -54,6 +67,24 @@ const DetailedServices = () => {
               </div>
               <h2 className="text-3xl md:text-4xl font-bold leading-tight">{service.title}</h2>
               <p className="text-lg text-gray-600">{service.description}</p>
+              
+              {/* Mobile Image - Shows between description and button */}
+              <motion.div
+                className="md:hidden relative"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-gray-800 rounded-2xl p-4 shadow-2xl">
+                  <img
+                    src={service.image}
+                    alt={service.imageAlt}
+                    className="w-full h-auto object-cover rounded-lg"
+                  />
+                </div>
+              </motion.div>
+              
               <Button
                 onClick={onNotImplemented}
                 variant="outline"
@@ -64,8 +95,9 @@ const DetailedServices = () => {
               </Button>
             </motion.div>
 
+            {/* Desktop Image - Hidden on mobile */}
             <motion.div
-              className={`relative ${service.order === 'image-first' ? 'md:order-1' : 'md:order-2'}`}
+              className={`relative hidden md:block ${service.order === 'image-first' ? 'md:order-1' : 'md:order-2'}`}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -87,4 +119,3 @@ const DetailedServices = () => {
 };
 
 export default DetailedServices;
-

@@ -443,7 +443,7 @@ const Hero = ({ onNotImplemented }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
-            className="absolute left-1/2 transform -translate-x-1/2 -bottom-[50px] md:-bottom-[50px] lg:-bottom-[80px]"
+            className="absolute left-1/2 transform -translate-x-1/2 -bottom-[70px] md:-bottom-[50px] lg:-bottom-[80px]"
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
