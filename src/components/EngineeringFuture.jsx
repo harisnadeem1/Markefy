@@ -75,9 +75,9 @@ Our mission is to craft experiences that not only look stunning but also drive m
               {/* Mobile full-width button */}
               <Button 
                 onClick={onNotImplemented}
-                className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-8 py-4 text-base font-semibold w-full"
+                className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-8 py-4 text-base font-semibold w-full mt-20"
               >
-                Learn more <ArrowRight className="ml-2 h-5 w-5" />
+                Learn more <ArrowRight className="ml-2 h-5 w-5 " />
               </Button>
             </div>
           </motion.div>

@@ -44,27 +44,29 @@ const Services = ({ onNotImplemented }) => {
   return (
     <section className="py-24 bg-[#111111] text-white rounded-t-[40px] lg:rounded-t-[60px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-3 gap-12 mb-16">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="lg:col-span-1"
-          >
-            <p className="text-sm font-bold tracking-widest text-gray-400 uppercase">Specialized Engineering,</p>
-            <p className="text-sm font-bold tracking-widest text-gray-400 uppercase">Faster Results.</p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="lg:col-span-2"
-          >
-            <p className="text-lg text-gray-300">
-              We help businesses leverage AI, automation, and modern software solutions to work smarter, scale faster, and stay ahead. Our expert team transforms your vision into powerful, scalable, and future-ready systems.
-            </p>
-          </motion.div>
-        </div>
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 mb-12 sm:mb-14 lg:mb-16 px-4 sm:px-6 lg:px-0">
+  <motion.div
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.7, ease: "easeOut" }}
+    className="lg:col-span-1"
+  >
+    <p className="text-sm font-bold tracking-widest text-gray-400 uppercase">Specialized Engineering,</p>
+    <p className="text-sm font-bold tracking-widest text-gray-400 uppercase">Faster Results.</p>
+  </motion.div>
+  
+  <motion.div
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.7, ease: "easeOut" }}
+    className="lg:col-span-2"
+  >
+    <p className="text-base sm:text-lg text-gray-300">
+      We help businesses leverage AI, automation, and modern software solutions to work smarter, scale faster, and stay ahead. Our expert team transforms your vision into powerful, scalable, and future-ready systems.
+    </p>
+  </motion.div>
+</div>
+
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {servicesData.map((service, index) => {
