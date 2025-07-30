@@ -3,39 +3,47 @@ import { motion } from 'framer-motion';
 
 const processSteps = [
   {
-    title: "Talking about your idea",
-    description: "Tell us about your vision, problems to solve, and expectations. We're all ears!",
+    title: "Talking About Your Idea",
+    description: "Share your vision, challenges, and goals — we’re ready to listen and understand.",
+    hasButton: false
+  },
+  {
+    title: "Research & Planning",
+    description: "We analyze your market, competitors, and requirements to create a winning plan.",
+    hasButton: false
+  },
+  {
+    title: "Strategy & Proposal",
+    description: "Get a clear roadmap with timelines, deliverables, and a strategy tailored to your needs.",
+    hasButton: false
+  },
+  {
+    title: "Design & Prototyping",
+    description: "We turn ideas into visual designs and interactive prototypes for your feedback.",
+    hasButton: false
+  },
+  {
+    title: "Development",
+    description: "Our team builds your product with clean code, best practices, and scalable architecture.",
+    hasButton: false
+  },
+  {
+    title: "Testing & Quality Assurance",
+    description: "Every feature is tested for performance, security, and usability before launch.",
+    hasButton: false
+  },
+  {
+    title: "Launch & Delivery",
+    description: "Your project goes live! We ensure a smooth handover and full deployment.",
     hasButton: true
   },
   {
-    title: "Defining the goal",
-    description: "Refine your product's purpose to boost its chances of thriving on the market."
-  },
-  {
-    title: "Setting the strategy",
-    description: "Make your product a standout success loved by users. Set the strategy, then get a plan with the timeline, budget, and more."
-  },
-  {
-    title: "Researching market needs",
-    description: "UX researchers do a deep dive into what users actually want. We use these insights to fine-tune the strategy."
-  },
-  {
-    title: "Creating your product",
-    description: "It's go time for designing, coding and testing – bringing your idea to life!"
-  },
-  {
-    title: "Launching to market",
-    description: "Time to let your product fly, introducing it to the market, and scooping up feedback."
-  },
-  {
-    title: "Further development",
-    description: "Keeping the ball rolling with fresh updates and new versions – all driven by market data."
-  },
-  {
-    title: "Handover to your team",
-    description: "Thinking about bringing the magic in-house? We'll help you build your team and smoothly pass the baton."
+    title: "Ongoing Support & Growth",
+    description: "We provide updates, improvements, and marketing support to help you grow.",
+    hasButton: false
   }
 ];
+
 
 const AnimatedTitle = () => {
   const titleText = "Let's turn your idea into a success story. Step by step. Together.";
