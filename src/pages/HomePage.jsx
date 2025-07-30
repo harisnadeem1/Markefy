@@ -35,7 +35,6 @@ const HomePage = () => {
 
       <TangibleResults onNotImplemented={handleNotImplemented} />
       <Process onNotImplemented={handleNotImplemented} />
-      <WhyChooseUs onNotImplemented={handleNotImplemented} />
       <TechStack />
       <LetsTalk onNotImplemented={handleNotImplemented} />
       <Contact onNotImplemented={handleNotImplemented} />
