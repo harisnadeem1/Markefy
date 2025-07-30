@@ -1,11 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const processSteps = [
   {
     title: "Talking About Your Idea",
     description: "Share your vision, challenges, and goals — we’re ready to listen and understand.",
-    hasButton: false
+    hasButton: true
   },
   {
     title: "Research & Planning",
@@ -35,7 +36,7 @@ const processSteps = [
   {
     title: "Launch & Delivery",
     description: "Your project goes live! We ensure a smooth handover and full deployment.",
-    hasButton: true
+    hasButton: false
   },
   {
     title: "Ongoing Support & Growth",
@@ -46,6 +47,7 @@ const processSteps = [
 
 
 const AnimatedTitle = () => {
+
   const titleText = "Let's turn your idea into a success story. Step by step. Together.";
   const words = titleText.split(' ');
   
@@ -109,6 +111,7 @@ const AnimatedTitle = () => {
 };
 
 const Process = ({ onNotImplemented = () => alert('Not implemented yet!') }) => {
+    const navigate = useNavigate();
   return (
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -188,7 +191,7 @@ const Process = ({ onNotImplemented = () => alert('Not implemented yet!') }) => 
                         </p>
                         {step.hasButton && (
                           <motion.button
-                            onClick={onNotImplemented}
+                            onClick={() => navigate('/contact')}
                             className="px-6 py-2 border-2 border-gray-900 rounded-full text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-all duration-300"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -233,7 +236,7 @@ const Process = ({ onNotImplemented = () => alert('Not implemented yet!') }) => 
                             </p>
                             {step.hasButton && (
                               <motion.button
-                                onClick={onNotImplemented}
+                                onClick={() => navigate('/contact')}
                                 className="px-6 py-2 border-2 border-gray-900 rounded-full text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-all duration-300"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}

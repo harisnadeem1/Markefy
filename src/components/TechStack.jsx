@@ -2,29 +2,29 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const techRow1 = [
-  { name: 'Docker', logo: '/public/techstacks/docker.svg' },
-  { name: 'Vue.js', logo: '/public/techstacks/vue.svg' },
-  { name: 'AWS', logo: '/public/techstacks/aws.svg' },
-  { name: 'Python', logo: '/public/techstacks/python.svg' },
-  { name: 'TypeScript', logo: '/public/techstacks/typescript.svg' },
-  { name: 'Node.js', logo: '/public/techstacks/node_js.svg' },
-  { name: 'Django', logo: '/public/techstacks/django.svg' },
-  { name: 'React', logo: '/public/techstacks/react.svg' },
-  { name: 'Angular', logo: '/public/techstacks/angular.svg' },
-  { name: 'Kubernetes', logo: '/public/techstacks/kubernetes.svg' }
+  { name: 'Docker', logo: '/techstacks/docker.svg' },
+  { name: 'Vue.js', logo: '/techstacks/vue.svg' },
+  { name: 'AWS', logo: '/techstacks/aws.svg' },
+  { name: 'Python', logo: '/techstacks/python.svg' },
+  { name: 'TypeScript', logo: '/techstacks/typescript.svg' },
+  { name: 'Node.js', logo: '/techstacks/node_js.svg' },
+  { name: 'Django', logo: '/techstacks/django.svg' },
+  { name: 'React', logo: '/techstacks/react.svg' },
+  { name: 'Angular', logo: '/techstacks/angular.svg' },
+  { name: 'Kubernetes', logo: '/techstacks/kubernetes.svg' }
 ];
 
 const techRow2 = [
-  { name: 'Swift', logo: '/public/techstacks/swift.svg' },
-  { name: 'Kotlin', logo: '/public/techstacks/kotlin.svg' },
-  { name: 'Flask', logo: '/public/techstacks/flask.svg' },
-  { name: '.NET', logo: '/public/techstacks/dot_net.svg' },
-  { name: 'Next.js', logo: '/public/techstacks/next_js.svg' },
-  { name: 'Azure', logo: '/public/techstacks/microsoft_azure.svg' },
-  { name: 'Firebase', logo: '/public/techstacks/firebase.svg' },
-  { name: 'JavaScript', logo: '/public/techstacks/javascrypt.svg' },
-  { name: 'PostgreSQL', logo: '/public/techstacks/postgres.svg' },
-  { name: 'MySQL', logo: '/public/techstacks/my_sql.svg' }
+  { name: 'Swift', logo: '/techstacks/swift.svg' },
+  { name: 'Kotlin', logo: '/techstacks/kotlin.svg' },
+  { name: 'Flask', logo: '/techstacks/flask.svg' },
+  { name: '.NET', logo: '/techstacks/dot_net.svg' },
+  { name: 'Next.js', logo: '/techstacks/next_js.svg' },
+  { name: 'Azure', logo: '/techstacks/microsoft_azure.svg' },
+  { name: 'Firebase', logo: '/techstacks/firebase.svg' },
+  { name: 'JavaScript', logo: '/techstacks/javascrypt.svg' },
+  { name: 'PostgreSQL', logo: '/techstacks/postgres.svg' },
+  { name: 'MySQL', logo: '/techstacks/my_sql.svg' }
 ];
 
 const InfiniteScroller = ({ children, direction, speed = 30 }) => {

@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const EngineeringFuture = ({ onNotImplemented }) => {
+    const navigate = useNavigate();
   return (
     <section className="py-24 bg-white text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +34,7 @@ Our mission is to craft experiences that not only look stunning but also drive m
             {/* Desktop Button */}
             <div className="hidden md:block">
               <Button 
-                onClick={onNotImplemented}
+               onClick={() => navigate('/about')}
                 className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-8 py-4 text-base font-semibold"
               >
                 Learn more <ArrowRight className="ml-2 h-5 w-5" />
@@ -53,28 +55,28 @@ Our mission is to craft experiences that not only look stunning but also drive m
             {/* Desktop awards (above image) */}
             <div className="hidden md:block bg-white p-8 rounded-xl shadow-2xl relative z-20 mb-[-5rem] max-w-lg -ml-8">
               <div className="flex justify-around items-center">
-                <img className="h-24" alt="Software Winner 2022 award badge" src="/public/awards/awards2022_winner_badge.webp" />
-                <img className="h-24" alt="DevOps Winner 2021 award badge" src="/public/awards/awards2021_winner_badge.webp" />
-                <img className="h-24" alt="North American Finalist 2021 award badge" src="/public/awards/awards2021_finalist_badge.webp" />
+                <img className="h-24" alt="Software Winner 2022 award badge" src="/awards/awards2022_winner_badge.webp" />
+                <img className="h-24" alt="DevOps Winner 2021 award badge" src="/awards/awards2021_winner_badge.webp" />
+                <img className="h-24" alt="North American Finalist 2021 award badge" src="/awards/awards2021_finalist_badge.webp" />
               </div>
             </div>
 
             {/* Main image */}
             <div className="rounded-xl overflow-hidden shadow-xl relative z-10">
-              <img className="w-full h-auto" alt="Creative team working in a modern office" src="/public/awards/diverse-people-working-office-markefy.webp" />
+              <img className="w-full h-auto" alt="Creative team working in a modern office" src="/awards/diverse-people-working-office-markefy.webp" />
             </div>
 
             {/* Mobile awards + button */}
             <div className="md:hidden mt-6 space-y-4">
               <div className="flex justify-around items-center gap-4">
-                <img className="h-20" alt="Software Winner 2022 award badge" src="/public/awards/awards2022_winner_badge.webp" />
-                <img className="h-20" alt="DevOps Winner 2021 award badge" src="/public/awards/awards2021_winner_badge.webp" />
-                <img className="h-20" alt="North American Finalist 2021 award badge" src="/public/awards/awards2021_finalist_badge.webp" />
+                <img className="h-20" alt="Software Winner 2022 award badge" src="/awards/awards2022_winner_badge.webp" />
+                <img className="h-20" alt="DevOps Winner 2021 award badge" src="/awards/awards2021_winner_badge.webp" />
+                <img className="h-20" alt="North American Finalist 2021 award badge" src="/awards/awards2021_finalist_badge.webp" />
               </div>
 
               {/* Mobile full-width button */}
               <Button 
-                onClick={onNotImplemented}
+                onClick={() => navigate('/about')}
                 className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-8 py-4 text-base font-semibold w-full mt-20"
               >
                 Learn more <ArrowRight className="ml-2 h-5 w-5 " />

@@ -43,18 +43,28 @@ const Header = () => {
   const navLinks = [
     { name: 'Services', path: '/services' },
     { name: 'About', path: '/about' },
-    { name: 'Process', path: '/process' },
-    { name: 'Results', path: '/results' },
+    // { name: 'Process', path: '/process' },
+    // { name: 'Results', path: '/results' },
     { name: 'Technologies', path: '/technologies' },
   ];
 
-  const headerStyle = isScrolled || location.pathname !== '/' ? 'bg-white/90 backdrop-blur-sm shadow-lg' : 'bg-transparent';
-  const textStyle = isScrolled || location.pathname !== '/' ? 'text-gray-700 hover:text-black' : 'text-gray-300 hover:text-white';
-  const mobileIconStyle = isScrolled || location.pathname !== '/' ? 'text-black' : 'text-white';
+  // Determine if we should show the white rounded header
+  const isWhiteHeader = isScrolled || location.pathname !== '/';
+  
+  const headerStyle = isWhiteHeader 
+    ? 'bg-white/90 backdrop-blur-sm shadow-lg' 
+    : 'bg-transparent';
+  
+  const textStyle = isWhiteHeader 
+    ? 'text-gray-700 hover:text-black' 
+    : 'text-gray-300 hover:text-white';
+  
+  const mobileIconStyle = isWhiteHeader 
+    ? 'text-black' 
+    : 'text-white';
   
   // Determine which logo to use based on background
-  const isLightBackground = isScrolled || location.pathname !== '/';
-  const logoSrc = isLightBackground 
+  const logoSrc = isWhiteHeader 
     ? '/logo/Markefy-black.png'
     : '/logo/Markefy-white.png';
 
@@ -128,8 +138,8 @@ const Header = () => {
 
   return (
     <>
-      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${headerStyle}`}>
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isWhiteHeader ? 'pt-4' : ''}`}>
+        <nav className={`${isWhiteHeader ? 'max-w-[90%] mx-auto rounded-2xl' : 'max-w-7xl mx-auto'} px-4 sm:px-6 lg:px-8 relative transition-all duration-300 ${headerStyle}`}>
           <div className="flex items-center h-20 md:justify-between">
             {/* Mobile: Centered logo with hamburger on right */}
             <div className="flex-1 flex justify-center md:flex-none md:justify-start">

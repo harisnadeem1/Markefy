@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Code, Monitor, Search, Megaphone, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const DetailedServices = () => {
+    const navigate = useNavigate();
   const onNotImplemented = () => {
     alert("🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀");
   };
@@ -14,7 +16,7 @@ const DetailedServices = () => {
       category: "Custom Software Development",
       title: "Scalable and tailored software for your business needs",
       description: "We develop custom software solutions designed to fit your exact workflows and goals. Whether it's an ERP system, automation tool, or a specialized business application, our software is built to be secure, reliable, and scalable. We ensure seamless integration with your existing systems and provide continuous support for long-term success.",
-      image: "/public/Services-Images/custom_software_development_markefy.jpg",
+      image: "/Services-Images/custom_software_development_markefy.jpg",
       imageAlt: "Custom software development dashboard showing business analytics, workflow automation, and enterprise resource planning interface",
       order: 'text-first'
     },
@@ -23,7 +25,7 @@ const DetailedServices = () => {
       category: "Website Design & Development",
       title: "Fast, modern, and conversion-focused websites",
       description: "We create visually stunning, fully responsive websites that work flawlessly across all devices. From corporate sites to eCommerce platforms, our websites are optimized for performance, SEO, and user experience. We focus on both design and functionality to make sure your site not only looks great but also drives results.",
-      image: "/public/Services-Images/web_design_development_markefy.jpg",
+      image: "/Services-Images/web_design_development_markefy.jpg",
       imageAlt: "Modern responsive website design showing mobile and desktop layouts with clean UI/UX design elements and fast loading performance",
       order: 'image-first'
     },
@@ -32,7 +34,7 @@ const DetailedServices = () => {
       category: "SEO Optimization",
       title: "Boost rankings and attract the right audience",
       description: "Our SEO strategies help your business dominate search results and attract customers who are ready to engage. We combine keyword research, technical optimization, content improvements, and link building to improve your search rankings. The result is a steady flow of targeted traffic that converts into sales and leads.",
-      image: "/public/Services-Images/seo_opitmzation_markefy.jpg",
+      image: "/Services-Images/seo_opitmzation_markefy.jpg",
       imageAlt: "SEO analytics dashboard displaying search rankings, keyword performance, organic traffic growth, and website optimization metrics",
       order: 'text-first'
     },
@@ -41,7 +43,7 @@ const DetailedServices = () => {
       category: "Ads Campaigns & Digital Marketing",
       title: "Targeted ads that maximize your ROI",
       description: "We design and manage high-ROI ad campaigns on Google, Facebook, Instagram, and more. Our process includes creative ad design, precise audience targeting, and ongoing optimization to ensure every dollar of your budget delivers measurable results. Whether you want leads, sales, or brand awareness, we've got you covered.",
-      image: "/public/Services-Images/digital-ad-campaign_markefy.jpg",
+      image: "/Services-Images/digital-ad-campaign_markefy.jpg",
       imageAlt: "Digital marketing campaign dashboard showing Google Ads, Facebook Ads, and Instagram advertising performance with ROI metrics and audience targeting",
       order: 'image-first'
     }
@@ -106,7 +108,7 @@ const DetailedServices = () => {
               </motion.div>
               
               <Button
-                onClick={onNotImplemented}
+                onClick={() => navigate('/services')}
                 variant="outline"
                 className="rounded-full border-gray-400 hover:bg-gray-100 text-black px-6 py-3"
               >

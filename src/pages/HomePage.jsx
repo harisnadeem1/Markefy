@@ -24,8 +24,8 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Markefy.ai - Empowering Digital Transformation | Web Development & SEO</title>
-        <meta name="description" content="Transform your digital presence with Markefy.ai. Expert web development, SEO optimization, and custom software solutions for modern businesses." />
+        <title>Markefy - Empowering Digital Transformation | Web Development & SEO</title>
+        <meta name="description" content="Transform your digital presence with Markefy. Expert web development, SEO optimization, and custom software solutions for modern businesses." />
       </Helmet>
       
       <Hero onNotImplemented={handleNotImplemented} />
@@ -37,7 +37,6 @@ const HomePage = () => {
       <Process onNotImplemented={handleNotImplemented} />
       <TechStack />
       <LetsTalk onNotImplemented={handleNotImplemented} />
-      <Contact onNotImplemented={handleNotImplemented} />
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Code, Monitor, Search, Megaphone } from 'lucide-react';
-
+import { useNavigate } from 'react-router-dom';
 const servicesData = [
   { 
     icon: Code, 
@@ -31,6 +31,7 @@ const servicesData = [
 ];
 
 const Services = ({ onNotImplemented }) => {
+  const navigate = useNavigate();
   // Arrow animation: come in, go out, come back
   const arrowAnimation = {
     x: [0, 8, -8, 0],
@@ -73,14 +74,14 @@ const Services = ({ onNotImplemented }) => {
             const IconComponent = service.icon;
             
             return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
-                className="bg-[#1C1C1C] rounded-2xl p-8 flex flex-col justify-between group transition-all duration-300 hover:bg-[#222222] hover:-translate-y-2 cursor-pointer"
-                onClick={onNotImplemented}
-              >
+             <motion.div
+  key={index}
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+  className="bg-[#1C1C1C] rounded-2xl p-8 flex flex-col justify-between group transition-all duration-300 hover:bg-[#222222] hover:-translate-y-2 cursor-pointer"
+  onClick={() => navigate('/services')} // ⬅ Redirect to /services
+>
                 <div>
                   <div className="flex justify-between items-start mb-6">
                     <div className="w-12 h-12 bg-blue-600/20 rounded-xl flex items-center justify-center">
