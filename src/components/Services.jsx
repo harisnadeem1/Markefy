@@ -43,7 +43,7 @@ const Services = ({ onNotImplemented }) => {
   };
 
   return (
-    <section className="py-24 bg-[#111111] text-white rounded-t-[40px] lg:rounded-t-[60px]">
+    <section className="py-24 bg-[#111111] text-white rounded-t-[40px]  lg:rounded-t-[60px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 mb-12 sm:mb-14 lg:mb-16 px-4 sm:px-6 lg:px-0">
   <motion.div

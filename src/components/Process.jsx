@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const processSteps = [
   {
     title: "Talking About Your Idea",
-    description: "Share your vision, challenges, and goals — we’re ready to listen and understand.",
+    description: "Share your vision, challenges, and goals — we're ready to listen and understand.",
     hasButton: true
   },
   {
@@ -120,57 +120,28 @@ const Process = ({ onNotImplemented = () => alert('Not implemented yet!') }) => 
         </div>
 
         <div className="relative">
-          {/* Animated SVG Path - Keep original for all screens */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <svg 
-              width="100%" 
-              height="100%" 
-              viewBox="0 0 1000 1800" 
-              className="absolute top-0 left-0"
-            >
-              <motion.path
-                d="M500 100 Q750 200 500 300 Q250 400 500 500 Q750 600 500 700 Q250 800 500 900 Q750 1000 500 1100 Q250 1200 500 1300 Q750 1400 500 1500 Q250 1600 300 1700"
-                stroke="#d1d5db"
-                strokeWidth="2"
-                fill="none"
-                strokeDasharray="8 8"
-                initial={{ pathLength: 0 }}
-                whileInView={{ pathLength: 1 }}
-                transition={{ duration: 3, ease: "easeInOut" }}
+          {/* Mobile Layout - Keep exactly the same */}
+          <div className="lg:hidden">
+            {/* Mobile Straight Line */}
+            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gray-300">
+              <motion.div
+                className="w-full bg-gray-400"
+                initial={{ height: "0%" }}
+                whileInView={{ height: "100%" }}
+                transition={{ duration: 2, ease: "easeInOut" }}
               />
-            </svg>
-          </div>
+            </div>
 
-          {/* Mobile Straight Line */}
-          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gray-300 lg:hidden">
-            <motion.div
-              className="w-full bg-gray-400"
-              initial={{ height: "0%" }}
-              whileInView={{ height: "100%" }}
-              transition={{ duration: 2, ease: "easeInOut" }}
-            />
-          </div>
-
-          {/* Steps Layout */}
-          <div className="space-y-8 lg:space-y-24 relative z-10">
-            {processSteps.map((step, index) => {
-              // First card centered, then alternate left/right (unchanged for desktop)
-              const getAlignment = () => {
-                if (index === 0) return 'center';
-                return index % 2 === 1 ? 'left' : 'right';
-              };
-              
-              const alignment = getAlignment();
-              
-              return (
+            {/* Mobile Steps */}
+            <div className="space-y-8 relative z-10">
+              {processSteps.map((step, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  {/* Mobile Layout */}
-                  <div className="flex items-start space-x-4 w-full lg:hidden">
+                  <div className="flex items-start space-x-4 w-full">
                     {/* Step Number */}
                     <motion.div 
                       className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0 relative z-10"
@@ -202,56 +173,49 @@ const Process = ({ onNotImplemented = () => alert('Not implemented yet!') }) => 
                       </div>
                     </div>
                   </div>
-
-                  {/* Desktop Layout - Unchanged */}
-                  <div className={`hidden lg:flex ${
-                    alignment === 'center' 
-                      ? 'justify-center' 
-                      : alignment === 'left' 
-                        ? 'justify-start lg:justify-start' 
-                        : 'justify-end lg:justify-end'
-                  }`}>
-                    <div className={`w-full max-w-md ${
-                      alignment === 'center' 
-                        ? '' 
-                        : alignment === 'left' 
-                          ? 'lg:ml-8' 
-                          : 'lg:mr-8'
-                    }`}>
-                      <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                        <div className="flex items-start space-x-6">
-                          <motion.div 
-                            className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0"
-                            whileHover={{ scale: 1.1 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                          >
-                            {index + 1}
-                          </motion.div>
-                          <div className="flex-grow">
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">
-                              {step.title}
-                            </h3>
-                            <p className="text-gray-600 mb-4 leading-relaxed">
-                              {step.description}
-                            </p>
-                            {step.hasButton && (
-                              <motion.button
-                                onClick={() => navigate('/contact')}
-                                className="px-6 py-2 border-2 border-gray-900 rounded-full text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-all duration-300"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                              >
-                                START THIS STEP
-                              </motion.button>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </motion.div>
-              );
-            })}
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop Layout - Simple Card Grid */}
+          <div className="hidden lg:block">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {processSteps.map((step, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                >
+                  <motion.div 
+                    className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg mb-4"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    {index + 1}
+                  </motion.div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {step.description}
+                  </p>
+                  {step.hasButton && (
+                    <motion.button
+                      onClick={() => navigate('/contact')}
+                      className="px-6 py-2 border-2 border-gray-900 rounded-full text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-all duration-300"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      START THIS STEP
+                    </motion.button>
+                  )}
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

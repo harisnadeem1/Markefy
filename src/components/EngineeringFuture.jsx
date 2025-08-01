@@ -5,12 +5,12 @@ import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const EngineeringFuture = ({ onNotImplemented }) => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <section className="py-24 bg-white text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left Text Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -24,17 +24,17 @@ const EngineeringFuture = ({ onNotImplemented }) => {
             </h2>
 
             <p className="text-lg text-gray-600 leading-relaxed">
-             At Markefy, we empower businesses with next‑level digital solutions that merge cutting-edge software development, web design, SEO strategies, and result-driven ad campaigns.
-Our mission is to craft experiences that not only look stunning but also drive measurable growth for your brand.
+              At Markefy, we empower businesses with next‑level digital solutions that merge cutting-edge software development, web design, SEO strategies, and result-driven ad campaigns.
+              Our mission is to craft experiences that not only look stunning but also drive measurable growth for your brand.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-             From custom web applications to scalable software systems, from SEO optimization that boosts visibility to data-driven ad campaigns that maximize ROI — we ensure your business stays ahead in the competitive digital landscape.
+              From custom web applications to scalable software systems, from SEO optimization that boosts visibility to data-driven ad campaigns that maximize ROI — we ensure your business stays ahead in the competitive digital landscape.
             </p>
 
             {/* Desktop Button */}
             <div className="hidden md:block">
-              <Button 
-               onClick={() => navigate('/about')}
+              <Button
+                onClick={() => navigate('/about')}
                 className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-8 py-4 text-base font-semibold"
               >
                 Learn more <ArrowRight className="ml-2 h-5 w-5" />
@@ -52,14 +52,14 @@ Our mission is to craft experiences that not only look stunning but also drive m
             {/* Green box behind image (desktop only) */}
             <div className="hidden md:block absolute top-0 right-0 w-96 h-96 border-2 border-blue-400 rounded-2xl -translate-y-1/4 translate-x-1/4 z-10"></div>
 
-            {/* Desktop awards (above image) */}
+            {/* Desktop awards (above image)
             <div className="hidden md:block bg-white p-8 rounded-xl shadow-2xl relative z-20 mb-[-5rem] max-w-lg -ml-8">
               <div className="flex justify-around items-center">
                 <img className="h-24" alt="Software Winner 2022 award badge" src="/awards/awards2022_winner_badge.webp" />
                 <img className="h-24" alt="DevOps Winner 2021 award badge" src="/awards/awards2021_winner_badge.webp" />
                 <img className="h-24" alt="North American Finalist 2021 award badge" src="/awards/awards2021_finalist_badge.webp" />
               </div>
-            </div>
+            </div> */}
 
             {/* Main image */}
             <div className="rounded-xl overflow-hidden shadow-xl relative z-10">
@@ -75,7 +75,7 @@ Our mission is to craft experiences that not only look stunning but also drive m
               </div>
 
               {/* Mobile full-width button */}
-              <Button 
+              <Button
                 onClick={() => navigate('/about')}
                 className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-8 py-4 text-base font-semibold w-full mt-20"
               >
