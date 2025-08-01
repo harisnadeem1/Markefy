@@ -68,16 +68,16 @@ const EngineeringFuture = ({ onNotImplemented }) => {
 
             {/* Mobile awards + button */}
             <div className="md:hidden mt-6 space-y-4">
-              <div className="flex justify-around items-center gap-4">
+              {/* <div className="flex justify-around items-center gap-4">
                 <img className="h-20" alt="Software Winner 2022 award badge" src="/awards/awards2022_winner_badge.webp" />
                 <img className="h-20" alt="DevOps Winner 2021 award badge" src="/awards/awards2021_winner_badge.webp" />
                 <img className="h-20" alt="North American Finalist 2021 award badge" src="/awards/awards2021_finalist_badge.webp" />
-              </div>
+              </div> */}
 
               {/* Mobile full-width button */}
               <Button
                 onClick={() => navigate('/about')}
-                className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-8 py-4 text-base font-semibold w-full mt-20"
+                className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-8 py-4 text-base font-semibold w-full "
               >
                 Learn more <ArrowRight className="ml-2 h-5 w-5 " />
               </Button>
