@@ -10,8 +10,8 @@ export const caseStudiesData = [
     title: "Multilingual Staffing & Job Matching Platform Delivered in 4 Days.",
     description: "Developed a fast, fully functional job portal connecting job seekers with businesses, complete with admin panel and bilingual support in Dutch & English.",
     longDescription: "We built FST Trading’s staffing platform to bridge the gap between job seekers and businesses in need of talent. The system features separate form flows for employers and candidates, job posting and application management, and a robust admin panel for complete control. The website supports both Dutch and English, catering to a wider audience in the Netherlands and beyond. Delivered in just 4 days, the platform is fully operational and user-friendly.",
-    image: "/public/projects/fsttrading/Homepage.png",
-    heroImage: "/public/projects/fsttrading/Homepage.png",
+    image: "/projects/fsttrading/Homepage.png",
+    heroImage: "/projects/fsttrading/Homepage.png",
     tags: ["Web Development", "Job Portal", "Multilingual"],
     duration: "4 days",
     teamSize: "3 people",
@@ -57,12 +57,12 @@ export const caseStudiesData = [
       { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" }
     ],
     projectImages: [
-      { url: "/public/projects/fsttrading/joblisitngs.png", title: "Job Listings", description: "List of available jobs with search and filter options." },
-      { url: "/public/projects/fsttrading/staffrequest.png", title: "Employer Form", description: "Dedicated form for businesses to submit staffing requests." },
-      { url: "/public/projects/fsttrading/jobapplication form.png", title: "Employee Form", description: "Dedicated form for persons to apply to jobs" },
+      { url: "/projects/fsttrading/joblisitngs.png", title: "Job Listings", description: "List of available jobs with search and filter options." },
+      { url: "/projects/fsttrading/staffrequest.png", title: "Employer Form", description: "Dedicated form for businesses to submit staffing requests." },
+      { url: "/projects/fsttrading/jobapplication form.png", title: "Employee Form", description: "Dedicated form for persons to apply to jobs" },
 
-      { url: "/public/projects/fsttrading/admindahsboard.png", title: "Admin Dashboard", description: "Full control over job postings, applications, and user activity." },
-      { url: "/public/projects/fsttrading/adminjobs.png", title: "Admin Jobs Dashboard", description: "Admin can handle jobs and applications from this page." },
+      { url: "/projects/fsttrading/admindahsboard.png", title: "Admin Dashboard", description: "Full control over job postings, applications, and user activity." },
+      { url: "/projects/fsttrading/adminjobs.png", title: "Admin Jobs Dashboard", description: "Admin can handle jobs and applications from this page." },
 
     ],
     results: [
@@ -77,8 +77,8 @@ export const caseStudiesData = [
     title: "Subscription-based platform for curated crypto investment strategies.",
     description: "Built a secure, subscription-based platform offering vetted DeFi investment strategies with admin management, user risk filters, and blockchain-specific opportunities.",
     longDescription: "We developed DeFi Strategies, a subscription-driven platform that simplifies Decentralized Finance for both beginners and experienced investors. Users can explore curated, step-by-step strategies, filter by risk level, and select opportunities across multiple blockchains like Ethereum, Polygon, and Solana. The platform includes a content management dashboard for admins, ensuring strategies remain updated and relevant.",
-    image: "/public/projects/defi/homepage.png",
-    heroImage: "/public/projects/defi/homepage.png",
+    image: "/projects/defi/homepage.png",
+    heroImage: "/projects/defi/homepage.png",
     tags: ["DeFi", "Crypto", "Web Development", "Subscription Platform"],
     duration: "1 Week",
     teamSize: "3 people",
@@ -132,28 +132,28 @@ export const caseStudiesData = [
       },
       {
         name: "Supabase",
-        logo: "/public/techicons/supa.png"
+        logo: "/techicons/supa.png"
       }
     ],
    projectImages: [
   
   {
-    url: "/public/projects/defi/community.png",
+    url: "/projects/defi/community.png",
     title: "Community Page",
     description: "Dedicated space for DeFi enthusiasts to share insights, discuss strategies, and connect."
   },
   {
-    url: "/public/projects/defi/learn.png",
+    url: "/projects/defi/learn.png",
     title: "Learn DeFi Page",
     description: "Step-by-step learning modules explaining key concepts, tools, and passive income methods."
   },
   {
-    url: "/public/projects/defi/strategies.png",
+    url: "/projects/defi/strategies.png",
     title: "Strategies Page",
     description: "Curated list of DeFi strategies with risk-level filters, blockchain selection, and detailed guides."
   },
   {
-    url: "/public/projects/defi/adminpanel.png",
+    url: "/projects/defi/adminpanel.png",
     title: "Admin Panel",
     description: "Full-featured dashboard for managing strategies, users, subscriptions, and content updates."
   }
