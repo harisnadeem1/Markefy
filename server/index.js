@@ -11,7 +11,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type'],
 }));
 
-app.post("/api/contact", async (req, res) => {
+app.post("/contact", async (req, res) => {
   const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
