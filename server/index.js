@@ -5,7 +5,11 @@ require("dotenv").config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://markefy.ai'],
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+}));
 
 app.post("/api/contact", async (req, res) => {
   const { name, email, message } = req.body;
