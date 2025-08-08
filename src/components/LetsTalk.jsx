@@ -103,7 +103,7 @@ const LetsTalk = ({ onNotImplemented }) => {
     
     // Send email in the background (fire and forget)
     try {
-      fetch("http://markefy.ai:5000/api/contact", {
+      fetch("https://markefy.ai:5000/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
