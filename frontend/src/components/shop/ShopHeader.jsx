@@ -208,11 +208,17 @@ const Header = () => {
                             {isOpen ? <X className="h-6 w-6 text-gray-600" /> : <Menu className="h-6 w-6 text-gray-600" />}
                         </button>
 
-                        {/* CENTER: Logo */}
-                        <Link to="/shop" className="flex items-center space-x-2">
-                            <Code className="h-7 w-7 text-blue-600" />
-                            <span className="text-lg font-bold gradient-text uppercase font-mono">CodeSnippets Pro</span>
-                        </Link>
+                         <div className="flex justify-center">
+                            <Link to="/shop" className="flex items-center space-x-2">
+                                <img
+                                    src="/logo/Markefy-black.png"   // ⬅️ replace with your actual logo path
+                                    alt="Markefy Shop Logo"
+                                    className="h-3 w-auto"
+                                    loading="eager"
+                                    decoding="async"
+                                />
+                            </Link>
+                        </div>
 
                         {/* RIGHT: Cart */}
                         <Link to="/shop/cart" className="relative p-2 hover:bg-gray-100 rounded-full transition-colors">
