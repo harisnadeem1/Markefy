@@ -160,7 +160,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`text-sm font-medium transition-colors ${textStyle}`}
+                  className={`text-sm font-medium transition-colors uppercase ${textStyle}`}
                 >
                   {item.name}
                 </Link>
