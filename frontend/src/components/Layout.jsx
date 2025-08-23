@@ -1,7 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import Header from '@/components/Header';       // Main Markefy header
+import Header from '@/components/Header';            // Main Markefy header
 import ShopHeader from '@/components/shop/ShopHeader'; // Shop-specific header
+import ScrollingBanner from '@/components/shop/ScrollingBanner'; // 🔹 Banner above shop header
 import Footer from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
 
@@ -14,12 +15,19 @@ const Layout = ({ children }) => {
   return (
     <div className="min-h-screen bg-white text-black flex flex-col overflow-x-hidden">
       {/* Switch header depending on route */}
-      {isShop ? <ShopHeader /> : <Header />}
-      
+      {isShop ? (
+        <>
+          <ScrollingBanner />  {/* 🔹 Banner always above ShopHeader */}
+          <ShopHeader />
+        </>
+      ) : (
+        <Header />
+      )}
+
       <main className="flex-grow">
         {children}
       </main>
-      
+
       <Footer />
       <Toaster />
     </div>
