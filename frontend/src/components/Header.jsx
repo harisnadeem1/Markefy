@@ -46,6 +46,7 @@ const Header = () => {
     // { name: 'Process', path: '/process' },
      { name: 'Portfolio', path: '/results' },
     { name: 'Technologies', path: '/technologies' },
+    { name: 'Shop', path: '/shop' },
   ];
 
   // Determine if we should show the white rounded header

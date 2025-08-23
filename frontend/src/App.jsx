@@ -14,6 +14,8 @@ import Terms from '@/pages/TermsofServices';
 import CookiePolicy from '@/pages/Cookie';
 import Disclamier from '@/pages/Disclamier';
 import CaseStudyDetail from '@/pages/CaseStudyDetail';
+import ShopHome from "@/pages/shop/ShopHome";
+
 
 function App() {
   return (
@@ -32,6 +34,7 @@ function App() {
         <Route path="/cookie-policy" element={<CookiePolicy />} />
         <Route path="/disclaimer" element={<Disclamier />} />
         <Route path="/case-study/:id" element={<CaseStudyDetail />} />
+         <Route path="/shop" element={<ShopHome />} />
       </Routes>
     </Layout>
   );
