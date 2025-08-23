@@ -213,7 +213,7 @@ const Header = () => {
                                 <img
                                     src="/logo/Markefy-black.png"   // ⬅️ replace with your actual logo path
                                     alt="Markefy Shop Logo"
-                                    className="h-3 w-auto"
+                                    className="h-5 w-auto"
                                     loading="eager"
                                     decoding="async"
                                 />
