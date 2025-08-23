@@ -292,6 +292,10 @@ const Header = () => {
                                 />
 
                                 <div className="border-t border-gray-100 mt-4">
+                                    <Link to="/" onClick={closeMobileMenu} className="block py-4 px-6 uppercase text-gray-900 hover:bg-gray-50 transition-colors">
+                                        Services
+                                    </Link>
+                                    
                                     <Link to="/contact" onClick={closeMobileMenu} className="block py-4 px-6 uppercase text-gray-900 hover:bg-gray-50 transition-colors">
                                         Contact
                                     </Link>
