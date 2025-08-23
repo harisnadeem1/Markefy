@@ -103,15 +103,18 @@ const LetsTalk = ({ onNotImplemented }) => {
     
     // Send email in the background (fire and forget)
     try {
-      fetch("https://markefy.ai/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      }).catch(err => {
-        // Silently handle errors - user already got positive feedback
-        console.error("Background email error:", err);
-      });
-    } catch (err) {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+  fetch(`${API_BASE_URL}/contact`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData),
+  }).catch((err) => {
+    // Silently handle errors - user already got positive feedback
+    console.error("Background email error:", err);
+  });
+} 
+ catch (err) {
       // Silently handle errors
       console.error("Background email error:", err);
     } finally {
