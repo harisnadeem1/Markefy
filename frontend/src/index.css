@@ -91,6 +91,13 @@
   max-width: 100%;
 }
 
+.stamped-fa-star:before,
+.stamped-fa-star-o:before {
+  font-size: 12px;
+  margin-right: -1px;
+  color: #0071bc !important; /* force them blue */
+}
+
 .scroller__inner {
   display: flex;
   flex-wrap: nowrap;

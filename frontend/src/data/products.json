@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Split Screen with Vertical Scroll",
+    "price": "$100",
+    "image": "/projects/defi/learn.png"
+  },
+  {
+    "title": "Wavy Text",
+    "price": "$90",
+    "image": "/shop/products/wavy-text.webp"
+  },
+  {
+    "title": "Masonry Image & Video Gallery",
+    "price": "$120",
+    "image": "/shop/products/masonry-gallery.webp"
+  },
+  {
+    "title": "Features Strip",
+    "price": "$80",
+    "image": "/shop/products/features-strip.webp"
+  },
+  {
+    "title": "Split Screen with Vertical Scroll",
+    "price": "$100",
+    "image": "/shop/products/split-screen.webp"
+  },
+  {
+    "title": "Wavy Text",
+    "price": "$90",
+    "image": "/shop/products/wavy-text.webp"
+  },
+  {
+    "title": "Masonry Image & Video Gallery",
+    "price": "$120",
+    "image": "/shop/products/masonry-gallery.webp"
+  },
+  {
+    "title": "Features Strip",
+    "price": "$80",
+    "image": "/shop/products/features-strip.webp"
+  }
+]

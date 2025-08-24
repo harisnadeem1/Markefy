@@ -30,7 +30,10 @@ const HeroSection = () => {
       </div>
 
       {/* LEFT - Text Content */}
-      <div className="flex flex-col justify-center px-6 sm:px-12 lg:px-24 py-10 bg-gray-50 text-center lg:text-left order-2 lg:order-1">
+      <div
+        className="flex flex-col justify-center px-6 sm:px-12 lg:px-24 py-10 text-center lg:text-left order-2 lg:order-1"
+        style={{ backgroundColor: "#eae6e3" }}
+      >
         {/* Rotating Heading */}
         <AnimatePresence mode="wait">
           <motion.h1
@@ -39,7 +42,8 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-[28px] sm:text-[32px] lg:text-[36px] leading-[42px] lg:leading-[47px] font-normal text-blue-700"
+            className="text-[28px] sm:text-[32px] lg:text-[36px] leading-[42px] lg:leading-[47px] font-normal"
+            style={{ color: "#0071bc" }}
           >
             {headings[index]}
           </motion.h1>
@@ -53,8 +57,11 @@ const HeroSection = () => {
         <div className="mt-5">
           <Link
             to="/shop"
-            className="bg-blue-600 hover:bg-blue-700 text-white text-base sm:text-lg uppercase px-6 py-3 inline-block shadow-md transition rounded-sm"
-            style={{ fontFamily: "'Inconsolata', monospace" }}
+            className="text-white text-base sm:text-lg uppercase px-6 py-3 inline-block shadow-md transition rounded-sm"
+            style={{
+              fontFamily: "'Inconsolata', monospace",
+              backgroundColor: "#0071bc",
+            }}
           >
             Shop Now
           </Link>
