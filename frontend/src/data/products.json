@@ -1,42 +1,34 @@
 [
   {
-    "title": "Split Screen with Vertical Scroll",
-    "price": "$100",
-    "image": "/projects/defi/learn.png"
+    "id": 1,
+    "title": "Split Screen Hero Slider",
+    "price": 130,
+    "image": "/projects/fsttrading/adminjobs.png",
+    "category": "Hero Sections",
+    "badge": "WITH VIDEO",
+    "rating": 5
   },
   {
-    "title": "Wavy Text",
-    "price": "$90",
-    "image": "/shop/products/wavy-text.webp"
+    "id": 2,
+    "title": "Split Screen Hero with Video",
+    "price": 100,
+    "image": "/projects/fsttrading/joblisitngs.png",
+    "category": "Hero Sections",
+    "badge": "WITH VIDEO",
+    "rating": 4
   },
   {
+    "id": 3,
     "title": "Masonry Image & Video Gallery",
-    "price": "$120",
-    "image": "/shop/products/masonry-gallery.webp"
+    "price": 120,
+    "image": "/shop/products/masonry-gallery.webp",
+    "category": "Grid Sections"
   },
   {
+    "id": 4,
     "title": "Features Strip",
-    "price": "$80",
-    "image": "/shop/products/features-strip.webp"
-  },
-  {
-    "title": "Split Screen with Vertical Scroll",
-    "price": "$100",
-    "image": "/shop/products/split-screen.webp"
-  },
-  {
-    "title": "Wavy Text",
-    "price": "$90",
-    "image": "/shop/products/wavy-text.webp"
-  },
-  {
-    "title": "Masonry Image & Video Gallery",
-    "price": "$120",
-    "image": "/shop/products/masonry-gallery.webp"
-  },
-  {
-    "title": "Features Strip",
-    "price": "$80",
-    "image": "/shop/products/features-strip.webp"
+    "price": 80,
+    "image": "/shop/products/features-strip.webp",
+    "category": "Carousel Sections"
   }
 ]

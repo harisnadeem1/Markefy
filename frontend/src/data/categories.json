@@ -1,0 +1,7 @@
+[
+  { "label": "All Sections", "slug": "" },
+  { "label": "Hero Sections", "slug": "hero-sections" },
+  { "label": "Carousel Sections", "slug": "carousel-sections" },
+  { "label": "Grid Sections", "slug": "grid-sections" },
+  { "label": "Special Effects", "slug": "special-effects" }
+]

@@ -15,10 +15,11 @@ import { cn } from '@/lib/utils';
 
 // 🔹 Dummy snippet items (replace with your real data if you have @/data/products)
 const snippetItems = [
-    { title: 'Hero Sections', href: '/shop/collection/heros' },
-    { title: 'Pricing Tables', href: '/shop/collection/pricing' },
+    { title: 'Hero Sections', href: '/shop/collection/hero-sections' },
+    { title: 'Pricing Tables', href: '/shop/collection/pricing-tables' },
     { title: 'Sliders', href: '/shop/collection/sliders' },
 ];
+
 
 const aboutItems = [
     { title: 'About Us', href: '/about-us', description: 'Learn more about our mission and team.' },

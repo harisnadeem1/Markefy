@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from '@/components/Layout';
-import ScrollToTop from '@/components/ScrollToTop'; // ⬅ import this
+import ScrollToTop from '@/components/ScrollToTop';
 import HomePage from '@/pages/HomePage';
 import ServicesPage from '@/pages/ServicesPage';
 import AboutPage from '@/pages/AboutPage';
@@ -15,12 +15,13 @@ import CookiePolicy from '@/pages/Cookie';
 import Disclamier from '@/pages/Disclamier';
 import CaseStudyDetail from '@/pages/CaseStudyDetail';
 import ShopHome from "@/pages/shop/ShopHome";
-
+import CollectionPage from "@/pages/shop/CollectionPage"; // ⬅ added
+import ProductPage from "@/components/shop/product/ProductPage"; // ⬅ added
 
 function App() {
   return (
     <Layout>
-      <ScrollToTop /> {/* ⬅ Add this */}
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
@@ -34,7 +35,12 @@ function App() {
         <Route path="/cookie-policy" element={<CookiePolicy />} />
         <Route path="/disclaimer" element={<Disclamier />} />
         <Route path="/case-study/:id" element={<CaseStudyDetail />} />
-         <Route path="/shop" element={<ShopHome />} />
+
+        {/* Shop Routes */}
+        <Route path="/shop" element={<ShopHome />} />
+        <Route path="/shop/collection" element={<CollectionPage />} />
+        <Route path="/shop/collection/:category" element={<CollectionPage />} />
+        <Route path="/shop/product/:id" element={<ProductPage />} />
       </Routes>
     </Layout>
   );
