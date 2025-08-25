@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const InstallSteps = () => {
   const steps = [
     {
@@ -58,16 +58,18 @@ const InstallSteps = () => {
       </div>
 
       {/* CTA Button */}
-      <button
-        className="px-6 py-2 rounded font-medium transition"
-        style={{
-          fontFamily: "'Inconsolata', monospace",
-          backgroundColor: "#0071bc",
-          color: "#ffffff",
-        }}
-      >
-        GET STARTED
-      </button>
+      <Link to="/shop/collection">
+  <button
+    className="px-6 py-2 rounded font-medium transition"
+    style={{
+      fontFamily: "'Inconsolata', monospace",
+      backgroundColor: "#0071bc",
+      color: "#ffffff",
+    }}
+  >
+    GET STARTED
+  </button>
+</Link>
     </section>
   );
 };

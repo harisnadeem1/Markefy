@@ -56,7 +56,7 @@ const HeroSection = () => {
         {/* CTA Button */}
         <div className="mt-5">
           <Link
-            to="/shop"
+            to="/shop/collection"
             className="text-white text-base sm:text-lg uppercase px-6 py-3 inline-block shadow-md transition rounded-sm"
             style={{
               fontFamily: "'Inconsolata', monospace",

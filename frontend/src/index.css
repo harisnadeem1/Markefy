@@ -121,3 +121,29 @@
     linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 3rem 3rem;
 }
+
+
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #8a8a8a; /* light gray bg */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px !important; /* smaller arrow */
+  color: #fff; /* white arrow */
+  font-weight: bold;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #d6d6d6; /* darker on hover */
+}

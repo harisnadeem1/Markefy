@@ -2,6 +2,8 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import ScrollToTop from '@/components/ScrollToTop';
+
+// Website Pages
 import HomePage from '@/pages/HomePage';
 import ServicesPage from '@/pages/ServicesPage';
 import AboutPage from '@/pages/AboutPage';
@@ -14,15 +16,27 @@ import Terms from '@/pages/TermsofServices';
 import CookiePolicy from '@/pages/Cookie';
 import Disclamier from '@/pages/Disclamier';
 import CaseStudyDetail from '@/pages/CaseStudyDetail';
+
+// Shop Pages
 import ShopHome from "@/pages/shop/ShopHome";
-import CollectionPage from "@/pages/shop/CollectionPage"; // ⬅ added
-import ProductPage from "@/components/shop/product/ProductPage"; // ⬅ added
+import CollectionPage from "@/pages/shop/CollectionPage";
+import ProductPage from "@/components/shop/product/ProductPage";
+import CartPage from "@/pages/shop/CartPage";
+import CheckoutPage from '@/pages/shop/CheckoutPage';
+import ThankYouPage from "@/pages/shop/ThankYouPage";
+
+// Admin Pages
+import AdminLogin from "@/pages/admin/AdminLogin";
+import AdminDashboard from "@/pages/admin/AdminDashboard";
+import ProtectedRoute from "@/pages/admin/ProtectedRoute";
+import AdminRegister from "@/pages/admin/AdminRegister";
 
 function App() {
   return (
     <Layout>
       <ScrollToTop />
       <Routes>
+        {/* Website Routes */}
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -41,6 +55,21 @@ function App() {
         <Route path="/shop/collection" element={<CollectionPage />} />
         <Route path="/shop/collection/:category" element={<CollectionPage />} />
         <Route path="/shop/product/:id" element={<ProductPage />} />
+        <Route path="/shop/cart" element={<CartPage />} />
+        <Route path="/shop/checkout" element={<CheckoutPage />} />
+        <Route path="/shop/thankyou/:orderId" element={<ThankYouPage />} />
+
+        {/* Admin Routes */}
+        <Route path="/shop/admin/login" element={<AdminLogin />} />
+        <Route path="/shop/admin/register" element={<AdminRegister />} />
+        <Route
+          path="/shop/admin/dashboard"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </Layout>
   );

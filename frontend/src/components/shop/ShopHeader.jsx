@@ -12,6 +12,7 @@ import {
     navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
+import { useCart } from "@/context/CartContext";
 
 // 🔹 Dummy snippet items (replace with your real data if you have @/data/products)
 const snippetItems = [
@@ -97,9 +98,9 @@ const MobileMenuSection = ({ title, items, isOpen, onToggle, onItemClick }) => (
 const Header = () => {
     const [isOpen, setIsOpen] = React.useState(false);
     const [openSection, setOpenSection] = React.useState(null);
+    const { itemCount } = useCart();
 
-    // 🔹 Replace with your cart hook later
-    const itemCount = 0;
+   
 
     const toggleSection = (section) => {
         setOpenSection(openSection === section ? null : section);

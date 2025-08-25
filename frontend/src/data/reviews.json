@@ -1,20 +1,30 @@
 [
   {
-    "title": "Exactly what I needed!",
-    "text": "The masonry image gallery works perfect on my Shopify site and has endless customization options.",
-    "reviewer": "Anonymous",
-    "productIndex": 2
+    "id": 1,
+    "title": "Amazing section for my store!",
+    "text": "This saved me hours of coding and looks perfect.",
+    "reviewer": "John D.",
+    "productId": 1
   },
   {
-    "title": "well done!",
-    "text": "Precisely what I was looking for, great support!",
-    "reviewer": "DC",
-    "productIndex": 0
+    "id": 2,
+    "title": "Perfect Hero Section",
+    "text": "Easy to integrate and customize. Highly recommended.",
+    "reviewer": "Alice K.",
+    "productId": 1
   },
   {
-    "title": "LOVED the script for the Carousel & Grid",
-    "text": "My theme did not support this. Researched and finally found what I needed for my store. Saved me a bunch!",
-    "reviewer": "Susan S.",
-    "productIndex": 1
+    "id": 3,
+    "title": "Perfect Hero Section",
+    "text": "Easy to integrate and customize. Highly recommended.",
+    "reviewer": "Alice K.",
+    "productId": 1
+  },
+  {
+    "id": 4,
+    "title": "Perfect Hero Section",
+    "text": "Easy to integrate and customize. Highly recommended.",
+    "reviewer": "Alice K.",
+    "productId": 1
   }
 ]

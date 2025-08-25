@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-import products from "../../data/products.json";
 import reviews from "../../data/reviews.json";
 
 const ReviewsSection = () => {
+  const [products, setProducts] = useState([]);
+
+  // ✅ Fetch products from DB
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/products`);
+        const data = await res.json();
+        setProducts(data);
+      } catch (err) {
+        console.error("Failed to load products", err);
+      }
+    };
+    fetchProducts();
+  }, []);
+
   return (
     <section className="py-12 bg-white w-full border-t">
       <div className="max-w-7xl mx-auto px-6">
@@ -27,9 +42,9 @@ const ReviewsSection = () => {
                 key={i}
                 className="stamped-fa stamped-fa-star"
                 style={{
-                  fontSize: "10px", // smaller stars
+                  fontSize: "10px",
                   color: "#0071bc",
-                  marginRight: "1px" // very little spacing
+                  marginRight: "1px",
                 }}
               ></span>
             ))}
@@ -49,7 +64,10 @@ const ReviewsSection = () => {
           loop
         >
           {reviews.map((review, idx) => {
-            const product = products[review.productIndex];
+            const product = products.find((p) => p.id === review.productId); // 🔹 match review → DB product
+
+            if (!product) return null; // skip if product not found
+
             return (
               <SwiperSlide key={idx}>
                 <div className="flex flex-col h-full p-4">
@@ -60,9 +78,9 @@ const ReviewsSection = () => {
                         key={i}
                         className="stamped-fa stamped-fa-star"
                         style={{
-                          fontSize: "10px", // smaller stars
+                          fontSize: "10px",
                           color: "#0071bc",
-                          marginRight: "1px" // very little spacing
+                          marginRight: "1px",
                         }}
                       ></span>
                     ))}
@@ -86,8 +104,11 @@ const ReviewsSection = () => {
                         className="h-16 object-cover border rounded mb-1"
                       />
                       <div
-                        className=" text-[#0071bc] text-left"
-                        style={{ fontFamily: "'Inconsolata', monospace",fontSize:"10px" } }
+                        className="text-[#0071bc] text-left"
+                        style={{
+                          fontFamily: "'Inconsolata', monospace",
+                          fontSize: "10px",
+                        }}
                       >
                         {product.title}
                       </div>
