@@ -18,7 +18,7 @@ exports.getOrderStatus = async (req, res) => {
   }
 };
 
-// ✅ Secure file download
+
 exports.downloadProduct = async (req, res) => {
   try {
     const { productId, orderId } = req.params;
@@ -28,23 +28,22 @@ exports.downloadProduct = async (req, res) => {
       return res.status(403).json({ error: "Unauthorized: payment not complete" });
     }
 
-    // Check product exists in order
-    const productsInOrder = order.products; // stored as JSON
-    const hasProduct = productsInOrder.find((p) => String(p.id) === String(productId));
-    if (!hasProduct) {
+    // Check product exists in this order
+    const item = order.products.find((p) => String(p.id) === String(productId));
+    if (!item) {
       return res.status(403).json({ error: "Product not part of this order" });
     }
 
-    // Find product file
-    const product = products.find((p) => String(p.id) === String(productId));
-    if (!product || !product.file) {
-      return res.status(404).json({ error: "File not found" });
-    }
+    // item.file_url looks like: "/files/products/myfile.zip"
+    // Normalize it so we only take the actual filename
+    const filename = path.basename(item.file_url); // → "myfile.zip"
 
-    const filePath = path.join(__dirname, "../files/products", product.file);
-    res.download(filePath);
+    const filePath = path.join(__dirname, "../files/products", filename);
+
+    return res.download(filePath);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Download failed" });
   }
 };
+
