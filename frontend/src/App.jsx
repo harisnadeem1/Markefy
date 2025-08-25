@@ -23,7 +23,7 @@ import CollectionPage from "@/pages/shop/CollectionPage";
 import ProductPage from "@/components/shop/product/ProductPage";
 import CartPage from "@/pages/shop/CartPage";
 import CheckoutPage from '@/pages/shop/CheckoutPage';
-import ThankYouPage from "@/pages/shop/ThankYouPage";
+import ThankyouPage from "@/pages/shop/ThankyouPage";
 import ShopAboutPage  from '@/pages/shop/AboutPage';
 import WhatAreCodeSnippets  from '@/pages/shop/WhatAreCodeSnippets';
 import FAQPage  from '@/pages/shop/FAQPage';
@@ -69,7 +69,7 @@ function App() {
         <Route path="/shop/product/:id" element={<ProductPage />} />
         <Route path="/shop/cart" element={<CartPage />} />
         <Route path="/shop/checkout" element={<CheckoutPage />} />
-        <Route path="/shop/thankyou/:orderId" element={<ThankYouPage />} />
+        <Route path="/shop/thankyou/:orderId" element={<ThankyouPage />} />
 
         {/* Admin Routes */}
         <Route path="/shop/admin/login" element={<AdminLogin />} />
