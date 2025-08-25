@@ -4,6 +4,13 @@ import { useCart } from "@/context/CartContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { PlayCircle } from "lucide-react"; // play icon
+import ProductVideoSection from "./ProductVideoSection";
+import ProductFAQSection from "./ProductFAQSection";
+import ReviewsSection from "../ReviewsSection"
+
+
+// inside return of ProductPage (below description, or at very bottom)
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -62,9 +69,9 @@ const ProductPage = () => {
 
   return (
     <section className="w-[80%] mx-auto py-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* ---------- LEFT: MEDIA ---------- */}
-        <div>
+        <div className="md:col-span-2">
           {allMedia.length > 1 ? (
             <Swiper
               modules={[Navigation]}
@@ -146,7 +153,7 @@ const ProductPage = () => {
         </div>
 
         {/* ---------- RIGHT: PRODUCT DETAILS ---------- */}
-        <div className="flex flex-col items-start">
+        <div className="md:col-span-1 flex flex-col items-start">
           {product.collection_name && (
             <p
               className="text-sm uppercase tracking-wide  mb-2"
@@ -206,28 +213,39 @@ const ProductPage = () => {
               ${product.regular_price}
             </p>
           )}
+         {/* Add to Cart */}
+<button
+  onClick={() => addToCart(product)}
+  disabled={isInCart}
+  className={`w-full mb-6 px-8 py-3 uppercase tracking-wide text-sm rounded transition ${
+    isInCart
+      ? "bg-gray-400 cursor-not-allowed"
+      : "bg-[#0071bc] text-white hover:bg-[#005a94]"
+  }`}
+  style={{ fontFamily: "'Inconsolata', monospace" }}
+>
+  {isInCart ? "Already in Cart" : "Add to Cart"}
+</button>
 
-          {/* ✅ Description (HTML) */}
+
+
+
           <div
-            className="prose max-w-none text-gray-700 mb-6"
+            className="product-description text-gray-700 mb-6 leading-relaxed animate-in fade-in duration-500"
             dangerouslySetInnerHTML={{ __html: product.description }}
           />
 
-          {/* Add to Cart */}
-          <button
-            onClick={() => addToCart(product)}
-            disabled={isInCart}
-            className={`px-8 py-3 uppercase tracking-wide text-sm rounded transition ${isInCart
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-[#0071bc] text-white hover:bg-[#005a94]"
-              }`}
-            style={{ fontFamily: "'Inconsolata', monospace" }}
-          >
-            {isInCart ? "Already in Cart" : "Add to Cart"}
-          </button>
+
         </div>
       </div>
+
+<ProductVideoSection videoUrl={product.preview_videos?.[0]} />
+<ProductFAQSection />
+<ReviewsSection/>
+
     </section>
+
+    
   );
 };
 

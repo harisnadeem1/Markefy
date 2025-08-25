@@ -1,30 +1,44 @@
 [
   {
     "id": 1,
-    "title": "Amazing section for my store!",
-    "text": "This saved me hours of coding and looks perfect.",
-    "reviewer": "John D.",
-    "productId": 1
+    "title": "Exactly what I needed!",
+    "text": "The section was easy to set up, highly customizable, and fit seamlessly into my store design.",
+    "reviewer": "Sarah L.",
+    "productId": 23
   },
   {
     "id": 2,
-    "title": "Perfect Hero Section",
-    "text": "Easy to integrate and customize. Highly recommended.",
-    "reviewer": "Alice K.",
-    "productId": 1
+    "title": "Professional and modern look",
+    "text": "This section instantly made my site look more polished and trustworthy. Couldn’t be happier!",
+    "reviewer": "David M.",
+    "productId": 11
   },
   {
     "id": 3,
-    "title": "Perfect Hero Section",
-    "text": "Easy to integrate and customize. Highly recommended.",
-    "reviewer": "Alice K.",
-    "productId": 1
+    "title": "Super easy to use",
+    "text": "No coding required—just plug and play. Works perfectly on both desktop and mobile.",
+    "reviewer": "Emily R.",
+    "productId": 17
   },
   {
     "id": 4,
-    "title": "Perfect Hero Section",
-    "text": "Easy to integrate and customize. Highly recommended.",
-    "reviewer": "Alice K.",
-    "productId": 1
+    "title": "Boosted my conversions",
+    "text": "After adding this section, I noticed an immediate improvement in customer engagement and sales.",
+    "reviewer": "Kevin S.",
+    "productId": 15
+  },
+  {
+    "id": 5,
+    "title": "Clean design, fast setup",
+    "text": "I love how simple yet powerful this section is. Took me minutes to install and customize.",
+    "reviewer": "Amanda T.",
+    "productId": 9
+  },
+  {
+    "id": 6,
+    "title": "Highly recommend Markefy",
+    "text": "Every section I’ve tried from Markefy has been top-notch. This one is no exception—worth every penny!",
+    "reviewer": "Michael B.",
+    "productId": 10
   }
 ]

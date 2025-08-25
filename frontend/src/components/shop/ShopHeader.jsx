@@ -16,15 +16,20 @@ import { useCart } from "@/context/CartContext";
 
 // 🔹 Dummy snippet items (replace with your real data if you have @/data/products)
 const snippetItems = [
-    { title: 'Hero Sections', href: '/shop/collection/hero-sections' },
-    { title: 'Pricing Tables', href: '/shop/collection/pricing-tables' },
-    { title: 'Sliders', href: '/shop/collection/sliders' },
+    { title: 'All Sections', href: '/shop/collection' },
+    { title: 'Trust Sections', href: '/shop/collection/trust-sections' },
+    { title: 'Testimonial Sections', href: '/shop/collection/testimonial-sections' },
+    { title: 'Conversion Sections', href: '/shop/collection/conversion-sections' },
+    { title: 'Slider Sections', href: '/shop/collection/slider-sections' },
+    { title: 'Feature Sections', href: '/shop/collection/feature-sections' },
+    { title: 'Content Sections', href: '/shop/collection/content-sections' },
+{ title: 'Effect Sections', href: '/shop/collection/effect-sections' },
 ];
 
 
 const aboutItems = [
-    { title: 'About Us', href: '/about-us', description: 'Learn more about our mission and team.' },
-    { title: 'What Are Code Snippets?', href: '/what-are-code-snippets', description: 'Discover how snippets can save you time.' },
+    { title: 'About Us', href: 'shop/about', description: 'Learn more about our mission and team.' },
+    { title: 'What Are Code Snippets?', href: '/shop/what-are-code-snippets', description: 'Discover how snippets can save you time.' },
 ];
 
 const customSnippetItems = [
@@ -185,7 +190,7 @@ const Header = () => {
                             <Link to="/contact" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
                                 Contact
                             </Link>
-                            <Link to="/faq" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
+                            <Link to="/shop/faq" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
                                 FAQ
                             </Link>
                             <Link to="/shop/cart" className="relative p-2 hover:bg-gray-100 rounded-full transition-colors">

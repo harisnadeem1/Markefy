@@ -24,6 +24,12 @@ import ProductPage from "@/components/shop/product/ProductPage";
 import CartPage from "@/pages/shop/CartPage";
 import CheckoutPage from '@/pages/shop/CheckoutPage';
 import ThankYouPage from "@/pages/shop/ThankYouPage";
+import ShopAboutPage  from '@/pages/shop/AboutPage';
+import WhatAreCodeSnippets  from '@/pages/shop/WhatAreCodeSnippets';
+import FAQPage  from '@/pages/shop/FAQPage';
+
+
+WhatAreCodeSnippets
 
 // Admin Pages
 import AdminLogin from "@/pages/admin/AdminLogin";
@@ -52,6 +58,12 @@ function App() {
 
         {/* Shop Routes */}
         <Route path="/shop" element={<ShopHome />} />
+        <Route path="/shop/about" element={<ShopAboutPage />} />
+        <Route path="/shop/what-are-code-snippets" element={<WhatAreCodeSnippets />} />
+        <Route path="/shop/faq" element={<FAQPage />} />
+
+
+
         <Route path="/shop/collection" element={<CollectionPage />} />
         <Route path="/shop/collection/:category" element={<CollectionPage />} />
         <Route path="/shop/product/:id" element={<ProductPage />} />

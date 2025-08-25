@@ -35,7 +35,7 @@ const ShopifySection = () => {
         </p>
       </div>
 
-      {/* Video */}
+      {/* Video
       <div className="mt-12 max-w-3xl mx-auto">
         <video
           className="rounded-lg shadow-lg w-full h-auto"
@@ -45,7 +45,7 @@ const ShopifySection = () => {
           muted
           controls
         />
-      </div>
+      </div> */}
     </section>
   );
 };

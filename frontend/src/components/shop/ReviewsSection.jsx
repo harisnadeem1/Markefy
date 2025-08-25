@@ -3,10 +3,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-import reviews from "../../data/reviews.json";
+import reviews from "../../data/reviews.json"; // still using your static reviews file
 
 const ReviewsSection = () => {
   const [products, setProducts] = useState([]);
+
+  const API_BASE = import.meta.env.VITE_API_BASE_URL.replace("/api", "");
 
   // ✅ Fetch products from DB
   useEffect(() => {
@@ -23,7 +25,7 @@ const ReviewsSection = () => {
   }, []);
 
   return (
-    <section className="py-12 bg-white w-full border-t">
+    <section className="py-12 bg-white w-full ">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
@@ -64,7 +66,7 @@ const ReviewsSection = () => {
           loop
         >
           {reviews.map((review, idx) => {
-            const product = products.find((p) => p.id === review.productId); // 🔹 match review → DB product
+            const product = products.find((p) => p.id === review.productId); // match review to product
 
             if (!product) return null; // skip if product not found
 
@@ -99,9 +101,9 @@ const ReviewsSection = () => {
                     {/* Left side: Product */}
                     <div className="flex flex-col items-start min-w-[90px]">
                       <img
-                        src={product.image}
-                        alt={product.title}
-                        className="h-16 object-cover border rounded mb-1"
+                        src={`${API_BASE}${product.preview_url}`} // ✅ product image from DB
+                        alt={product.name}
+                        className="h-16  object-cover border rounded mb-1"
                       />
                       <div
                         className="text-[#0071bc] text-left"
@@ -110,7 +112,7 @@ const ReviewsSection = () => {
                           fontSize: "10px",
                         }}
                       >
-                        {product.title}
+                        {product.name}
                       </div>
                     </div>
 

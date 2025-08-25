@@ -5,7 +5,8 @@ import "react-quill/dist/quill.snow.css";
 const AdminDashboard = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [showProductModal, setShowProductModal] = useState(false);
+  const [showAddProductModal, setShowAddProductModal] = useState(false);
+  const [showEditProductModal, setShowEditProductModal] = useState(false);
   const [showCategoryModal, setShowCategoryModal] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
   const [editingCategory, setEditingCategory] = useState(null);
@@ -17,6 +18,10 @@ const AdminDashboard = () => {
     collection_id: "",
     is_featured: false,
     rating: "",
+    front_image: null,
+    gallery: null,
+    videos: null,
+    product_file: null,
   });
   const [description, setDescription] = useState("");
 
@@ -50,7 +55,46 @@ const AdminDashboard = () => {
   };
 
   // ---------- PRODUCT HANDLERS ----------
-  const handleProductSubmit = async (e) => {
+
+  // Add Product (with files)
+  const handleAddProductSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("name", form.name);
+    formData.append("regular_price", form.regular_price);
+    if (form.sale_price) formData.append("sale_price", form.sale_price);
+    formData.append("collection_id", form.collection_id);
+    formData.append("is_featured", form.is_featured);
+    if (form.rating) formData.append("rating", form.rating);
+    formData.append("description", description);
+
+    if (form.front_image) formData.append("front_image", form.front_image);
+    if (form.gallery) {
+      Array.from(form.gallery).forEach((file) => formData.append("gallery", file));
+    }
+    if (form.videos) {
+      Array.from(form.videos).forEach((file) => formData.append("videos", file));
+    }
+    if (form.product_file) formData.append("product_file", form.product_file);
+
+    try {
+      await fetch(`${import.meta.env.VITE_API_BASE_URL}/admin/products`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` },
+        body: formData,
+      });
+
+      setShowAddProductModal(false);
+      resetForm();
+      fetchData();
+    } catch (err) {
+      console.error("Error adding product:", err);
+    }
+  };
+
+  // Edit Product (JSON only)
+  const handleEditProductSubmit = async (e) => {
     e.preventDefault();
 
     const payload = {
@@ -64,37 +108,24 @@ const AdminDashboard = () => {
     };
 
     try {
-      if (editingProduct) {
-        // Update product
-        await fetch(
-          `${import.meta.env.VITE_API_BASE_URL}/admin/products/${editingProduct.id}`,
-          {
-            method: "PUT",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-            body: JSON.stringify(payload),
-          }
-        );
-      } else {
-        // Add product
-        await fetch(`${import.meta.env.VITE_API_BASE_URL}/admin/products`, {
-          method: "POST",
+      await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/admin/products/${editingProduct.id}`,
+        {
+          method: "PUT",
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify(payload),
-        });
-      }
+        }
+      );
 
-      setShowProductModal(false);
+      setShowEditProductModal(false);
       setEditingProduct(null);
       resetForm();
       fetchData();
     } catch (err) {
-      console.error("Error saving product:", err);
+      console.error("Error editing product:", err);
     }
   };
 
@@ -106,6 +137,10 @@ const AdminDashboard = () => {
       collection_id: "",
       is_featured: false,
       rating: "",
+      front_image: null,
+      gallery: null,
+      videos: null,
+      product_file: null,
     });
     setDescription("");
   };
@@ -121,7 +156,7 @@ const AdminDashboard = () => {
       rating: product.rating,
     });
     setDescription(product.description || "");
-    setShowProductModal(true);
+    setShowEditProductModal(true);
   };
 
   const handleProductDelete = async (id) => {
@@ -143,7 +178,6 @@ const AdminDashboard = () => {
 
     try {
       if (editingCategory) {
-        // Update
         await fetch(
           `${import.meta.env.VITE_API_BASE_URL}/admin/collections/${editingCategory.id}`,
           {
@@ -156,7 +190,6 @@ const AdminDashboard = () => {
           }
         );
       } else {
-        // Add
         await fetch(`${import.meta.env.VITE_API_BASE_URL}/admin/collections`, {
           method: "POST",
           headers: {
@@ -246,7 +279,7 @@ const AdminDashboard = () => {
             onClick={() => {
               resetForm();
               setEditingProduct(null);
-              setShowProductModal(true);
+              setShowAddProductModal(true);
             }}
             className="px-3 py-1 bg-green-600 text-white rounded text-sm"
           >
@@ -300,14 +333,12 @@ const AdminDashboard = () => {
         </table>
       </div>
 
-      {/* Add/Edit Product Modal */}
-      {showProductModal && (
+      {/* Add Product Modal */}
+      {showAddProductModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded w-[600px] max-h-[90vh] overflow-y-auto">
-            <h2 className="text-xl font-semibold mb-4">
-              {editingProduct ? "Edit Product" : "Add Product"}
-            </h2>
-            <form onSubmit={handleProductSubmit} className="space-y-3">
+            <h2 className="text-xl font-semibold mb-4">Add Product</h2>
+            <form onSubmit={handleAddProductSubmit} className="space-y-3">
               <input
                 type="text"
                 placeholder="Product Name"
@@ -372,12 +403,58 @@ const AdminDashboard = () => {
                 <span>Featured</span>
               </label>
 
-              <ReactQuill value={description} onChange={setDescription} />
+              {/* File Inputs with Labels */}
+              <div>
+                <label className="block text-sm font-medium mb-1">Preview Image</label>
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={(e) =>
+                    setForm({ ...form, front_image: e.target.files[0] })
+                  }
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">Gallery Images</label>
+                <input
+                  type="file"
+                  accept="image/*"
+                  multiple
+                  onChange={(e) => setForm({ ...form, gallery: e.target.files })}
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">Preview Videos</label>
+                <input
+                  type="file"
+                  accept="video/*"
+                  multiple
+                  onChange={(e) => setForm({ ...form, videos: e.target.files })}
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">Product File (.zip)</label>
+                <input
+                  type="file"
+                  accept=".zip"
+                  onChange={(e) =>
+                    setForm({ ...form, product_file: e.target.files[0] })
+                  }
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">Description</label>
+                <ReactQuill value={description} onChange={setDescription} />
+              </div>
 
               <div className="flex justify-end space-x-2 pt-4">
                 <button
                   type="button"
-                  onClick={() => setShowProductModal(false)}
+                  onClick={() => setShowAddProductModal(false)}
                   className="px-4 py-2 bg-gray-500 text-white rounded"
                 >
                   Cancel
@@ -387,6 +464,101 @@ const AdminDashboard = () => {
                   className="px-4 py-2 bg-blue-600 text-white rounded"
                 >
                   Save
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* Edit Product Modal */}
+      {showEditProductModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white p-6 rounded w-[600px] max-h-[90vh] overflow-y-auto">
+            <h2 className="text-xl font-semibold mb-4">Edit Product</h2>
+            <form onSubmit={handleEditProductSubmit} className="space-y-3">
+              <input
+                type="text"
+                placeholder="Product Name"
+                className="border w-full p-2"
+                value={form.name}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
+                required
+              />
+              <select
+                className="border w-full p-2"
+                value={form.collection_id}
+                onChange={(e) =>
+                  setForm({ ...form, collection_id: e.target.value })
+                }
+                required
+              >
+                <option value="">Select Category</option>
+                {categories.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.name}
+                  </option>
+                ))}
+              </select>
+              <input
+                type="number"
+                step="0.01"
+                placeholder="Regular Price"
+                className="border w-full p-2"
+                value={form.regular_price}
+                onChange={(e) =>
+                  setForm({ ...form, regular_price: e.target.value })
+                }
+                required
+              />
+              <input
+                type="number"
+                step="0.01"
+                placeholder="Sale Price (optional)"
+                className="border w-full p-2"
+                value={form.sale_price || ""}
+                onChange={(e) =>
+                  setForm({ ...form, sale_price: e.target.value })
+                }
+              />
+              <input
+                type="number"
+                min="1"
+                max="5"
+                placeholder="Rating (1-5)"
+                className="border w-full p-2"
+                value={form.rating || ""}
+                onChange={(e) => setForm({ ...form, rating: e.target.value })}
+              />
+              <label className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  checked={form.is_featured}
+                  onChange={(e) =>
+                    setForm({ ...form, is_featured: e.target.checked })
+                  }
+                />
+                <span>Featured</span>
+              </label>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">Description</label>
+                <ReactQuill value={description} onChange={setDescription} />
+              </div>
+
+              <div className="flex justify-end space-x-2 pt-4">
+                <button
+                  type="button"
+                  onClick={() => setShowEditProductModal(false)}
+                  className="px-4 py-2 bg-gray-500 text-white rounded"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-blue-600 text-white rounded"
+                >
+                  Update
                 </button>
               </div>
             </form>
@@ -417,7 +589,10 @@ const AdminDashboard = () => {
                 className="border w-full p-2"
                 value={categoryForm.description}
                 onChange={(e) =>
-                  setCategoryForm({ ...categoryForm, description: e.target.value })
+                  setCategoryForm({
+                    ...categoryForm,
+                    description: e.target.value,
+                  })
                 }
               />
 

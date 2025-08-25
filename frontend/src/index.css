@@ -147,3 +147,29 @@
 .swiper-button-prev:hover {
   background-color: #d6d6d6; /* darker on hover */
 }
+
+
+
+/* Product description styles */
+.product-description p {
+  margin-bottom: 1rem; /* spacing between paragraphs */
+}
+
+.product-description h3 {
+  font-size: 1.25rem;  /* Tailwind: text-lg */
+  font-weight: 600;    /* Tailwind: font-semibold */
+  margin-top: 1rem; /* Tailwind: mt-5 */
+  margin-bottom: 0.75rem; /* Tailwind: mb-3 */
+  color: #0071bc;      /* Your brand blue */
+}
+
+.product-description ul {
+  list-style-type: disc;
+  margin-left: 1.5rem; /* Tailwind: ml-6 */
+  margin-bottom: 1rem;
+}
+
+.product-description li {
+  margin-bottom: 0.25rem;
+  font-size: 16px; /* small spacing */
+}

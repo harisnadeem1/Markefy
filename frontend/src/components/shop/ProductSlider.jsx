@@ -38,7 +38,7 @@ const FeaturedProducts = () => {
             className="text-3xl md:text-3xl font-bold text-center flex-1"
             style={{ color: "#0071bc", fontFamily: "'Nunito Sans', sans-serif" }}
           >
-            Featured sections for your Shopify store
+            Our Featured Sections
           </h2>
 
           {/* Desktop View All */}
@@ -61,7 +61,7 @@ const FeaturedProducts = () => {
             1024: { slidesPerView: 3 },
             1280: { slidesPerView: 4 },
           }}
-          navigation={true}
+          // navigation={true}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop
         >
@@ -73,7 +73,7 @@ const FeaturedProducts = () => {
       <img
         src={`${API_BASE}${product.preview_url}`}
         alt={product.name}
-        className="w-full h-48 object-cover mb-4 rounded hover:opacity-90 transition"
+        className="w-full h-40 object-cover mb-4 rounded hover:opacity-90 transition"
       />
 
       {/* Title */}
