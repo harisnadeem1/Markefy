@@ -30,141 +30,160 @@ const FeaturedProducts = () => {
   }, []);
 
   return (
-    <section className="py-12 bg-[#eae6e3] w-full">
-      <div className="w-full px-6">
+    <section className="py-20 bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
-        <div className="flex items-center justify-between mb-8">
-          <h2
-            className="text-3xl md:text-3xl font-bold text-center flex-1"
-            style={{ color: "#0071bc", fontFamily: "'Nunito Sans', sans-serif" }}
-          >
-            Our Featured Sections
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-4 tracking-tight">
+            Featured Products
           </h2>
-
-          {/* Desktop View All */}
-          <Link
-            to="/shop/collection"
-            className="text-xs font-normal ml-4 hidden md:block"
-            style={{ color: "gray" }}
-          >
-            View all
-          </Link>
+          <div className="w-20 h-0.5 bg-white mx-auto mb-6"></div>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
+            Discover our carefully curated selection of premium products
+          </p>
         </div>
 
         {/* Swiper Carousel */}
-        <Swiper
-          modules={[Navigation, Autoplay]}
-          spaceBetween={30}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
-          }}
-          // navigation={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          loop
-        >
-          {products.map((product) => (
-           <SwiperSlide key={product.id}>
-  <div className="flex flex-col items-center p-4 bg-transparent shadow-none">
-    {/* ✅ Wrap Image + Name + Price in one Link */}
-    <Link to={`/shop/product/${product.id}`} className="block w-full text-center">
-      <img
-        src={`${API_BASE}${product.preview_url}`}
-        alt={product.name}
-        className="w-full h-40 object-cover mb-4 rounded hover:opacity-90 transition"
-      />
-
-      {/* Title */}
-      <h3
-        className="text-md font-medium mb-2"
-        style={{ color: "#0071bc" }}
-      >
-        {product.name}
-      </h3>
-
-      {/* Price */}
-      {product.sale_price ? (
-        <p className="text-sm mb-3 flex items-center gap-2 justify-center">
-          <span
-            className="line-through text-gray-500"
-            style={{ fontFamily: "'Inconsolata', monospace" }}
+        <div className="relative">
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={24}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 24 },
+              1024: { slidesPerView: 3, spaceBetween: 32 },
+              1280: { slidesPerView: 4, spaceBetween: 32 },
+            }}
+            navigation={false}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            loop
+            className="featured-products-swiper"
           >
-            ${product.regular_price}
-          </span>
-          <span
-            className="text-red-600 font-semibold"
-            style={{ fontFamily: "'Inconsolata', monospace" }}
-          >
-            ${product.sale_price}
-          </span>
-        </p>
-      ) : (
-        <p
-          className="text-sm mb-3"
-          style={{
-            fontFamily: "'Inconsolata', monospace",
-            color: "#a00",
-          }}
-        >
-          ${product.regular_price}
-        </p>
-      )}
-    </Link>
+            {products.map((product) => (
+              <SwiperSlide key={product.id}>
+                <Link to={`/shop/product/${product.id}`} className="group block h-full">
+                  <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-700 h-full flex flex-col">
+                    {/* Image Container */}
+                    <div className="relative aspect-[3/2] overflow-hidden bg-gray-700 flex-shrink-0">
+                      <img
+                        src={`${API_BASE}${product.preview_url}`}
+                        alt={product.name}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      {/* Overlay on hover */}
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                    </div>
 
-    {/* CTA Button (separate, still clickable)
-    <Link
-      to={`/shop/product/${product.id}`}
-      className="px-4 py-2 text-sm uppercase font-medium"
-      style={{
-        fontFamily: "'Inconsolata', monospace",
-        backgroundColor: "#0071bc",
-        color: "#fff",
-      }}
-    >
-      View Product
-    </Link> */}
-  </div>
-</SwiperSlide>
+                    {/* Content */}
+                    <div className="p-6 flex-1 flex flex-col justify-between">
+                      <div className="space-y-3">
+                        {/* Title */}
+                        <h3 className="text-lg font-medium text-white group-hover:text-gray-200 transition-colors duration-200 line-clamp-2 min-h-[3.5rem]">
+                          {product.name}
+                        </h3>
 
-          ))}
-        </Swiper>
+                        {/* Price */}
+                        <div className="flex items-center gap-3">
+                          {product.sale_price ? (
+                            <>
+                              <span className="text-xl font-semibold text-white">
+                                ${product.sale_price}
+                              </span>
+                              <span className="text-sm text-gray-400 line-through">
+                                ${product.regular_price}
+                              </span>
+                              <span className="px-2 py-1 bg-red-500 text-white text-xs font-medium rounded-full">
+                                Sale
+                              </span>
+                            </>
+                          ) : (
+                            <span className="text-xl font-semibold text-white">
+                              ${product.regular_price}
+                            </span>
+                          )}
+                        </div>
+                      </div>
 
-        {/* Mobile View All */}
-        <div className="text-center mt-6 block md:hidden">
+                      {/* Call to Action */}
+                      <div className="pt-4 mt-auto">
+                        <div className="inline-flex items-center text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
+                          View Details
+                          <svg className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* View All Link */}
+        <div className="text-center mt-12">
           <Link
             to="/shop/collection"
-            className="text-base font-normal"
-            style={{
-              color: "gray",
-              fontFamily: "'Inconsolata', monospace",
-            }}
+            className="inline-flex items-center px-8 py-3 border border-gray-600 text-sm font-medium rounded-full text-gray-300 bg-gray-800 hover:bg-gray-700 hover:border-gray-500 hover:text-white transition-all duration-200 shadow-lg hover:shadow-xl"
           >
-            View all
+            View All Products
+            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </Link>
         </div>
       </div>
 
-      {/* Custom Swiper Arrow Styling */}
-      <style>
-        {`
-          .swiper-button-next,
-          .swiper-button-prev {
-            background-color: #0071bc;
-            color: #fff !important;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            font-size: 12px;
+      {/* Custom Swiper Navigation Styling */}
+      <style jsx>{`
+        .featured-products-swiper .swiper-button-next,
+        .featured-products-swiper .swiper-button-prev {
+          background: white;
+          color: #374151 !important;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          transition: all 0.3s ease;
+          border: 1px solid #e5e7eb;
+        }
+        
+        .featured-products-swiper .swiper-button-next:hover,
+        .featured-products-swiper .swiper-button-prev:hover {
+          background: #f9fafb;
+          transform: scale(1.05);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .featured-products-swiper .swiper-button-next::after,
+        .featured-products-swiper .swiper-button-prev::after {
+          font-size: 16px !important;
+          font-weight: 600;
+        }
+        
+        .featured-products-swiper .swiper-button-next {
+          right: -24px;
+        }
+        
+        .featured-products-swiper .swiper-button-prev {
+          left: -24px;
+        }
+        
+        @media (max-width: 1024px) {
+          .featured-products-swiper .swiper-button-next,
+          .featured-products-swiper .swiper-button-prev {
+            display: none;
           }
-          .swiper-button-next::after,
-          .swiper-button-prev::after {
-            font-size: 14px !important;
-            font-weight: bold;
-          }
-        `}
-      </style>
+        }
+        
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      `}</style>
     </section>
   );
 };

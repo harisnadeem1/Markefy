@@ -6,7 +6,7 @@ const HeroSection = () => {
   const headings = [
     "Premium pre-built Shopify Sections",
     "Beautiful Page Layout Templates",
-    "Redesign your Shopify store within minutes",
+    "Redesign your store or website within minutes",
   ];
 
   const [index, setIndex] = useState(0);
@@ -14,57 +14,61 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % headings.length);
-    }, 4000); // changes every 4 seconds
+    }, 4000);
     return () => clearInterval(interval);
   }, [headings.length]);
 
   return (
-    <section className="w-full grid lg:grid-cols-2">
-      {/* RIGHT (on mobile first) - Image */}
-      <div className="relative w-full h-64 sm:h-80 lg:h-auto order-1 lg:order-2">
-        <img
-          alt="Shopify store redesign"
-          src="/shop/home/hero.webp"
-          className="w-full h-full object-cover"
-        />
-      </div>
+    <section className="w-full bg-gradient-to-r from-[#fafafa] via-[#fefefe] to-[#f7f7f7]">
+      <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 items-center px-6 sm:px-10 lg:px-20 py-16 lg:py-24 gap-12">
+        
+        {/* LEFT - Text Content */}
+        <div className="text-center lg:text-left">
+          <AnimatePresence mode="wait">
+            <motion.h1
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-[28px] sm:text-[36px] lg:text-[44px] font-semibold tracking-tight leading-snug"
+              style={{ color: "#0071bc" }}
+            >
+              {headings[index]}
+            </motion.h1>
+          </AnimatePresence>
 
-      {/* LEFT - Text Content */}
-      <div
-        className="flex flex-col justify-center px-6 sm:px-12 lg:px-24 py-10 text-center lg:text-left order-2 lg:order-1"
-        style={{ backgroundColor: "#eae6e3" }}
-      >
-        {/* Rotating Heading */}
-        <AnimatePresence mode="wait">
-          <motion.h1
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-[28px] sm:text-[32px] lg:text-[36px] leading-[42px] lg:leading-[47px] font-normal"
-            style={{ color: "#0071bc" }}
-          >
-            {headings[index]}
-          </motion.h1>
-        </AnimatePresence>
+          <p className="mt-6 text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-2xl">
+            Our professionally crafted snippets aren’t limited to Shopify. 
+            They integrate seamlessly with WordPress, WooCommerce, custom-coded 
+            websites, and any modern CMS. Each section is lightweight, 
+            responsive, and designed for performance — helping you deliver 
+            beautiful, conversion-optimized pages in minutes, without hiring 
+            a developer.
+          </p>
 
-        <p className="mt-2 sm:mt-3 text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
-          Explore our super-flexible section templates that you can easily add to your Shopify store.
-        </p>
+          <div className="mt-8">
+            <Link
+              to="/shop/collection"
+              className="inline-block px-10 py-3 text-base sm:text-lg font-medium rounded-md shadow-md transition hover:shadow-lg"
+              style={{
+                fontFamily: "'Inconsolata', monospace",
+                backgroundColor: "#0071bc",
+                color: "#fff",
+              }}
+            >
+              Explore Sections
+            </Link>
+          </div>
+        </div>
 
-        {/* CTA Button */}
-        <div className="mt-5">
-          <Link
-            to="/shop/collection"
-            className="text-white text-base sm:text-lg uppercase px-6 py-3 inline-block shadow-md transition rounded-sm"
-            style={{
-              fontFamily: "'Inconsolata', monospace",
-              backgroundColor: "#0071bc",
-            }}
-          >
-            Shop Now
-          </Link>
+        {/* RIGHT - Image */}
+        <div className="relative w-full h-72 sm:h-96 lg:h-[500px]">
+          <img
+            alt="Website redesign sections"
+            src="/shop/home/hero.jpg"
+            className="w-full h-full object-cover rounded-xl shadow-lg"
+          />
         </div>
       </div>
     </section>

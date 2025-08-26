@@ -23,9 +23,8 @@ const snippetItems = [
     { title: 'Slider Sections', href: '/shop/collection/slider-sections' },
     { title: 'Feature Sections', href: '/shop/collection/feature-sections' },
     { title: 'Content Sections', href: '/shop/collection/content-sections' },
-{ title: 'Effect Sections', href: '/shop/collection/effect-sections' },
+    { title: 'Effect Sections', href: '/shop/collection/effect-sections' },
 ];
-
 
 const aboutItems = [
     { title: 'About Us', href: 'shop/about', description: 'Learn more about our mission and team.' },
@@ -35,7 +34,6 @@ const aboutItems = [
 const customSnippetItems = [
     { title: 'Custom Website Request', href: '/shop/website-request', description: 'Get a quote for a full website build.' },
     { title: 'Section Requests / Suggestions', href: '/shop/suggestion-form', description: 'Suggest a new snippet for our store.' },
-   
 ];
 
 const ListItem = React.forwardRef(({ className, title, children, to, ...props }, ref) => {
@@ -103,9 +101,17 @@ const MobileMenuSection = ({ title, items, isOpen, onToggle, onItemClick }) => (
 const Header = () => {
     const [isOpen, setIsOpen] = React.useState(false);
     const [openSection, setOpenSection] = React.useState(null);
+    const [isScrolled, setIsScrolled] = React.useState(false);
     const { itemCount } = useCart();
 
-   
+    // Add scroll effect - this is the key addition
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const toggleSection = (section) => {
         setOpenSection(openSection === section ? null : section);
@@ -118,96 +124,132 @@ const Header = () => {
 
     return (
         <>
-            <header className="bg-white backdrop-blur-sm border-b border-gray-200 sticky top-0 z-40 w-full font-mono">
-                <div className="px-4 sm:px-6 lg:px-8 w-full">
-                    {/* Desktop Layout */}
-                    <div className="hidden md:grid md:grid-cols-3 items-center h-16 w-full">
-                        {/* LEFT Nav */}
-                        <nav className="flex items-center space-x-1">
-                            <NavigationMenu>
-                                <NavigationMenuList>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuTrigger className="uppercase font-mono">About</NavigationMenuTrigger>
-                                        <NavigationMenuContent>
-                                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                                                {aboutItems.map((item) => (
-                                                    <ListItem key={item.title} title={item.title} to={item.href}>
-                                                        {item.description}
-                                                    </ListItem>
-                                                ))}
-                                            </ul>
-                                        </NavigationMenuContent>
-                                    </NavigationMenuItem>
+            {/* Updated header with floating effect */}
+            <header className={`${isScrolled ? 'fixed' : 'sticky'} top-0 z-[1000] w-full font-mono transition-all duration-300 ${isScrolled ? 'pt-4' : ''}`}>
+                <div className={`${
+                    isScrolled 
+                        ? 'max-w-[90%] mx-auto rounded-2xl bg-white/90 backdrop-blur-sm shadow-lg border border-gray-200' 
+                        : 'bg-white backdrop-blur-sm border-b border-gray-200 w-full'
+                } transition-all duration-300`}>
+                    <div className="px-4 sm:px-6 lg:px-8 w-full">
+                        {/* Desktop Layout */}
+                        <div className="hidden md:grid md:grid-cols-3 items-center h-16 w-full">
+                            {/* LEFT Nav */}
+                            <nav className="flex items-center space-x-1">
+                                <NavigationMenu>
+                                    <NavigationMenuList>
+                                        <NavigationMenuItem>
+                                            <NavigationMenuTrigger className="uppercase font-mono">About</NavigationMenuTrigger>
+                                            <NavigationMenuContent>
+                                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                                                    {aboutItems.map((item) => (
+                                                        <ListItem key={item.title} title={item.title} to={item.href}>
+                                                            {item.description}
+                                                        </ListItem>
+                                                    ))}
+                                                </ul>
+                                            </NavigationMenuContent>
+                                        </NavigationMenuItem>
 
-                                    <NavigationMenuItem>
-                                        <NavigationMenuTrigger className="uppercase font-mono">Code Snippets</NavigationMenuTrigger>
-                                        <NavigationMenuContent>
-                                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                                                {snippetItems.map((item) => (
-                                                    <ListItem key={item.title} title={item.title} to={item.href}>
-                                                        Browse our collection of {item.title.toLowerCase()}.
-                                                    </ListItem>
-                                                ))}
-                                            </ul>
-                                        </NavigationMenuContent>
-                                    </NavigationMenuItem>
+                                        <NavigationMenuItem>
+                                            <NavigationMenuTrigger className="uppercase font-mono">Code Snippets</NavigationMenuTrigger>
+                                            <NavigationMenuContent>
+                                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                                                    {snippetItems.map((item) => (
+                                                        <ListItem key={item.title} title={item.title} to={item.href}>
+                                                            Browse our collection of {item.title.toLowerCase()}.
+                                                        </ListItem>
+                                                    ))}
+                                                </ul>
+                                            </NavigationMenuContent>
+                                        </NavigationMenuItem>
 
-                                    <NavigationMenuItem>
-                                        <NavigationMenuTrigger className="uppercase font-mono">Custom Snippets</NavigationMenuTrigger>
-                                        <NavigationMenuContent>
-                                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] lg:w-[600px]">
-                                                {customSnippetItems.map((item) => (
-                                                    <ListItem key={item.title} title={item.title} to={item.href}>
-                                                        {item.description}
-                                                    </ListItem>
-                                                ))}
-                                            </ul>
-                                        </NavigationMenuContent>
-                                    </NavigationMenuItem>
+                                        <NavigationMenuItem>
+                                            <NavigationMenuTrigger className="uppercase font-mono">Custom Snippets</NavigationMenuTrigger>
+                                            <NavigationMenuContent>
+                                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] lg:w-[600px]">
+                                                    {customSnippetItems.map((item) => (
+                                                        <ListItem key={item.title} title={item.title} to={item.href}>
+                                                            {item.description}
+                                                        </ListItem>
+                                                    ))}
+                                                </ul>
+                                            </NavigationMenuContent>
+                                        </NavigationMenuItem>
 
-                                    <NavigationMenuItem>
-  <NavigationMenuLink asChild>
-    <Link
-      to="/"
-      className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}
-    >
-      Services
-    </Link>
-  </NavigationMenuLink>
-</NavigationMenuItem>
-                                    
-                                </NavigationMenuList>
-                            </NavigationMenu>
-                        </nav>
+                                        <NavigationMenuItem>
+                                            <NavigationMenuLink asChild>
+                                                <Link
+                                                    to="/"
+                                                    className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}
+                                                >
+                                                    Services
+                                                </Link>
+                                            </NavigationMenuLink>
+                                        </NavigationMenuItem>
+                                    </NavigationMenuList>
+                                </NavigationMenu>
+                            </nav>
 
-                        {/* CENTER Logo */}
-                        <div className="flex justify-center">
-                            <Link to="/shop" className="flex items-center space-x-2">
-                                <img
-                                    src="/logo/Markefy-black.png"   // ⬅️ replace with your actual logo path
-                                    alt="Markefy Shop Logo"
-                                    className="h-6 w-auto"
-                                    loading="eager"
-                                    decoding="async"
-                                />
-                            </Link>
+                            {/* CENTER Logo */}
+                            <div className="flex justify-center">
+                                <Link to="/shop" className="flex items-center space-x-2">
+                                    <img
+                                        src="/logo/Markefy-black.png"
+                                        alt="Markefy Shop Logo"
+                                        className="h-6 w-auto"
+                                        loading="eager"
+                                        decoding="async"
+                                    />
+                                </Link>
+                            </div>
+
+                            {/* RIGHT */}
+                            <div className="flex justify-end items-center gap-4">
+                                <Link to="/shop/contact" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
+                                    Contact
+                                </Link>
+                                <Link to="/shop/faq" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
+                                    FAQ
+                                </Link>
+                                <Link to="/shop/orders" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
+                                    My Orders
+                                </Link>
+                                <Link to="/shop/cart" className="relative p-2 hover:bg-gray-100 rounded-full transition-colors">
+                                    <ShoppingCart className="h-6 w-6 text-gray-600" />
+                                    {itemCount > 0 && (
+                                        <motion.span
+                                            initial={{ scale: 0 }}
+                                            animate={{ scale: 1 }}
+                                            className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white"
+                                        >
+                                            {itemCount}
+                                        </motion.span>
+                                    )}
+                                </Link>
+                            </div>
                         </div>
 
+                        {/* Mobile Layout */}
+                        <div className="md:hidden flex items-center justify-between h-16">
+                            {/* LEFT: Menu */}
+                            <button onClick={() => setIsOpen(!isOpen)} className="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                                {isOpen ? <X className="h-6 w-6 text-gray-600" /> : <Menu className="h-6 w-6 text-gray-600" />}
+                            </button>
 
-                        {/* RIGHT */}
-                        <div className="flex justify-end items-center gap-4">
-                            {/* <Link to="/" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
-                                Services
-                            </Link> */}
-                            <Link to="/shop/contact" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
-                                Contact
-                            </Link>
-                            <Link to="/shop/faq" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
-                                FAQ
-                            </Link>
-                             <Link to="/shop/orders" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
-                                My Orders
-                            </Link>
+                            <div className="flex justify-center">
+                                <Link to="/shop" className="flex items-center space-x-2">
+                                    <img
+                                        src="/logo/Markefy-black.png"
+                                        alt="Markefy Shop Logo"
+                                        className="h-5 w-auto"
+                                        loading="eager"
+                                        decoding="async"
+                                    />
+                                </Link>
+                            </div>
+
+                            {/* RIGHT: Cart */}
                             <Link to="/shop/cart" className="relative p-2 hover:bg-gray-100 rounded-full transition-colors">
                                 <ShoppingCart className="h-6 w-6 text-gray-600" />
                                 {itemCount > 0 && (
@@ -222,54 +264,20 @@ const Header = () => {
                             </Link>
                         </div>
                     </div>
-
-                    {/* Mobile Layout */}
-                    <div className="md:hidden flex items-center justify-between h-16">
-                        {/* LEFT: Menu */}
-                        <button onClick={() => setIsOpen(!isOpen)} className="p-2 rounded-lg hover:bg-gray-100 transition-colors">
-                            {isOpen ? <X className="h-6 w-6 text-gray-600" /> : <Menu className="h-6 w-6 text-gray-600" />}
-                        </button>
-
-                         <div className="flex justify-center">
-                            <Link to="/shop" className="flex items-center space-x-2">
-                                <img
-                                    src="/logo/Markefy-black.png"   // ⬅️ replace with your actual logo path
-                                    alt="Markefy Shop Logo"
-                                    className="h-5 w-auto"
-                                    loading="eager"
-                                    decoding="async"
-                                />
-                            </Link>
-                        </div>
-
-                        {/* RIGHT: Cart */}
-                        <Link to="/shop/cart" className="relative p-2 hover:bg-gray-100 rounded-full transition-colors">
-                            <ShoppingCart className="h-6 w-6 text-gray-600" />
-                            {itemCount > 0 && (
-                                <motion.span
-                                    initial={{ scale: 0 }}
-                                    animate={{ scale: 1 }}
-                                    className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white"
-                                >
-                                    {itemCount}
-                                </motion.span>
-                            )}
-                        </Link>
-                    </div>
                 </div>
             </header>
 
-            {/* Mobile Overlay */}
+            {/* Mobile Overlay - unchanged */}
             <AnimatePresence>
                 {isOpen && (
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 md:hidden">
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[1200] md:hidden">
                         {/* Backdrop */}
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={closeMobileMenu}
-                            className="fixed inset-0 bg-black/20 backdrop-blur-sm"
+                            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-[1201]"
                         />
 
                         {/* Panel */}
@@ -278,7 +286,7 @@ const Header = () => {
                             animate={{ x: 0 }}
                             exit={{ x: '-100%' }}
                             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                            className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl overflow-y-auto"
+                            className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl overflow-y-auto z-[1202]"
                         >
                             <div className="flex items-center justify-between p-6 border-b border-gray-100">
                                 <div className="flex items-center space-x-2">
@@ -324,10 +332,9 @@ const Header = () => {
                                     <Link to="/shop/faq" onClick={closeMobileMenu} className="block py-4 px-6 uppercase text-gray-900 hover:bg-gray-50 transition-colors">
                                         FAQ
                                     </Link>
-                                      <Link to="/shop/orders" onClick={closeMobileMenu} className="block py-4 px-6 uppercase text-gray-900 hover:bg-gray-50 transition-colors">
+                                    <Link to="/shop/orders" onClick={closeMobileMenu} className="block py-4 px-6 uppercase text-gray-900 hover:bg-gray-50 transition-colors">
                                         My Orders
                                     </Link>
-                                    
                                 </div>
                             </div>
 

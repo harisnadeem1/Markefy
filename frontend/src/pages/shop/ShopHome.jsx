@@ -14,11 +14,11 @@ const ShopHome = () => {
       <ShopifySection />
       <CustomScrollingBanner
         items={[
-          "So easy, so flexible...",
-          "So easy, so flexible...",
-          "So easy, so flexible...",
+          "No code. Just add",
+          "Drag & drop ready",
+          "Edit in minutes",
         ]}
-        backgroundColor="#0071bc"
+        backgroundColor="#000000"
         textColor="#fff"
         fontFamily="'Nunito Sans', sans-serif"
         fontSize="2.5rem"
@@ -31,19 +31,7 @@ const ShopHome = () => {
       <FeaturedProducts />
       <ReviewsSection />
 
-       <CustomScrollingBanner className="my-8"
-  items={[
-    "Install sections quicker with our snippets",
-    "Install sections quicker with our snippets",
-    "Install sections quicker with our snippets",
-  ]}
-  backgroundColor="#529337"
-  textColor="#fff"
-  fontFamily="'Nunito Sans', sans-serif"
-  fontSize="1.5rem"
-  speed={20}
-  spacing="10rem"
-/>
+       
 
 
 
