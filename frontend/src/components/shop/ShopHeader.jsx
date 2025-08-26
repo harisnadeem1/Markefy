@@ -193,6 +193,9 @@ const Header = () => {
                             <Link to="/shop/faq" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
                                 FAQ
                             </Link>
+                             <Link to="/shop/orders" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
+                                My Orders
+                            </Link>
                             <Link to="/shop/cart" className="relative p-2 hover:bg-gray-100 rounded-full transition-colors">
                                 <ShoppingCart className="h-6 w-6 text-gray-600" />
                                 {itemCount > 0 && (

@@ -27,6 +27,7 @@ import ThankyouPage from "@/pages/shop/ThankyouPage";
 import ShopAboutPage  from '@/pages/shop/AboutPage';
 import WhatAreCodeSnippets  from '@/pages/shop/WhatAreCodeSnippets';
 import FAQPage  from '@/pages/shop/FAQPage';
+import Orders from '@/pages/shop/Orders'
 
 
 WhatAreCodeSnippets
@@ -61,6 +62,8 @@ function App() {
         <Route path="/shop/about" element={<ShopAboutPage />} />
         <Route path="/shop/what-are-code-snippets" element={<WhatAreCodeSnippets />} />
         <Route path="/shop/faq" element={<FAQPage />} />
+        <Route path="/shop/orders" element={<Orders />} />
+
 
 
 

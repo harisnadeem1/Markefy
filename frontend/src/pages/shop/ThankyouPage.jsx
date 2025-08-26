@@ -1,17 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { useCart } from "@/context/CartContext";
 
 const ThankYouPage = () => {
   const { orderId } = useParams();
   const [order, setOrder] = useState(null);
+    const { clearCart } = useCart();
 
-  useEffect(() => {
-  fetch(`${import.meta.env.VITE_API_BASE_URL}/order/order-status/${orderId}`)
-    .then((res) => res.json())
-    .then(setOrder)
-    .catch(console.error);
-}, [orderId]);
+useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/order/order-status/${orderId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setOrder(data);
 
+        // ✅ clear cart only if payment successful
+        
+          clearCart();
+        
+      })
+      .catch(console.error);
+  }, [orderId, clearCart]);
 
   if (!order) return <p>Loading...</p>;
 
@@ -27,10 +35,10 @@ const ThankYouPage = () => {
             {order.products.map((p) => (
               <li key={p.id}>
                 <a
-                  href={`${import.meta.env.VITE_API_BASE_URL}/order/download/${p.id}/${orderId}`}
+                  href={`${import.meta.env.VITE_API_BASE_URL}/order/download/${p.product_id}/${orderId}`}
                   className="text-[#0071bc] underline"
                 >
-                  Download {p.title}
+                  Download {p.name}
                 </a>
               </li>
             ))}

@@ -4,6 +4,7 @@ import { useCart } from "@/context/CartContext";
 
 const CheckoutPage = () => {
   const { cart, itemCount } = useCart();
+  
   const [form, setForm] = useState({
     name: "",
     email: "",
