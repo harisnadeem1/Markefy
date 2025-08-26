@@ -5,6 +5,7 @@ import CustomScrollingBanner from "@/components/shop/CustomScrollingBanner"; // 
 import InstallSteps from "@/components/shop/InstallSteps"; // 🔹 import the install steps section
 import FeaturedProducts from "@/components/shop/ProductSlider"; // 🔹 import the product slider
 import ReviewsSection from "@/components/shop/ReviewsSection"; // 🔹 import the reviews section
+import TechStackSection from '@/components/shop/TechStackSection'
 
 const ShopHome = () => {
   return (
@@ -12,7 +13,10 @@ const ShopHome = () => {
       {/* 🔹 Reuse your existing hero section */}
       <HeroSection />
       <ShopifySection />
-      <CustomScrollingBanner
+
+      <FeaturedProducts />
+      <InstallSteps />
+ <CustomScrollingBanner
         items={[
           "No code. Just add",
           "Drag & drop ready",
@@ -26,9 +30,11 @@ const ShopHome = () => {
         spacing="10rem"
       />
 
-      <InstallSteps />
+      <TechStackSection />
 
-      <FeaturedProducts />
+     
+
+
       <ReviewsSection />
 
        
