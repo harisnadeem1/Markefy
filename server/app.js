@@ -8,6 +8,7 @@ const collectionRoutes = require("./routes/collections");
 const authRoutes = require("./routes/authRoutes");
 const path = require("path");
 const adminRoutes = require("./routes/adminRoutes.js");
+const formRoutes = require("./routes/forms.js");
 
 
 
@@ -38,6 +39,8 @@ app.use("/api/products", productRoutes);
 app.use("/api/collections", collectionRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/forms", formRoutes);
+
 
 
 

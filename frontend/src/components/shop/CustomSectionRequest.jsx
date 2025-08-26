@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const CustomSectionRequest = () => {
   return (
@@ -21,12 +23,17 @@ const CustomSectionRequest = () => {
           We would love to help you with a section built specifically for your
           needs.
         </p>
-        <button
-          className="px-8 py-3 bg-[#0071bc] text-white uppercase tracking-wide text-base"
-          style={{ fontFamily: "'Inconsolata', monospace" }}
-        >
-          Request a Custom Section
-        </button>
+      
+
+<Link to="/shop/suggestion-form">
+  <button
+    className="px-8 py-3 bg-[#0071bc] text-white uppercase tracking-wide text-base"
+    style={{ fontFamily: "'Inconsolata', monospace" }}
+  >
+    Request a Custom Section
+  </button>
+</Link>
+
       </div>
     </section>
   );

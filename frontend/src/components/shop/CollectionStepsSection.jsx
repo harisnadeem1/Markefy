@@ -61,7 +61,7 @@ const InstallSteps = () => {
           <p>
             Not finding exactly what you need?{" "}
             <a
-              href="#"
+              href="/shop/suggestion-form"
               className="underline text-[#0071bc] hover:text-[#005a94]"
             >
               Let us know

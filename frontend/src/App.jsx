@@ -27,7 +27,11 @@ import ThankyouPage from "@/pages/shop/ThankyouPage";
 import ShopAboutPage  from '@/pages/shop/AboutPage';
 import WhatAreCodeSnippets  from '@/pages/shop/WhatAreCodeSnippets';
 import FAQPage  from '@/pages/shop/FAQPage';
-import Orders from '@/pages/shop/Orders'
+import Orders from '@/pages/shop/Orders';
+import CustomWebsiteRequest from '@/pages/shop/CustomWebsiteRequest'
+import SuggestionForm from '@/pages/shop/SuggestionForm'
+import ShopContactPage from '@/pages/shop/ShopContactPage';
+
 
 
 WhatAreCodeSnippets
@@ -63,6 +67,12 @@ function App() {
         <Route path="/shop/what-are-code-snippets" element={<WhatAreCodeSnippets />} />
         <Route path="/shop/faq" element={<FAQPage />} />
         <Route path="/shop/orders" element={<Orders />} />
+        <Route path="/shop/website-request" element={<CustomWebsiteRequest />} />
+        <Route path="/shop/suggestion-form" element={<SuggestionForm />} />
+        <Route path="/shop/contact" element={<ShopContactPage />} />
+
+
+
 
 
 

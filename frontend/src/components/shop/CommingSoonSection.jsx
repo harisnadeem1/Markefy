@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ComingSoonSection = () => {
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubscribed(true);
+    setEmail(""); // clear the field
+  };
+
   return (
     <section
-      className="w-[calc(100%-2rem)] sm:w-[calc(100%-2rem)] lg:w-[calc(100%-4rem)] mx-auto my-12 sm:my-12 lg:my-12 py-12 sm:py-12 px-4 sm:px-8 bg-[#0071bc] text-center rounded-lg"
+      className="w-[calc(100%-2rem)] sm:w-[calc(100%-2rem)] lg:w-[calc(100%-4rem)] mx-auto my-12 py-12 px-4 sm:px-8 bg-[#0071bc] text-center rounded-lg"
       style={{ fontFamily: "'Nunito Sans', sans-serif" }}
     >
       {/* Heading */}
@@ -22,26 +31,34 @@ const ComingSoonSection = () => {
       </p>
 
       {/* Email Input + Button */}
-      <form
-        className="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-xl mx-auto"
-        onSubmit={(e) => e.preventDefault()}
-      >
-       <input
-  type="email"
-  placeholder="Enter email"
-  className="min-w-[250px] sm:min-w-[280px] flex-1 bg-transparent border-0 border-b-2 border-white px-2 py-2 text-white placeholder-white focus:outline-none focus:border-white"
-  style={{ fontFamily: "'Inconsolata', monospace" }}
-/>
-
-
-        <button
-          type="submit"
-          className="px-6 py-3 bg-white text-[#0071bc] font-bold tracking-wide text-sm uppercase"
-          style={{ fontFamily: "'Inconsolata', monospace" }}
+      {!subscribed ? (
+        <form
+          className="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-xl mx-auto"
+          onSubmit={handleSubmit}
         >
-          Subscribe
-        </button>
-      </form>
+          <input
+            type="email"
+            placeholder="Enter email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="min-w-[250px] sm:min-w-[280px] flex-1 bg-transparent border-0 border-b-2 border-white px-2 py-2 text-white placeholder-white focus:outline-none focus:border-white"
+            style={{ fontFamily: "'Inconsolata', monospace" }}
+            required
+          />
+
+          <button
+            type="submit"
+            className="px-6 py-3 bg-white text-[#0071bc] font-bold tracking-wide text-sm uppercase"
+            style={{ fontFamily: "'Inconsolata', monospace" }}
+          >
+            Subscribe
+          </button>
+        </form>
+      ) : (
+        <p className="text-white font-semibold text-lg">
+          Subscribed! Thank you for joining us.
+        </p>
+      )}
     </section>
   );
 };

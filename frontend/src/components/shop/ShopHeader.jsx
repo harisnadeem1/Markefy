@@ -33,9 +33,9 @@ const aboutItems = [
 ];
 
 const customSnippetItems = [
-    { title: 'Custom Website Request', href: '/custom-request', description: 'Get a quote for a full website build.' },
-    { title: 'Section Requests / Suggestions', href: '/section-request', description: 'Suggest a new snippet for our store.' },
-    { title: 'Migration / Integration Help', href: '/migration-help', description: 'Need help integrating a snippet?' },
+    { title: 'Custom Website Request', href: '/shop/website-request', description: 'Get a quote for a full website build.' },
+    { title: 'Section Requests / Suggestions', href: '/shop/suggestion-form', description: 'Suggest a new snippet for our store.' },
+   
 ];
 
 const ListItem = React.forwardRef(({ className, title, children, to, ...props }, ref) => {
@@ -199,7 +199,7 @@ const Header = () => {
                             {/* <Link to="/" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
                                 Services
                             </Link> */}
-                            <Link to="/contact" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
+                            <Link to="/shop/contact" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
                                 Contact
                             </Link>
                             <Link to="/shop/faq" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
