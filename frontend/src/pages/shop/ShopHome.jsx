@@ -22,7 +22,7 @@ const ShopHome = () => {
           "Drag & drop ready",
           "Edit in minutes",
         ]}
-        backgroundColor="#000000"
+        backgroundColor="#252525"
         textColor="#fff"
         fontFamily="'Nunito Sans', sans-serif"
         fontSize="2.5rem"

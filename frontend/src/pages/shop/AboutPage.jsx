@@ -1,200 +1,113 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const ShopAboutPage = () => {
-  const [isVideoVisible, setIsVideoVisible] = useState(false);
-  const [shouldPlayVideo, setShouldPlayVideo] = useState(false);
-  const videoRef = useRef(null);
-  const videoContainerRef = useRef(null);
-
-  // Intersection Observer for lazy loading video
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVideoVisible(true);
-            // Add a small delay before starting video to ensure smooth rendering
-            setTimeout(() => {
-              setShouldPlayVideo(true);
-            }, 100);
-          }
-        });
-      },
-      {
-        rootMargin: '50px', // Start loading slightly before the element comes into view
-        threshold: 0.1
-      }
-    );
-
-    if (videoContainerRef.current) {
-      observer.observe(videoContainerRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Handle video loading and playback
-  useEffect(() => {
-    if (videoRef.current && shouldPlayVideo) {
-      const video = videoRef.current;
-      
-      // Preload metadata first
-      video.preload = 'metadata';
-      
-      const handleCanPlay = () => {
-        video.play().catch(console.error);
-      };
-      
-      video.addEventListener('canplay', handleCanPlay);
-      
-      return () => video.removeEventListener('canplay', handleCanPlay);
-    }
-  }, [shouldPlayVideo]);
-
   return (
-    <div className="font-sans">
+    <div className="font-sans bg-white text-gray-700">
       {/* ---------- HERO SECTION ---------- */}
-      <section className="grid grid-cols-1 md:grid-cols-2">
+      <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6 lg:px-12 py-20">
         {/* Left Content */}
-        <div
-          className="flex flex-col justify-center px-12 py-16 text-white"
-          style={{ backgroundColor: "#0071bc" }}
-        >
-          <h1 className="text-4xl font-bold mb-4 leading-snug">
-            We're Markefy, Shopify experts creating unique experiences
+        <div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ color: "#0071bc" }}>
+            About Markefy
           </h1>
-          <p className="text-lg opacity-90">
-            Don't limit yourself to what your theme provided, you can now make it
-            more unique.
+          <p className="text-lg leading-relaxed text-gray-600 max-w-xl">
+            At Markefy, we create premium, pre-built website sections designed
+            to make building modern websites faster, easier, and more affordable.
+            Whether you’re running an online store, a portfolio, or a business
+            site, our snippets give you the flexibility of custom code without
+            the complexity or cost.
           </p>
         </div>
 
         {/* Right Image */}
         <div className="w-full h-full">
           <img
-            src="/shop/about/hero.webp"
+            src="/shop/about/hero1.webp"
             alt="About Markefy"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-lg shadow-lg"
             loading="lazy"
             decoding="async"
           />
         </div>
       </section>
 
-      {/* ---------- WHY MARKEFY SECTIONS ---------- */}
-      <section className="w-[80%] mx-auto py-16">
-        <h2
-          className="text-3xl font-bold mb-6"
-          style={{ color: "#0071bc" }}
-        >
-          Why Markefy sections?
-        </h2>
-
-        <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-          Setting up a custom shop with Shopify is meant to be so easy and quick.
-        </p>
-
-        <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-          Just create a Shopify account, choose a theme to install, and start adding your products and other content.{" "}
-          <em>Voilà</em>, your storefront is ready for customers!
-        </p>
-
-        <p className="text-gray-700 text-lg leading-relaxed">
-          But more often than not, you run into a problem. Even though Shopify is a
-          fantastic e-commerce platform, the themes available to choose from have a
-          variety of content blocks to add to your site, but each theme is
-          different. And if there's no option to add a certain layout or a
-          particular functionality that your store needs, you might be forced into{" "}
-         finding a workaround via a
-          third-party app or custom code developed just for you. And both solutions
-          come at a high cost.
-        </p>
-      </section>
-
-      {/* ---------- INTEGRATION vs CUSTOM CODE (VIDEO) ---------- */}
-      <section className="w-[80%] mx-auto py-16 grid grid-cols-1 md:grid-cols-[70%_30%] gap-12 items-center">
-        {/* LEFT SIDE */}
+      {/* ---------- ABOUT CONTENT ---------- */}
+      <section className="max-w-5xl mx-auto px-6 lg:px-12 py-16 space-y-12">
+        {/* Who We Are */}
         <div>
-          <h2
-            className="text-3xl font-bold mb-4"
-            style={{ color: "#0071bc" }}
-          >
-            Integrating apps
+          <h2 className="text-3xl font-bold mb-4" style={{ color: "#0071bc" }}>
+            Who We Are
           </h2>
-          <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-            Shopify offers integrations with hundreds of apps designed to fill in
-            missing functionalities of the basic storefront. But these apps are
-            developed by third parties, which sometimes leads to server issues,
-            workflow-breaking updates, clunky code, and slow loading time.
-          </p>
-
-          <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-            A better alternative is to get custom code created specifically for your
-            Shopify store. While this solution tends to be better fine-tuned to your
-            shop needs and could affect your website's loading speed much less, it
-            usually turns out to be expensive, labor-intensive, and time-consuming.
-          </p>
-
-          <h3
-            className="text-2xl font-bold mt-8 mb-4"
-            style={{ color: "#0071bc" }}
-          >
-            Using pre-built Liquid templates for your store
-          </h3>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            All Shopify merchants come across this issue sooner than later. Both
-            experienced website designers and beginner merchants have a choice to
-            make: either settle for less than what they imagined or spend time and
-            money on custom code.
-          </p>
-
-          <p className="text-gray-700 text-lg leading-relaxed mt-4">
-            But now you don't have to choose between potentially flawed and clunky
-            functionality and a costly developer. Instead, display the information
-            the way you like for less with the help of our customizable{" "}
-            <a href="/shop/collection" className="underline text-[#0071bc]">
-              pre-built Liquid Shopify section blocks
-            </a>.
+          <p className="text-lg leading-relaxed">
+            Markefy is a digital product studio dedicated to helping businesses
+            and creators achieve professional results without the traditional
+            barriers of time, cost, and complexity. We know the struggles of
+            working with rigid themes, expensive developers, and bulky third-party
+            apps. That’s why we’ve built a library of ready-to-use, lightweight
+            code snippets — so you can create polished websites without compromise.
           </p>
         </div>
 
-        {/* RIGHT SIDE (VIDEO) */}
-        <div 
-          ref={videoContainerRef}
-          className="rounded-lg overflow-hidden shadow-lg"
-        >
-          {isVideoVisible ? (
-            <video
-              ref={videoRef}
-              src="/shop/about/sections.mp4"
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-              preload="none"
-              onLoadStart={() => {
-                // Reduce video quality for better performance if needed
-                if (videoRef.current) {
-                  videoRef.current.playbackRate = 1;
-                }
-              }}
-            />
-          ) : (
-            // Placeholder with same aspect ratio to prevent layout shift
-            <div 
-              className="w-full bg-gray-200 flex items-center justify-center"
-              style={{ aspectRatio: '16/9' }}
-            >
-              <div className="text-gray-500 text-center">
-                <div className="w-12 h-12 mx-auto mb-2 opacity-50">
-                  <svg fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M8 5v10l7-5z"/>
-                  </svg>
-                </div>
-                <p className="text-sm">Video will load when visible</p>
-              </div>
-            </div>
-          )}
+        {/* What We Offer */}
+        <div>
+          <h2 className="text-3xl font-bold mb-4" style={{ color: "#0071bc" }}>
+            What We Offer
+          </h2>
+          <p className="text-lg leading-relaxed mb-4">
+            From hero sections and testimonials to sliders, conversion blocks,
+            and content layouts — our collection covers every essential element
+            a modern website needs. Each snippet is:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-lg">
+            <li>Built with clean, responsive HTML, CSS, and JavaScript</li>
+            <li>Lightweight, fast-loading, and free of unnecessary bloat</li>
+            <li>Customizable to match your brand identity</li>
+            <li>Compatible with Shopify, WordPress, and custom websites</li>
+          </ul>
+        </div>
+
+        {/* Why Choose Us */}
+        <div>
+          <h2 className="text-3xl font-bold mb-4" style={{ color: "#0071bc" }}>
+            Why Choose Markefy
+          </h2>
+          <p className="text-lg leading-relaxed mb-4">
+            Unlike standard templates or third-party apps, our snippets are
+            designed to give you maximum flexibility with minimal effort.
+            Everything is optimized for performance, accessibility, and
+            consistency — so you can focus on your content and customers instead
+            of worrying about code.
+          </p>
+          <p className="text-lg leading-relaxed">
+            With Markefy, you don’t have to choose between expensive custom
+            development and generic themes. You get modern, professional designs
+            you can implement in minutes.
+          </p>
+        </div>
+
+        {/* Vision */}
+        <div>
+          <h2 className="text-3xl font-bold mb-4" style={{ color: "#0071bc" }}>
+            Our Vision
+          </h2>
+          <p className="text-lg leading-relaxed">
+            We believe great design should be accessible to everyone. Our vision
+            is to empower businesses of all sizes — from startups to established
+            brands — with tools that save time, reduce costs, and deliver
+            websites that stand out. Markefy is here to make professional web
+            design achievable for all.
+          </p>
+        </div>
+
+        {/* CTA */}
+        <div className="pt-6">
+          <Link
+            to="/shop/collection"
+            className="inline-block px-10 py-4 text-lg font-semibold bg-[#0071bc] text-white rounded-md shadow hover:bg-[#005fa3] transition"
+          >
+            Explore Our Collection →
+          </Link>
         </div>
       </section>
     </div>

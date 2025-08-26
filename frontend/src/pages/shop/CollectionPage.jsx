@@ -8,8 +8,9 @@ import ComingSoonSection from "@/components/shop/CommingSoonSection"; // 🔹 im
 const CollectionPage = () => {
   return (
     <div className="w-full">
-     <StepsSection />
       <CollectionComponent />
+     <StepsSection />
+
 
             <ReviewsSection />
             <CustomSectionRequest />

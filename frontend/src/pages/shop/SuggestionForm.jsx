@@ -18,14 +18,11 @@ const SuggestionForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Store form data before clearing
     const formData = { ...form };
 
-    // Clear form instantly + show toast
     setForm({ name: "", email: "", suggestion: "" });
     showToast("Thank you! Your suggestion has been sent successfully. We appreciate your feedback.", "success");
 
-    // Fire & forget API call
     fetch(`${import.meta.env.VITE_API_BASE_URL}/forms/suggestion`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -37,16 +34,18 @@ const SuggestionForm = () => {
 
   return (
     <section className="w-full py-20 bg-gray-50 relative">
-       {/* Toast Notification */}
+      {/* Toast Notification */}
       {toast.show && (
         <div className="fixed top-6 right-6 z-50 animate-slide-in">
-          <div className={`
-            px-6 py-4 rounded-lg shadow-lg border-l-4 max-w-md
-            ${toast.type === "success" 
-              ? "bg-white border-green-500 text-black" 
-              : "bg-white border-red-500 text-black"
-            }
-          `}>
+          <div
+            className={`
+              px-6 py-4 rounded-lg shadow-lg border-l-4 max-w-md
+              ${toast.type === "success"
+                ? "bg-white border-green-500 text-black"
+                : "bg-white border-red-500 text-black"
+              }
+            `}
+          >
             <div className="flex items-center">
               <div className="flex-1">
                 <p className="text-sm font-medium">{toast.message}</p>
@@ -67,8 +66,8 @@ const SuggestionForm = () => {
       {/* Top Heading */}
       <div className="text-center mb-14 px-6">
         <h1
-          className="text-4xl font-extrabold text-blue-700 mb-4"
-          style={{ fontFamily: "'Nunito Sans', sans-serif" }}
+          className="text-4xl font-extrabold mb-4"
+          style={{ fontFamily: "'Nunito Sans', sans-serif", color: "#0071bc" }}
         >
           Share Your Suggestions
         </h1>
@@ -87,8 +86,8 @@ const SuggestionForm = () => {
         {/* Left Column: Info */}
         <div className="flex flex-col justify-center">
           <h2
-            className="text-2xl font-bold text-gray-800 mb-6"
-            style={{ fontFamily: "'Nunito Sans', sans-serif" }}
+            className="text-2xl font-bold mb-6"
+            style={{ fontFamily: "'Nunito Sans', sans-serif", color: "#0071bc" }}
           >
             Why your feedback matters
           </h2>
@@ -115,14 +114,14 @@ const SuggestionForm = () => {
           className="bg-white shadow-lg rounded-2xl p-8"
           style={{ fontFamily: "'Nunito Sans', sans-serif" }}
         >
-          <h3 className="text-xl font-semibold text-blue-600 mb-6 text-center">
+          <h3 className="text-xl font-semibold mb-6 text-center" style={{ color: "#0071bc" }}>
             Submit a Suggestion
           </h3>
 
-          <div className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <input
-              className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              style={{ fontFamily: "'Inconsolata', monospace" }}
+              className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2"
+              style={{ fontFamily: "'Inconsolata', monospace", borderColor: "#0071bc" }}
               type="text"
               name="name"
               value={form.name}
@@ -131,8 +130,8 @@ const SuggestionForm = () => {
               required
             />
             <input
-              className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              style={{ fontFamily: "'Inconsolata', monospace" }}
+              className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2"
+              style={{ fontFamily: "'Inconsolata', monospace", borderColor: "#0071bc" }}
               type="email"
               name="email"
               value={form.email}
@@ -141,8 +140,8 @@ const SuggestionForm = () => {
               required
             />
             <textarea
-              className="w-full border rounded-lg p-3 h-28 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              style={{ fontFamily: "'Inconsolata', monospace" }}
+              className="w-full border rounded-lg p-3 h-28 focus:outline-none focus:ring-2"
+              style={{ fontFamily: "'Inconsolata', monospace", borderColor: "#0071bc" }}
               name="suggestion"
               value={form.suggestion}
               onChange={handleChange}
@@ -151,12 +150,13 @@ const SuggestionForm = () => {
             />
 
             <button
-              onClick={handleSubmit}
-              className="w-full bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+              type="submit"
+              className="w-full font-semibold px-6 py-3 rounded-lg transition"
+              style={{ backgroundColor: "#0071bc", color: "#fff" }}
             >
               Submit Suggestion
             </button>
-          </div>
+          </form>
         </div>
       </div>
 

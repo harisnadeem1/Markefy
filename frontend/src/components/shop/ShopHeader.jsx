@@ -113,6 +113,8 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const isCollectionPage = location.pathname.startsWith("/shop/collection");
+
     const toggleSection = (section) => {
         setOpenSection(openSection === section ? null : section);
     };
@@ -126,11 +128,10 @@ const Header = () => {
         <>
             {/* Updated header with floating effect */}
             <header className={`${isScrolled ? 'fixed' : 'sticky'} top-0 z-[1000] w-full font-mono transition-all duration-300 ${isScrolled ? 'pt-4' : ''}`}>
-                <div className={`${
-                    isScrolled 
-                        ? 'max-w-[90%] mx-auto rounded-2xl bg-white/90 backdrop-blur-sm shadow-lg border border-gray-200' 
+                <div className={`${isScrolled
+                        ? 'max-w-[90%] mx-auto rounded-2xl bg-white/90 backdrop-blur-sm shadow-lg border border-gray-200'
                         : 'bg-white backdrop-blur-sm border-b border-gray-200 w-full'
-                } transition-all duration-300`}>
+                    } transition-all duration-300`}>
                     <div className="px-4 sm:px-6 lg:px-8 w-full">
                         {/* Desktop Layout */}
                         <div className="hidden md:grid md:grid-cols-3 items-center h-16 w-full">
@@ -325,7 +326,7 @@ const Header = () => {
                                     <Link to="/" onClick={closeMobileMenu} className="block py-4 px-6 uppercase text-gray-900 hover:bg-gray-50 transition-colors">
                                         Services
                                     </Link>
-                                    
+
                                     <Link to="/shop/contact" onClick={closeMobileMenu} className="block py-4 px-6 uppercase text-gray-900 hover:bg-gray-50 transition-colors">
                                         Contact
                                     </Link>

@@ -1,107 +1,110 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const InstallSteps = () => {
   const steps = [
     {
       number: "1",
-      title: "Get the code",
-      description: "After your purchase, you'll get a link.",
+      title: "Choose your snippet",
+      description:
+        "Pick from our collection of premium ready-to-use section templates.",
     },
     {
       number: "2",
-      title: "Copy & paste the code",
-      description: "Don't worry, it's easy. We'll guide you.",
+      title: "Copy & paste instantly",
+      description:
+        "Drop it into Shopify, WordPress, or any custom website with zero hassle.",
     },
     {
       number: "3",
-      title: "Add & style your content",
-      description: "Customize the new section to your liking.",
+      title: "Customize & launch",
+      description:
+        "Adjust text, colors, and layout — then publish a polished section in minutes.",
     },
   ];
 
   return (
     <section
-      className="py-12 bg-white"
+      className="py-20 bg-white text-center"
       style={{ fontFamily: "'Nunito Sans', sans-serif" }}
     >
-      <div className="w-[100%] mx-auto text-center">
-        {/* Heading */}
+      {/* Heading + Detailed Description */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mb-14"
+      >
         <h2
-          className="text-2xl md:text-3xl font-bold mb-6"
+          className="text-3xl md:text-4xl font-bold mb-6 tracking-tight"
           style={{ color: "#0071bc" }}
         >
-          Custom Hero Section Templates for your Shopify Store
+          Install in just 3 easy steps
         </h2>
-
-        {/* Intro blue text */}
-        <div className="max-w-6xl mx-auto mb-6 text-lg text-[#0071bc] space-y-2">
-          <p>
-            Are you looking for new and unique hero sections for your Shopify
-            website pages?
-          </p>
-          <p>
-            Or maybe you need one with just a few more options and more
-            flexibility than the current section you have with your existing
-            theme?
-          </p>
-          <p>
-            We have a variety of custom Liquid section templates for your Shopify
-            store.
-          </p>
-        </div>
-
-        {/* Gray larger text */}
-        <div className="max-w-3xl mx-auto mb-5 text-base text-gray-700 space-y-2">
-          <p>
-            Our custom premium Liquid section blocks are exactly what you've been
-            missing to improve your Shopify store. They're really easy to install
-            (just a little copy/pasting) and they're packed with settings so that
-            you can customize all of the elements.
-          </p>
-          <p>
-            Not finding exactly what you need?{" "}
-            <a
-              href="/shop/suggestion-form"
-              className="underline text-[#0071bc] hover:text-[#005a94]"
-            >
-              Let us know
-            </a>{" "}
-            and we can help.
-          </p>
-        </div>
-
-        {/* Black subheading */}
-        <p className="font-semibold text-black mb-12">
-          Customize your Shopify website with a quick, intuitive 3-step setup:
+        <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+          With Markefy snippets, you don’t need coding knowledge or expensive
+          developers. Every section is designed to be intuitive, responsive,
+          and flexible — whether you’re running a Shopify store, a WordPress
+          site, or a fully custom-coded website. Just follow our 3 simple
+          steps and you’ll have a beautiful, functional section ready to go
+          live in minutes. <br /> <br />
+          Not finding exactly what you need?{" "}
+          <a
+            href="/shop/suggestion-form"
+            className="underline text-[#0071bc] hover:text-[#005a94]"
+          >
+            Let us know
+          </a>{" "}
+          and we’ll help bring your idea to life.
         </p>
+      </motion.div>
 
-        {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
-          {steps.map((step, idx) => (
-            <div key={idx} className="flex flex-col items-center">
-              <div
-                className="w-28 h-28 flex items-center justify-center rounded-full text-6xl font-semibold mb-4"
-                style={{
-                  fontFamily: "'Inconsolata', monospace",
-                  color: "#0071bc",
-                  backgroundColor: "#f5f5f5",
-                }}
-              >
-                {step.number}
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">
-                {step.title}
-              </h3>
-              <p
-                className="text-gray-600 text-base"
-                style={{ fontFamily: "'Inconsolata', monospace" }}
-              >
-                {step.description}
-              </p>
-            </div>
-          ))}
-        </div>
+      {/* Steps */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto px-6">
+        {steps.map((step, idx) => (
+          <motion.div
+            key={idx}
+            className="flex flex-col items-center"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: idx * 0.25 }}
+          >
+            {/* Step Number */}
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.5, delay: idx * 0.3 }}
+              className="w-24 h-24 flex items-center justify-center rounded-full text-3xl font-bold mb-6 shadow-lg transition-transform group-hover:scale-105"
+              style={{
+                fontFamily: "'Inconsolata', monospace",
+                color: "#0071bc",
+                backgroundColor: "#f0f6fb",
+                border: "2px solid #0071bc",
+              }}
+            >
+              {step.number}
+            </motion.div>
+
+            {/* Title */}
+            <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
+              {step.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className="text-gray-600 text-base leading-relaxed max-w-xs"
+              style={{ fontFamily: "'Inconsolata', monospace" }}
+            >
+              {step.description}
+            </p>
+          </motion.div>
+        ))}
       </div>
+
+    
     </section>
   );
 };
