@@ -164,6 +164,18 @@ const Header = () => {
                                             </ul>
                                         </NavigationMenuContent>
                                     </NavigationMenuItem>
+
+                                    <NavigationMenuItem>
+  <NavigationMenuLink asChild>
+    <Link
+      to="/"
+      className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}
+    >
+      Services
+    </Link>
+  </NavigationMenuLink>
+</NavigationMenuItem>
+                                    
                                 </NavigationMenuList>
                             </NavigationMenu>
                         </nav>
@@ -184,9 +196,9 @@ const Header = () => {
 
                         {/* RIGHT */}
                         <div className="flex justify-end items-center gap-4">
-                            <Link to="/" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
+                            {/* <Link to="/" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
                                 Services
-                            </Link>
+                            </Link> */}
                             <Link to="/contact" className={cn(navigationMenuTriggerStyle(), "uppercase font-mono")}>
                                 Contact
                             </Link>
@@ -306,18 +318,22 @@ const Header = () => {
                                         Services
                                     </Link>
                                     
-                                    <Link to="/contact" onClick={closeMobileMenu} className="block py-4 px-6 uppercase text-gray-900 hover:bg-gray-50 transition-colors">
+                                    <Link to="/shop/contact" onClick={closeMobileMenu} className="block py-4 px-6 uppercase text-gray-900 hover:bg-gray-50 transition-colors">
                                         Contact
                                     </Link>
-                                    <Link to="/faq" onClick={closeMobileMenu} className="block py-4 px-6 uppercase text-gray-900 hover:bg-gray-50 transition-colors">
+                                    <Link to="/shop/faq" onClick={closeMobileMenu} className="block py-4 px-6 uppercase text-gray-900 hover:bg-gray-50 transition-colors">
                                         FAQ
                                     </Link>
+                                      <Link to="/shop/orders" onClick={closeMobileMenu} className="block py-4 px-6 uppercase text-gray-900 hover:bg-gray-50 transition-colors">
+                                        My Orders
+                                    </Link>
+                                    
                                 </div>
                             </div>
 
                             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gray-50 border-t border-gray-100">
                                 <p className="text-sm text-gray-600 text-center font-mono">
-                                    © {new Date().getFullYear()} CodeSnippets Pro
+                                    © {new Date().getFullYear()} Markefy
                                 </p>
                             </div>
                         </motion.div>

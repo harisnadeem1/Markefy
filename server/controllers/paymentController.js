@@ -2,6 +2,8 @@ const axios = require("axios");
 const path = require("path");
 const { createOrder, updateOrderStatus, findOrderById } = require("../models/Order");
 
+const { sendOrderEmail } = require("../utils/emailService");
+
 const NOWPAYMENTS_API_KEY = process.env.NOWPAYMENTS_API_KEY;
 const NOWPAYMENTS_API_URL = process.env.NOWPAYMENTS_API_URL || "https://api.nowpayments.io/v1";
 
@@ -46,13 +48,22 @@ exports.handleWebhook = async (req, res) => {
     const { order_id, payment_status, payment_id } = req.body;
 
     if (order_id && payment_status) {
-      await updateOrderStatus(order_id, payment_status, payment_id);
+      const order = await updateOrderStatus(order_id, payment_status, payment_id);
+
+      if (payment_status === "finished") {
+        // fire and forget
+        sendOrderEmail(order_id).catch((err) => {
+          console.error("❌ Failed to send order email:", err.message);
+        });
+      }
     }
 
+    // ✅ Always acknowledge webhook quickly
     res.status(200).send("OK");
   } catch (err) {
     console.error("Webhook error:", err.message);
-    res.status(500).send("Error");
+    // still send 200 so NowPayments doesn't retry forever
+    res.status(200).send("OK");
   }
 };
 
