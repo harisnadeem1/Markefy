@@ -134,7 +134,7 @@ const TechStackSection = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <button className="inline-flex items-center px-8 py-4 bg-[#0071bc] text-white font-medium rounded-full hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl">
+          <button className="inline-flex items-center px-8 py-4 bg-[#0071bc] text-white font-medium rounded-full transition-colors duration-200 shadow-lg hover:shadow-xl">
             Explore All Snippets
             <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
