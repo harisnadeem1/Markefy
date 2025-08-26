@@ -44,6 +44,7 @@ exports.createPayment = async (req, res) => {
 
 // Webhook
 exports.handleWebhook = async (req, res) => {
+  console.log("Webhook payload:", req.body);
   try {
     const { order_id, payment_status, payment_id } = req.body;
 
