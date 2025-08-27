@@ -14,9 +14,11 @@ exports.createPayment = async (req, res) => {
 
     // Create pending order
     const order = await createOrder({ email, total_price, products });
+console.log("Creating invoice with callback URL:", `${process.env.APP_URL}/api/payment/webhook`);
 
     // Call NowPayments
     const response = await axios.post(
+      
       `${NOWPAYMENTS_API_URL}/invoice`,
       {
         price_amount: total_price,
