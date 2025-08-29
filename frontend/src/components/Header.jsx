@@ -4,8 +4,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import LanguageToggle from './LanguageToggle';
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,7 +29,7 @@ const Header = () => {
     } else {
       document.body.style.overflow = 'unset';
     }
-    
+
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -41,31 +44,30 @@ const Header = () => {
   };
 
   const navLinks = [
-    { name: 'Services', path: '/services' },
-    { name: 'About', path: '/about' },
-    // { name: 'Process', path: '/process' },
-     { name: 'Portfolio', path: '/results' },
-    { name: 'Technologies', path: '/technologies' },
-    { name: 'Shop', path: '/shop/collection' },
+    { name: t("nav.services"), path: "/services" },
+    { name: t("nav.about"), path: "/about" },
+    { name: t("nav.portfolio"), path: "/results" },
+    { name: t("nav.technologies"), path: "/technologies" },
+    { name: t("nav.shop"), path: "/shop/collection" }
   ];
 
   // Determine if we should show the white rounded header
   const isWhiteHeader = isScrolled || location.pathname !== '/';
-  
-  const headerStyle = isWhiteHeader 
-    ? 'bg-white/90 backdrop-blur-sm shadow-lg' 
+
+  const headerStyle = isWhiteHeader
+    ? 'bg-white/90 backdrop-blur-sm shadow-lg'
     : 'bg-transparent';
-  
-  const textStyle = isWhiteHeader 
-    ? 'text-gray-700 hover:text-black' 
+
+  const textStyle = isWhiteHeader
+    ? 'text-gray-700 hover:text-black'
     : 'text-gray-300 hover:text-white';
-  
-  const mobileIconStyle = isWhiteHeader 
-    ? 'text-black' 
+
+  const mobileIconStyle = isWhiteHeader
+    ? 'text-black'
     : 'text-white';
-  
+
   // Determine which logo to use based on background
-  const logoSrc = isWhiteHeader 
+  const logoSrc = isWhiteHeader
     ? '/logo/Markefy-black.png'
     : '/logo/Markefy-white.png';
 
@@ -141,11 +143,15 @@ const Header = () => {
     <>
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isWhiteHeader ? 'pt-4' : ''}`}>
         <nav className={`${isWhiteHeader ? 'max-w-[90%] mx-auto rounded-2xl' : 'max-w-7xl mx-auto'} px-4 sm:px-6 lg:px-8 relative transition-all duration-300 ${headerStyle}`}>
-          <div className="flex items-center h-20 md:justify-between">
-            {/* Mobile: Centered logo with hamburger on right */}
-            <div className="flex-1 flex justify-center md:flex-none md:justify-start">
+          <div className="flex items-center h-20">
+            {/* MOBILE (md:hidden) */}
+            <div className="flex items-center justify-between w-full md:hidden">
+              {/* Left: Switcher */}
+              <LanguageToggle />
+
+              {/* Center: Logo */}
               <Link to="/" className="block">
-                <img 
+                <img
                   src={logoSrc}
                   alt="Markefy.ai Logo"
                   className="h-5 w-auto transition-all duration-300"
@@ -153,32 +159,8 @@ const Header = () => {
                   decoding="async"
                 />
               </Link>
-            </div>
-            
-            <div className="hidden md:flex items-center space-x-8">
-              {navLinks.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`text-sm font-medium transition-colors uppercase ${textStyle}`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
 
-            <div className="hidden md:flex items-center space-x-4">
-              <Link to="/contact">
-                <Button 
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 py-2 text-sm"
-                  size="sm"
-                >
-                  Get started
-                </Button>
-              </Link>
-            </div>
-
-            <div className="md:hidden absolute right-0">
+              {/* Right: Hamburger */}
               <motion.button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className={`p-3 ${mobileIconStyle} z-[60] relative rounded-full hover:bg-white/10 transition-colors`}
@@ -189,7 +171,45 @@ const Header = () => {
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </motion.button>
             </div>
+
+            {/* DESKTOP (hidden on mobile) */}
+            <div className="hidden md:flex flex-1 items-center justify-between">
+              {/* Logo left */}
+              <Link to="/" className="block">
+                <img
+                  src={logoSrc}
+                  alt="Markefy.ai Logo"
+                  className="h-5 w-auto transition-all duration-300"
+                  loading="eager"
+                  decoding="async"
+                />
+              </Link>
+
+              {/* Nav links */}
+              <div className="flex items-center space-x-8">
+                {navLinks.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    className={`text-sm font-medium transition-colors uppercase ${textStyle}`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Language toggle + button */}
+              <div className="flex items-center space-x-4">
+                <LanguageToggle />
+                <Link to="/contact">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 py-2 text-sm" size="sm">
+                    {t("nav.get_started")}
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
+
         </nav>
       </header>
 
@@ -206,7 +226,7 @@ const Header = () => {
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[55] md:hidden"
               onClick={() => setIsMenuOpen(false)}
             />
-            
+
             {/* Slide-in Menu Panel */}
             <motion.div
               initial="closed"
@@ -217,7 +237,7 @@ const Header = () => {
             >
               {/* Menu Header */}
               <div className="flex justify-between items-center h-20 px-6 border-b border-gray-800">
-                <img 
+                <img
                   src="/logo/Markefy-white.png"
                   alt="Markefy.ai Logo"
                   className="h-5 w-auto"
@@ -266,8 +286,9 @@ const Header = () => {
                     ))}
                   </nav>
 
+
                   {/* Decorative Elements */}
-                  <motion.div 
+                  <motion.div
                     className="mt-12 pt-8 border-t border-gray-800"
                     custom={navLinks.length}
                     variants={itemVariants}
@@ -275,21 +296,21 @@ const Header = () => {
                     animate="open"
                   >
                     <div className="text-gray-400 text-sm mb-4">
-                      Ready to transform your business?
+                      {t("nav.decorative1")}
                     </div>
                     <div className="flex space-x-4 mb-6">
                       <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
                       <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse delay-100"></div>
                       <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-200"></div>
                     </div>
-                    
+
                     {/* Get Started Button */}
                     <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                      <Button 
+                      <Button
                         className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl py-4 text-lg font-semibold shadow-lg transition-all duration-300 hover:shadow-xl"
                       >
                         <span className="flex items-center justify-center">
-                          Get Started
+                          {t("nav.get_started")}
                           <motion.span
                             className="ml-2"
                             initial={{ x: 0 }}
@@ -301,9 +322,9 @@ const Header = () => {
                         </span>
                       </Button>
                     </Link>
-                    
+
                     <div className="text-center mt-4 text-gray-500 text-sm">
-                      Free consultation • No commitment
+                      {t("nav.decorative2")}
                     </div>
                   </motion.div>
                 </div>

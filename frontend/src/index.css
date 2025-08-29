@@ -173,3 +173,38 @@
   margin-bottom: 0.25rem;
   font-size: 16px; /* small spacing */
 }
+
+
+/* Hide Google top banner completely */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+/* Keep dropdown alive but invisible */
+#google_translate_element {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.goog-te-combo {
+  visibility: hidden;
+  position: absolute;
+  left: -9999px; /* move off-screen */
+}
+
+
+
+#google_translate_element {
+  display: none; /* keeps it alive but invisible */
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}

@@ -1,7 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Linkedin, Twitter, Instagram, Mail, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
+  const { t } = useTranslation();
+  
   const onNotImplemented = () => {
     console.log("Feature not implemented yet");
   };
@@ -26,7 +29,7 @@ const Footer = () => {
             {/* About Me Section */}
             <div className="space-y-3">
               <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
-               Markefy is a digital solutions company delivering high‑impact web development, software, SEO, and marketing campaigns. We help businesses grow with creativity, technology, and results‑driven strategies.
+                {t('footer.about')}
               </p>
             </div>
 
@@ -49,54 +52,86 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8">
           {/* Contact Section - First column on mobile */}
           <div>
-            <span className="font-semibold mb-4 block text-white">Contact</span>
+            <span className="font-semibold mb-4 block text-white">
+              {t('footer.sections.contact')}
+            </span>
             <div className="space-y-3">
               <div className="flex items-start space-x-2">
                 <Mail className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">support@markefy.ai</span>
+                <span className="text-gray-400 text-sm">{t('footer.contact.email')}</span>
               </div>
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">Str. Dunarii Nr 146-148<br />Bragadiru, Romania</span>
+                <span className="text-gray-400 text-sm whitespace-pre-line">
+                  {t('footer.contact.address')}
+                </span>
               </div>
             </div>
           </div>
           
           {/* Services Section - Second column on mobile */}
           <div>
-            <span className="font-semibold mb-4 block text-white">Services</span>
+            <span className="font-semibold mb-4 block text-white">
+              {t('footer.sections.services')}
+            </span>
             <div className="space-y-2">
-              <a href="/services" className="block text-gray-400 hover:text-white transition-colors text-sm">Web Development</a>
-              <a href="/services" className="block text-gray-400 hover:text-white transition-colors text-sm">SEO Optimization</a>
-              <a href="/services" className="block text-gray-400 hover:text-white transition-colors text-sm">Custom Software</a>
-              <a href="/services" className="block text-gray-400 hover:text-white transition-colors text-sm">AI Solutions</a>
+              <a href="/services" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                {t('footer.services.webDevelopment')}
+              </a>
+              <a href="/services" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                {t('footer.services.seoOptimization')}
+              </a>
+              <a href="/services" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                {t('footer.services.customSoftware')}
+              </a>
+              <a href="/services" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                {t('footer.services.aiSolutions')}
+              </a>
             </div>
           </div>
           
           {/* Company Section - Third column on mobile (wraps to new row) */}
           <div>
-            <span className="font-semibold mb-4 block text-white">Company</span>
+            <span className="font-semibold mb-4 block text-white">
+              {t('footer.sections.company')}
+            </span>
             <div className="space-y-2">
-              <a href="/about" className="block text-gray-400 hover:text-white transition-colors text-sm">About Us</a>
-              <a href="/process" className="block text-gray-400 hover:text-white transition-colors text-sm">Our Process</a>
-             <a href="/technologies" className="block text-gray-400 hover:text-white transition-colors text-sm">Technologies</a>
+              <a href="/about" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                {t('footer.company.aboutUs')}
+              </a>
+              <a href="/process" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                {t('footer.company.ourProcess')}
+              </a>
+              <a href="/technologies" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                {t('footer.company.technologies')}
+              </a>
             </div>
           </div>
 
           {/* Legal Section - Fourth column on mobile (wraps to new row) */}
           <div>
-            <span className="font-semibold mb-4 block text-white">Legal</span>
+            <span className="font-semibold mb-4 block text-white">
+              {t('footer.sections.legal')}
+            </span>
             <div className="space-y-2">
-               <a href="/privacy-policy" className="block text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
-               <a href="/terms" className="block text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
-                <a href="/cookie-policy" className="block text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</a>
-                 <a href="/disclaimer" className="block text-gray-400 hover:text-white transition-colors text-sm">Disclamier</a>
+              <a href="/privacy-policy" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                {t('footer.legal.privacyPolicy')}
+              </a>
+              <a href="/terms" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                {t('footer.legal.termsOfService')}
+              </a>
+              <a href="/cookie-policy" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                {t('footer.legal.cookiePolicy')}
+              </a>
+              <a href="/disclaimer" className="block text-gray-400 hover:text-white transition-colors text-sm">
+                {t('footer.legal.disclaimer')}
+              </a>
             </div>
           </div>
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Markefy.ai. All rights reserved.</p>
+          <p>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
         </div>
       </div>
     </footer>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from "react-i18next";
 
 const techRow1 = [
   { name: 'Docker', logo: '/techstacks/docker.svg' },
@@ -56,8 +57,9 @@ const InfiniteScroller = ({ children, direction, speed = 30 }) => {
 };
 
 const TechStack = () => {
+  const { t } = useTranslation();
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-[#111111] text-white overflow-hidden relative">
+   <section className="py-16 sm:py-20 md:py-24 bg-[#111111] text-white overflow-hidden relative">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-blue-500 rounded-full blur-3xl"></div>
@@ -72,20 +74,24 @@ const TechStack = () => {
           viewport={{ once: true }}
           className="mb-12 sm:mb-16 md:mb-20"
         >
+          {/* Badge */}
           <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-300 text-xs sm:text-sm font-medium mb-4 sm:mb-6">
             <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-400 rounded-full mr-2 animate-pulse"></div>
-            Technologies We Master
+            {t("home.techstack.badge")}
           </div>
-          
+
+          {/* Title */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight px-4">
-            We've Got Your{' '}
+            {t("home.techstack.title_line1")}{' '}
             <span className="bg-gradient-to-r from-blue-400 via-blue-300 to-cyan-400 bg-clip-text text-transparent">
-              Tech Stack
+              {t("home.techstack.title_highlight")}
             </span>{' '}
-            Covered
+            {t("home.techstack.title_line2")}
           </h2>
+
+          {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
-            With a proven record of solving challenges for over a decade, our experienced team can guide you to the best technological solutions and practices for your business needs.
+            {t("home.techstack.subtitle")}
           </p>
         </motion.div>
       </div>

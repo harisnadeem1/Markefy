@@ -12,8 +12,12 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import TechStack from '@/components/TechStack';
 import LetsTalk from '@/components/LetsTalk';
 import Contact from '@/components/Contact';
+import { useTranslation } from "react-i18next";
+
 
 const HomePage = () => {
+    const { t } = useTranslation();
+  
   const { toast } = useToast();
   const handleNotImplemented = () => {
     toast({
@@ -24,7 +28,7 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Markefy - Empowering Digital Transformation | Web Development & SEO</title>
+        <title>{t("home.title")}</title>
         <meta name="description" content="Transform your digital presence with Markefy. Expert web development, SEO optimization, and custom software solutions for modern businesses." />
       </Helmet>
       

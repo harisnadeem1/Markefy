@@ -1,0 +1,1949 @@
+{
+    "nav": {
+        "services": "Servicii",
+        "about": "Despre",
+        "portfolio": "Portofoliu",
+        "technologies": "Tehnologii",
+        "shop": "Magazin",
+        "get_started": "Începe",
+        "decorative1": "Ești pregătit să îți transformi afacerea?",
+        "decorative2": "Consultanță gratuită • Fără obligații"
+    },
+    "home": {
+        "title": "Markefy - Împuternicim Transformarea Digitală | Dezvoltare Web & SEO",
+        "hero": {
+            "badge": "Creăm excelență digitală cu AI și expertiză",
+            "title_line1": "Construim viitorul",
+            "title_line2": "Experiențelor Digitale",
+            "rotating": [
+                "Construim soluții web și aplicații personalizate",
+                "Creăm software și ERP-uri bazate pe inteligență artificială",
+                "Proiectăm aplicații mobile pentru iOS și Android",
+                "Oferim SEO și marketing optimizat cu AI",
+                "Stimulăm creșterea prin analize bazate pe date"
+            ],
+            "subtitle": "De la idee la execuție, Markefy.ai transformă viziunea ta în soluții digitale scalabile și performante — alimentate de AI și construite pentru creștere.",
+            "cta_primary": "Începe gratuit",
+            "cta_secondary": "Află mai multe",
+            "scroll": "Derulează pentru a explora"
+        },
+        "services": {
+            "section_title_line1": "Inginerie specializată,",
+            "section_title_line2": "Rezultate mai rapide.",
+            "section_subtitle": "Ajutăm companiile să valorifice AI-ul, automatizarea și soluțiile software moderne pentru a lucra mai inteligent, a se scala mai repede și a rămâne în față. Echipa noastră de experți îți transformă viziunea în sisteme puternice, scalabile și pregătite pentru viitor.",
+            "items": [
+                {
+                    "title": "Dezvoltare software personalizată",
+                    "desc": "Dezvoltăm soluții personalizate care se potrivesc exact nevoilor tale — fie că este vorba despre o platformă web, un instrument enterprise sau un sistem de automatizare. Fiecare proiect este construit pentru performanță, securitate și scalabilitate din prima zi.",
+                    "linkText": "DEZVOLTARE SOFTWARE"
+                },
+                {
+                    "title": "Design și dezvoltare website",
+                    "desc": "Proiectăm și dezvoltăm website-uri rapide, sigure și impresionante care transformă vizitatorii în clienți. Fie că este eCommerce, corporate sau portofoliu — îl facem să strălucească și să performeze.",
+                    "linkText": "DEZVOLTARE WEB"
+                },
+                {
+                    "title": "SEO și vizibilitate în căutări",
+                    "desc": "Strategiile noastre SEO pun brandul tău în fața audienței potrivite. De la cercetare de cuvinte cheie la optimizare tehnică, ne asigurăm că site-ul tău se clasează mai sus și atrage trafic țintit.",
+                    "linkText": "SERVICII SEO"
+                },
+                {
+                    "title": "Campanii de publicitate și marketing",
+                    "desc": "Creăm campanii publicitare bazate pe date pe Google, Facebook, Instagram și multe altele — maximizând ROI prin targetare precisă, vizuale creative și optimizare continuă.",
+                    "linkText": "MARKETING DIGITAL"
+                }
+            ]
+        },
+        "future": {
+            "title_line1": "Construim viitorul",
+            "title_highlight": "Soluțiilor Digitale bazate pe AI",
+            "para1": "La Markefy, sprijinim afacerile cu soluții digitale de ultimă generație care îmbină dezvoltarea software de vârf, designul web, strategiile SEO și campaniile publicitare orientate spre rezultate. Misiunea noastră este să creăm experiențe care nu doar arată uimitor, dar și generează creștere măsurabilă pentru brandul tău.",
+            "para2": "De la aplicații web personalizate la sisteme software scalabile, de la optimizare SEO care crește vizibilitatea până la campanii publicitare bazate pe date care maximizează ROI-ul — ne asigurăm că afacerea ta rămâne în fruntea peisajului digital competitiv.",
+            "cta": "Află mai multe"
+        },
+        "detailedservices": {
+            "heading": {
+        "part1": "Cum",
+        "highlight": "transformăm",
+        "part2": "afacerea ta"
+      },
+            "subheading": "Descoperă abordarea noastră dovedită pentru a oferi rezultate excepționale. Fiecare serviciu este conceput pentru a răspunde nevoilor tale unice și a genera creștere măsurabilă pentru afacerea ta.",
+            "items": [
+                {
+                    "category": "Dezvoltare Software Personalizată",
+                    "title": "Software scalabil și adaptat nevoilor afacerii tale",
+                    "description": "Dezvoltăm soluții software personalizate care se potrivesc fluxurilor și obiectivelor tale. Fie că este un sistem ERP, un instrument de automatizare sau o aplicație de afaceri specializată, software-ul nostru este sigur, fiabil și scalabil. Asigurăm integrare fără probleme și suport continuu pentru succes pe termen lung.",
+                    "image": "/Services-Images/custom_software_development_markefy.jpg",
+                    "imageAlt": "Tablou de bord pentru dezvoltare software arătând analize de afaceri și automatizare"
+                },
+                {
+                    "category": "Design și Dezvoltare Website",
+                    "title": "Website-uri rapide, moderne și orientate spre conversie",
+                    "description": "Creăm website-uri atractive vizual și complet responsive care funcționează impecabil pe toate dispozitivele. De la site-uri corporate la platforme eCommerce, website-urile noastre sunt optimizate pentru performanță, SEO și experiența utilizatorului. Punem accent pe design și funcționalitate pentru ca site-ul tău să nu doar arate bine, dar și să aducă rezultate.",
+                    "image": "/Services-Images/web_design_development_markefy.jpg",
+                    "imageAlt": "Design modern de website responsive cu layout-uri mobile și desktop"
+                },
+                {
+                    "category": "Optimizare SEO",
+                    "title": "Crește clasamentele și atrage publicul potrivit",
+                    "description": "Strategiile noastre SEO ajută afacerea ta să domine rezultatele de căutare și să atragă clienți pregătiți să interacționeze. Combinăm cercetarea de cuvinte cheie, optimizarea tehnică, îmbunătățirea conținutului și link building-ul pentru a îmbunătăți clasamentele. Rezultatul este un flux constant de trafic țintit care se transformă în vânzări și lead-uri.",
+                    "image": "/Services-Images/seo_opitmzation_markefy.jpg",
+                    "imageAlt": "Tablou de bord SEO afișând performanța cuvintelor cheie și creșterea traficului"
+                },
+                {
+                    "category": "Campanii Publicitare & Marketing Digital",
+                    "title": "Reclame targetate care îți maximizează ROI-ul",
+                    "description": "Proiectăm și gestionăm campanii publicitare cu ROI ridicat pe Google, Facebook, Instagram și altele. Procesul nostru include design creativ de reclame, targetare precisă și optimizare continuă pentru a ne asigura că fiecare dolar din buget generează rezultate măsurabile.",
+                    "image": "/Services-Images/digital-ad-campaign_markefy.jpg",
+                    "imageAlt": "Tablou de bord campanii marketing digital cu performanța Google Ads și Facebook Ads"
+                }
+            ],
+            "cta": "Află mai multe"
+        },
+         "tangible": {
+      "badge": "De ce brandurile aleg Markefy",
+      "heading": {
+        "part1": "Rezultate",
+        "highlight": "Reale"
+      },
+      "subheading": "Ne concentrăm pe livrarea de rezultate reale cu strategii adaptate afacerii tale, nu doar cifre mari.",
+      "strengths": [
+        {
+          "title": "Soluții personalizate",
+          "description": "Fiecare proiect este conceput în jurul obiectivelor și publicului unic al afacerii tale."
+        },
+        {
+          "title": "Expertiză completă",
+          "description": "De la dezvoltare software la campanii plătite, gestionăm totul intern."
+        },
+        {
+          "title": "Proces transparent",
+          "description": "Comunicare clară, fără costuri ascunse și actualizări regulate de progres."
+        },
+        {
+          "title": "Suport continuu",
+          "description": "Nu livrăm doar proiecte — te ajutăm să crești pe termen lung."
+        }
+      ],
+      "footer": "Credem că fiecare afacere merită atenție personalizată și strategii care chiar funcționează pentru nevoile și obiectivele sale."
+    },
+     "process": {
+      "heading": "Hai să transformăm ideea ta într-o poveste de succes. Pas cu pas. Împreună.",
+      "steps": [
+        {
+          "title": "Discutăm despre ideea ta",
+          "description": "Împărtășește-ți viziunea, provocările și obiectivele — suntem gata să ascultăm și să înțelegem.",
+          "hasButton": true
+        },
+        {
+          "title": "Cercetare și planificare",
+          "description": "Analizăm piața, concurenții și cerințele tale pentru a crea un plan câștigător.",
+          "hasButton": false
+        },
+        {
+          "title": "Strategie și propunere",
+          "description": "Primești un plan clar cu termene, livrabile și o strategie adaptată nevoilor tale.",
+          "hasButton": false
+        },
+        {
+          "title": "Design și prototipare",
+          "description": "Transformăm ideile în designuri vizuale și prototipuri interactive pentru feedback-ul tău.",
+          "hasButton": false
+        },
+        {
+          "title": "Dezvoltare",
+          "description": "Echipa noastră construiește produsul tău cu cod curat, bune practici și arhitectură scalabilă.",
+          "hasButton": false
+        },
+        {
+          "title": "Testare și asigurarea calității",
+          "description": "Fiecare funcționalitate este testată pentru performanță, securitate și utilizabilitate înainte de lansare.",
+          "hasButton": false
+        },
+        {
+          "title": "Lansare și livrare",
+          "description": "Proiectul tău devine live! Ne asigurăm de o predare lină și o implementare completă.",
+          "hasButton": false
+        },
+        {
+          "title": "Suport și creștere continuă",
+          "description": "Oferim actualizări, îmbunătățiri și suport de marketing pentru a te ajuta să crești.",
+          "hasButton": false
+        }
+      ],
+      "cta": "ÎNCEPE ACEST PAS"
+    },
+     "techstack": {
+      "badge": "Tehnologii pe care le stăpânim",
+      "title_line1": "Avem grijă de",
+      "title_highlight": "Tech Stack-ul",
+      "title_line2": "tău",
+      "subtitle": "Cu o experiență dovedită în rezolvarea provocărilor de peste un deceniu, echipa noastră te poate ghida către cele mai bune soluții și practici tehnologice pentru afacerea ta."
+    },
+    "letstalk": {
+      "title": "Ai un proiect în minte? Hai să discutăm.",
+      "subtitle": "Adu-ne ideile tale și le vom transforma în realitate. Echipa noastră de experți este pregătită să colaboreze cu tine pentru a crea ceva cu adevărat uimitor.",
+      "form": {
+        "name": "Numele tău",
+        "email": "Emailul tău",
+        "message": "Spune-ne despre proiectul tău",
+        "submit": "Începe proiectul",
+        "sending": "Se trimite..."
+      },
+      "toast": {
+        "success": "Mesaj trimis cu succes! Te vom contacta în curând.",
+        "error_required": "Te rugăm să completezi toate câmpurile",
+        "error_email": "Te rugăm să introduci o adresă de email validă"
+      },
+      "contact": {
+        "email": "support@markefy.ai",
+        "address": "Str. Dunării Nr 146-148, Bragadiru, România"
+      }
+    }
+    },
+
+   
+
+  "servicesPage": {
+    "meta": {
+      "title": "Serviciile Noastre - Markefy | Ghidul Complet al Soluțiilor Digitale",
+      "description": "Ghidul complet al soluțiilor digitale cuprinzătoare Markefy.ai. Dezvoltare software personalizat, dezvoltare web, SEO, reclame plătite, branding și suport continuu - tot ce trebuie să știi."
+    },
+    "hero": {
+      "badge": "Ghidul Complet al Serviciilor",
+      "title": "Ghidul Complet pentru",
+      "titleHighlight": "Excelența Digitală",
+      "description": "Tot ce trebuie să știi despre soluțiile noastre digitale cuprinzătoare. De la dezvoltarea software personalizat la suportul continuu – aceasta este resursa ta completă pentru transformarea afacerii tale."
+    },
+    "stats": [
+      {
+        "number": "500+",
+        "label": "Proiecte Livrate",
+        "desc": "Proiecte finalizate cu succes în toate industriile"
+      },
+      {
+        "number": "98%",
+        "label": "Satisfacția Clienților",
+        "desc": "Clienți încântați de rezultatele și serviciile noastre"
+      },
+      {
+        "number": "200%",
+        "label": "Creștere Medie",
+        "desc": "Creșterea medie a indicatorilor cheie pentru clienții noștri"
+      },
+      {
+        "number": "24/7",
+        "label": "Suport Disponibil",
+        "desc": "Suport non-stop ori de câte ori ai nevoie de noi"
+      }
+    ],
+    "portfolio": {
+      "title": "Portofoliul Nostru Complet de Servicii",
+      "description": "Fiecare serviciu, fiecare detaliu, fiecare beneficiu explicat. Acesta este ghidul tău cuprinzător despre cum transformăm afacerile prin excelența digitală."
+    },
+    "services": [
+      {
+        "id": "software",
+        "title": "Dezvoltare Software Personalizat",
+        "subtitle": "Scalabil, Securizat și Adaptat Afacerii Tale",
+        "description": "În lumea rapidă de astăzi, afacerile au nevoie de software construit pentru nevoile lor unice, nu de soluții universale. Proiectăm și dezvoltăm aplicații software personalizate care eficientizează operațiunile, sporesc productivitatea și oferă valoare pe termen lung.",
+        "fullDescription": "Nu doar scriem cod - rezolvăm probleme de afaceri. Abordarea noastră de dezvoltare software personalizat începe cu înțelegerea provocărilor tale unice și transformarea lor în soluții puternice și scalabile. Fie că trebuie să automatizezi fluxuri de lucru complexe, să integrezi sisteme diferite sau să creezi produse digitale complet noi, echipa noastră are expertiza pentru a livra rezultate excepționale.",
+        "result": "Afacerea ta primește un sistem de înaltă performanță care crește odată cu tine, îmbunătățește eficiența și îți economisește bani pe termen lung.",
+        "offerings": [
+          {
+            "title": "Soluții Software Enterprise",
+            "desc": "Aplicații la scară largă proiectate pentru operațiuni enterprise"
+          },
+          {
+            "title": "Sisteme ERP și CRM",
+            "desc": "Platforme comprehensive de management al afacerii"
+          },
+          {
+            "title": "Instrumente de Automatizare a Fluxurilor",
+            "desc": "Eficientizează procesele și elimină sarcinile manuale"
+          },
+          {
+            "title": "Aplicații de Afaceri Bazate pe AI",
+            "desc": "Sisteme inteligente care învață și se adaptează"
+          },
+          {
+            "title": "Integrări API și Platforme Cloud",
+            "desc": "Conectivitate seamless și soluții native cloud"
+          }
+        ],
+        "whyBest": [
+          "Expertiză profundă în dezvoltare full-stack și arhitecturi scalabile",
+          "Metodologia de dezvoltare Agile pentru livrare mai rapidă și flexibilitate",
+          "Practici de codare cu securitatea pe primul loc pentru protejarea datelor valoroase",
+          "Mentenanță pe termen lung și parteneriate de suport dedicat"
+        ],
+        "technologies": ["React", "Node.js", "Python", "AWS", "Docker", "PostgreSQL"]
+      },
+      {
+        "id": "website",
+        "title": "Design și Dezvoltare Website",
+        "subtitle": "Frumos, Rapid și Construit pentru Conversie",
+        "description": "Website-ul tău este vitrina ta digitală, iar primele impresii contează. La Markefy, creăm website-uri uimitoare vizual, responsive pe mobil și focalizate pe conversie, care reflectă brandul tău și implică audiența ta.",
+        "fullDescription": "Creăm mai mult decât website-uri - construim experiențe digitale care captivează, implică și convertesc. Fiecare pixel este considerat cu atenție, fiecare interacțiune este gândită. Website-urile noastre nu doar arată frumos; performează excepțional, se încarcă extrem de rapid și sunt optimizate pentru motoarele de căutare din prima zi.",
+        "result": "Un website care nu doar arată uimitor, dar atrage și trafic, generează lead-uri și convertește vizitatorii în clienți.",
+        "offerings": [
+          {
+            "title": "Website-uri Corporative și de Afaceri",
+            "desc": "Website-uri profesionale care stabilesc credibilitatea"
+          },
+          {
+            "title": "Platforme eCommerce și Magazine Online",
+            "desc": "Soluții complete de vânzare online"
+          },
+          {
+            "title": "Landing Page-uri pentru Campanii de Marketing",
+            "desc": "Pagini cu conversie ridicată pentru campanii specifice"
+          },
+          {
+            "title": "Aplicații Web Progressive (PWA)",
+            "desc": "Experiențe similare aplicațiilor în browser"
+          },
+          {
+            "title": "Redesign Website-uri și Optimizare Performanță",
+            "desc": "Transformă site-urile existente pentru rezultate mai bune"
+          }
+        ],
+        "whyBest": [
+          "Design-uri UI/UX care echilibrează perfect frumusețea și utilizabilitatea",
+          "Website-uri care se încarcă în sub 2 secunde pentru clasificări SEO mai bune",
+          "Structură și optimizare gata pentru SEO din prima zi",
+          "Design-uri complet responsive care funcționează perfect pe toate dispozitivele"
+        ],
+        "technologies": ["React", "Next.js", "Tailwind CSS", "WordPress", "Shopify", "Webflow"]
+      },
+      {
+        "id": "seo",
+        "title": "Optimizare SEO",
+        "subtitle": "Clasează-te Mai Sus, Fii Găsit, Îți Crește Audiența",
+        "description": "Produsele și serviciile grozave merită vizibilitate. Strategiile noastre SEO bazate pe AI te ajută să urci în clasamentele căutărilor, să crești traficul organic și să atragi clienți cu intenții mari.",
+        "fullDescription": "SEO nu este doar despre clasamente - este despre conectarea afacerii tale cu oamenii care caută activ ceea ce oferi. Abordarea noastră SEO cuprinzătoare combină excelența tehnică, strategia de conținut și perspectivele bazate pe date pentru a livra o creștere organică sustenabilă care se compune în timp.",
+        "result": "Un flux constant de lead-uri calificate și clienți fără să plătești pentru fiecare clic.",
+        "offerings": [
+          {
+            "title": "Cercetare Cuvinte Cheie și Strategie",
+            "desc": "Identifică oportunitățile de valoare ridicată în piața ta"
+          },
+          {
+            "title": "Optimizare SEO On-Page",
+            "desc": "Optimizează fiecare element pentru vizibilitate maximă"
+          },
+          {
+            "title": "Audituri SEO Tehnice și Remedieri",
+            "desc": "Rezolvă problemele tehnice care afectează clasamentele"
+          },
+          {
+            "title": "Link Building și Creșterea Autorității",
+            "desc": "Construiește autoritatea domeniului prin backlink-uri de calitate"
+          },
+          {
+            "title": "SEO Local pentru Acoperire Țintită",
+            "desc": "Domină rezultatele căutărilor locale din zona ta"
+          }
+        ],
+        "whyBest": [
+          "Abordare bazată pe date alimentată de perspective AI de ultimă generație",
+          "Monitorizare și optimizare continuă pentru creștere susținută",
+          "Istoric dovedit - clienții văd creșteri de trafic de 200%+",
+          "Practici SEO white-hat care asigură clasamente stabile pe termen lung"
+        ],
+        "technologies": ["SEMrush", "Ahrefs", "Google Analytics", "Search Console", "Screaming Frog", "Hotjar"]
+      },
+      {
+        "id": "ads",
+        "title": "Reclame Plătite și Campanii PPC",
+        "subtitle": "Publicitate Inteligentă Care Livrează ROI",
+        "description": "Facem bugetul tău de publicitate să lucreze mai mult prin țintirea audiencei potrivite cu mesajul potrivit la momentul potrivit. Campaniile noastre PPC și plătite sunt bazate pe date și orientate spre rezultate.",
+        "fullDescription": "Fiecare dolar pe care îl cheltui pe publicitate ar trebui să returneze mai mult de un dolar în valoare. Expertiza noastră în publicitate plătită se întinde pe toate platformele majore, utilizând țintire avansată, creativități convingătoare și optimizare continuă pentru a maximiza returnul cheltuielilor de publicitate în timp ce minimizez costul pe achiziție.",
+        "result": "Mai multe lead-uri, mai multe vânzări și ROI semnificativ mai bun din cheltuielile tale de publicitate.",
+        "offerings": [
+          {
+            "title": "Reclame Google Search și Display",
+            "desc": "Capturează căutările cu intenții mari și construiește conștientizarea"
+          },
+          {
+            "title": "Reclame Facebook și Instagram",
+            "desc": "Implică audiența ta pe platformele sociale"
+          },
+          {
+            "title": "Campanii Publicitare LinkedIn B2B",
+            "desc": "Țintește factorii de decizie și profesioniștii"
+          },
+          {
+            "title": "Publicitate Video YouTube",
+            "desc": "Folosește puterea marketingului video"
+          },
+          {
+            "title": "Campanii de Retargeting",
+            "desc": "Re-implică vizitatorii care nu au convertit inițial"
+          }
+        ],
+        "whyBest": [
+          "Creativități publicitare care se remarc în feed-urile aglomerate și convertesc vizitatorii",
+          "Țintirea avansată a audienței pentru relevanță și eficiență maximă",
+          "Testare A/B continuă pentru a reduce continuu costurile și a spori conversiile",
+          "Raportare transparentă astfel încât să știi exact unde se duc fiecare dolar"
+        ],
+        "technologies": ["Google Ads", "Facebook Ads Manager", "LinkedIn Campaign Manager", "Google Analytics", "Unbounce", "Hotjar"]
+      },
+      {
+        "id": "branding",
+        "title": "Branding și Design Grafic",
+        "subtitle": "Identitate Vizuală Care Îți Spune Povestea",
+        "description": "Brandul tău este mai mult decât doar un logo - este conexiunea emoțională pe care o creezi cu audiența ta. Proiectăm identități de brand care sunt consistente, memorabile și aliniate cu viziunea ta.",
+        "fullDescription": "Brandingul grozav nu este doar despre a arăta bine - este despre a se simți corect. Creăm identități de brand cuprinzătoare care capturează esența afacerii tale și rezonează profund cu audiența ta țintă. Fiecare culoare, font și element de design este ales cu grijă pentru a susține obiectivele afacerii tale și a crea conexiuni emoționale durabile.",
+        "result": "O identitate de brand care face afacerea ta instantaneu recognoscibilă, de încredere și preferată de clienții tăi ideali.",
+        "offerings": [
+          {
+            "title": "Design Logo și Ghiduri de Brand",
+            "desc": "Sisteme complete de identitate vizuală și standarde de utilizare"
+          },
+          {
+            "title": "Grafice pentru Social Media",
+            "desc": "Vizuale consistente și captivante pentru toate platformele"
+          },
+          {
+            "title": "Cărți de Vizită, Flyere, Broșuri",
+            "desc": "Materiale de print profesionale care fac impact"
+          },
+          {
+            "title": "Ambalaje Produse și Materiale Promoționale",
+            "desc": "Ambalaje care vând și articole promoționale care convertesc"
+          },
+          {
+            "title": "Design Prezentări și Pitch Deck-uri",
+            "desc": "Prezentări convingătoare care câștigă contracte"
+          }
+        ],
+        "whyBest": [
+          "Design-uri care echilibrează perfect creativitatea cu gândirea strategică de brand",
+          "Consistență absolută pe toate platformele și punctele de contact",
+          "Înțelegere profundă a psihologiei culorilor și impactului vizual al brandului",
+          "Proces colaborativ de design cu revizuiri nelimitate până la perfecțiune"
+        ],
+        "technologies": ["Adobe Creative Suite", "Figma", "Sketch", "Canva Pro", "After Effects", "Principle"]
+      },
+      {
+        "id": "support",
+        "title": "Suport și Mentenanță Continuă",
+        "subtitle": "Mereu Actualizat, Securizat și Înaintea Timpului",
+        "description": "Nu dispărem după lansare - rămânem cu tine. Planurile noastre de suport și mentenanță asigură că sistemele, website-urile și campaniile tale continuă să performeze la cel mai înalt nivel.",
+        "fullDescription": "Succesul tău digital nu se termină la lansare - evoluează și crește. Serviciile noastre cuprinzătoare de suport și mentenanță asigură că activele tale digitale rămân securizate, rapide și optimizate. Suntem partenerul tău tehnologic pe termen lung, monitorizând proactiv, actualizând și îmbunătățind sistemele tale astfel încât tu să te poți concentra pe creșterea afacerii tale.",
+        "result": "Liniște completă știind că activele tale digitale sunt în mâini experte și performează optim.",
+        "offerings": [
+          {
+            "title": "Actualizări Regulate și Patch-uri de Securitate",
+            "desc": "Păstrează sistemele tale securizate și actualizate"
+          },
+          {
+            "title": "Monitorizare și Optimizare Performanță",
+            "desc": "Asigură performanță de vârf în permanență"
+          },
+          {
+            "title": "Remedieri Bug-uri și Rezolvare Probleme",
+            "desc": "Rezolvarea rapidă a oricăror probleme tehnice"
+          },
+          {
+            "title": "Îmbunătățiri Funcții și Upgrade-uri",
+            "desc": "Îmbunătățire continuă și capacități noi"
+          },
+          {
+            "title": "Rapoarte Lunare de Analiză și Performanță",
+            "desc": "Perspective detaliate asupra performanței tale digitale"
+          }
+        ],
+        "whyBest": [
+          "Monitorizare proactivă pentru a depista și rezolva problemele înainte să te afecteze",
+          "Planuri de suport flexibile proiectate să se potrivească oricărui buget și cerință",
+          "Disponibilitate 24/7 pentru suport urgent cu timpuri de răspuns garantate",
+          "Manager de cont dedicat care îți cunoaște afacerea și obiectivele în detaliu"
+        ],
+        "technologies": ["Instrumente de Monitorizare", "Scannere de Securitate", "Platforme de Analiză", "Sisteme de Backup", "Rețele CDN", "Sisteme de Suport"]
+      }
+    ],
+    "benefits": {
+      "title": "Avantajul Markefy",
+      "description": "Ce ne diferențiază și ne face alegerea potrivită pentru transformarea ta digitală",
+      "items": [
+        {
+          "title": "Expertiză Full-Stack",
+          "description": "Soluții end-to-end de la strategie la implementare și optimizare continuă."
+        },
+        {
+          "title": "Abordare Personalizată",
+          "description": "Strategii personalizate proiectate special pentru obiectivele și provocările unice ale afacerii tale."
+        },
+        {
+          "title": "Rezultate Dovedite",
+          "description": "Istoric consistent de livrare a unei creșteri măsurabile și unui ROI excepțional."
+        },
+        {
+          "title": "Parteneriat pe Termen Lung",
+          "description": "Suport și optimizare continuă pentru a asigura succesul și creșterea ta continuă."
+        }
+      ]
+    },
+    "process": {
+      "title": "Procesul Nostru Dovedit în 5 Pași",
+      "description": "O abordare sistematică, testată în timp, care asigură succesul la fiecare etapă a proiectului tău. Iată exact cum lucrăm cu tine pentru a obține rezultate excepționale.",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Descoperire și Analiză",
+          "description": "Ne adâncim în afacerea, obiectivele, provocările și peisajul competitiv al tău",
+          "details": "Analiză cuprinzătoare a afacerii, cercetare competitori, identificarea audienței țintă și stabilirea obiectivelor."
+        },
+        {
+          "step": "02",
+          "title": "Strategie și Planificare",
+          "description": "Creăm o foaie de parcurs detaliată și o strategie adaptată special pentru succesul tău",
+          "details": "Planificare strategică, roadmapping proiect, alocare resurse și dezvoltarea cronogramelor."
+        },
+        {
+          "step": "03",
+          "title": "Design și Dezvoltare",
+          "description": "Construim soluția ta cu precizie, atenție la detalii și cele mai bune practici",
+          "details": "Design creativ, dezvoltare tehnică, asigurarea calității și îmbunătățiri iterative."
+        },
+        {
+          "step": "04",
+          "title": "Testare și Lansare",
+          "description": "Testare riguroasă și implementare lină pentru a asigura performanță impecabilă",
+          "details": "Testare cuprinzătoare, optimizare performanță, implementare și coordonarea lansării."
+        },
+        {
+          "step": "05",
+          "title": "Creștere și Optimizare",
+          "description": "Monitorizare continuă, analiză și optimizare pentru succesul pe termen lung",
+          "details": "Monitorizare performanță, analiza datelor, optimizare continuă și strategii de scalare."
+        }
+      ]
+    },
+    "sections": {
+      "whatWeOffer": "Ce Oferim",
+      "whyBest": "De Ce Suntem Cei Mai Buni",
+      "technologies": "Tehnologiile Pe Care Le Folosim",
+      "result": "Rezultatul"
+    },
+    "toast": {
+      "notImplemented": "🚧 Această funcție nu este încă implementată—dar nu-ți face griji! O poți cere în următoarea ta solicitare! 🚀"
+    }
+  },
+  "aboutPage": {
+    "meta": {
+      "title": "Despre Noi - Markefy | Inovație Digitală și Soluții de Creștere",
+      "description": "Află despre Markefy.ai - combinăm design-ul, tehnologia și inovația pentru a livra soluții digitale transformatoare care ajută afacerile să se dezvolte și să concureze."
+    },
+    "hero": {
+      "title": "Inovând Experiențe Digitale,",
+      "titleHighlight": "Conducând Creșterea Afacerii",
+      "description": "La Markefy, credem că tehnologia ar trebui să fie mai mult decât funcțională — ar trebui să fie transformatoare. Suntem o echipă de gânditori creativi, dezvoltatori pricepuți și strategiști de marketing dedicați construirii de soluții digitale care ajută afacerile să se dezvolte, să concureze și să câștige.",
+      "cta": "Să Construim Ceva Extraordinar"
+    },
+    "stats": [
+      {
+        "number": "500+",
+        "label": "Proiecte Finalizate"
+      },
+      {
+        "number": "98%",
+        "label": "Satisfacția Clienților"
+      },
+      {
+        "number": "24/7",
+        "label": "Suport Disponibil"
+      },
+      {
+        "number": "5+",
+        "label": "Ani de Experiență"
+      }
+    ],
+    "story": {
+      "title": "Povestea Noastră",
+      "paragraph1": "Markefy a început cu o idee simplă — să facem serviciile digitale de înaltă calitate accesibile afacerilor de toate dimensiunile. Ceea ce a început ca un mic proiect de pasiune a crescut rapid într-o agenție completă în care au încredere clienții din întreaga lume.",
+      "paragraph2": "Astăzi, lucrăm în diverse industrii, ajutând startup-urile, IMM-urile și întreprinderile să-și aducă viziunile la viață. De la website-uri personalizate și software enterprise la strategii SEO și campanii de marketing bazate pe date, combinăm design-ul, tehnologia și inovația pentru a livra rezultate care contează."
+    },
+    "services": {
+      "title": "Ce Facem",
+      "description": "Oferim o gamă cuprinzătoare de servicii pentru a satisface nevoile afacerilor moderne",
+      "items": [
+        {
+          "title": "Design și Dezvoltare Web",
+          "description": "Website-uri uimitoare, rapide și focalizate pe utilizator care convertesc vizitatorii în clienți."
+        },
+        {
+          "title": "Dezvoltare Software și Aplicații",
+          "description": "Aplicații scalabile și sigure adaptate nevoilor specifice ale afacerii tale."
+        },
+        {
+          "title": "Optimizare SEO Alimentată de AI",
+          "description": "Clasează-te mai sus, fii observat și dezvoltă traficul organic cu strategii de ultimă generație."
+        },
+        {
+          "title": "Reclame Plătite și Campanii PPC",
+          "description": "Strategii de publicitate țintite concepute pentru ROI maxim și creștere."
+        },
+        {
+          "title": "Marketing de Conținut și Brand",
+          "description": "Povestiri convingătoare care se conectează cu audiența ta și construiesc încrederea."
+        }
+      ]
+    },
+    "approach": {
+      "title": "Abordarea Noastră",
+      "description": "Fiecare proiect începe cu înțelegerea ta — viziunea, provocările și obiectivele tale. Combinăm cercetarea, strategia și creativitatea pentru a livra soluții care nu doar arată grozav, ci și conduc la o creștere măsurabilă.",
+      "highlightText1": "înțelegerea ta",
+      "highlightText2": "conduc la o creștere măsurabilă"
+    },
+    "whyChoose": {
+      "title": "De Ce să Alegi Markefy.ai?",
+      "items": [
+        {
+          "title": "Expertiză Full-Stack",
+          "description": "De la cod la campanii, gestionăm fiecare aspect al prezenței tale digitale."
+        },
+        {
+          "title": "Soluții Personalizate",
+          "description": "Strategii construite la comandă pentru a se potrivi perfect afacerii și audienței tale."
+        },
+        {
+          "title": "Rezultate Dovedite",
+          "description": "Impact măsurabil asupra traficului, vânzărilor și angajamentului care conduce la creștere reală."
+        },
+        {
+          "title": "Suport Continuu",
+          "description": "Parteneriate pe termen lung pentru a te menține înaintea competiției."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Să Construim Ceva Extraordinar",
+      "description": "Fie că lansezi un brand nou, îți îmbunătățești website-ul sau îți scalezi marketingul digital, Markefy este aici să facă să se întâmple. Creșterea ta este misiunea noastră.",
+      "button": "Începe-ți Călătoria Astăzi"
+    }
+  },
+  "technologiesPage": {
+    "meta": {
+      "title": "Stiva Noastră Tehnologică - Markefy | Instrumente de Dezvoltare Avansate și Expertiză",
+      "description": "Explorează expertiza noastră tehnologică cuprinzătoare. De la React și Node.js la AWS și Kubernetes - descoperă instrumentele avansate pe care le folosim pentru a construi soluții digitale excepționale."
+    },
+    "hero": {
+      "badge": "Expertiză Tehnologică",
+      "title": "Stivă Tehnologică",
+      "titleHighlight": "de Ultimă Generație",
+      "description": "Folosim cele mai avansate, robuste și scalabile tehnologii pentru a construi soluții care nu doar satisfac nevoile de astăzi – sunt pregătite pentru viitor și construite să evolueze odată cu afacerea ta."
+    },
+    "stats": [
+      {
+        "number": "50+",
+        "label": "Tehnologii Stăpânite"
+      },
+      {
+        "number": "500+",
+        "label": "Proiecte Livrate"
+      },
+      {
+        "number": "99.9%",
+        "label": "Uptime Realizat"
+      },
+      {
+        "number": "24/7",
+        "label": "Suport și Monitorizare"
+      }
+    ],
+    "arsenal": {
+      "title": "Arsenalul Nostru Tehnologic",
+      "description": "Expertiză profundă în întregul spectru tehnologic - de la framework-uri frontend la infrastructură cloud"
+    },
+    "categories": {
+      "frontend": {
+        "title": "Dezvoltare Frontend",
+        "description": "Construirea interfețelor frumoase, responsive și interactive",
+        "technologies": [
+          {
+            "name": "React",
+            "description": "Bibliotecă bazată pe componente pentru construirea interfețelor utilizator",
+            "level": "Expert",
+            "years": "5+",
+            "projects": "200+",
+            "features": ["Arhitectură Componentă", "Hook-uri și Context", "Optimizare Performanță", "Managementul Stării"]
+          },
+          {
+            "name": "Next.js",
+            "description": "Framework React full-stack cu SSR și SSG",
+            "level": "Expert",
+            "years": "3+",
+            "projects": "150+",
+            "features": ["Server-Side Rendering", "Generare Statică", "Rute API", "Optimizare Imagini"]
+          },
+          {
+            "name": "Vue.js",
+            "description": "Framework JavaScript progresiv pentru construirea UI-urilor",
+            "level": "Avansat",
+            "years": "4+",
+            "projects": "80+",
+            "features": ["Composition API", "Date Reactive", "Componente Single File", "Vue Router"]
+          },
+          {
+            "name": "TypeScript",
+            "description": "Limbaj de programare puternic tipizat construit pe JavaScript",
+            "level": "Expert",
+            "years": "4+",
+            "projects": "180+",
+            "features": ["Siguranță Tipurilor", "IntelliSense", "Refactorizare", "Prevenirea Erorilor"]
+          },
+          {
+            "name": "Tailwind CSS",
+            "description": "Framework CSS utility-first pentru dezvoltarea rapidă a UI-ului",
+            "level": "Expert",
+            "years": "3+",
+            "projects": "250+",
+            "features": ["Clase Utility", "Design Responsive", "Teme Personalizate", "Extragere Componente"]
+          },
+          {
+            "name": "Framer Motion",
+            "description": "Bibliotecă de animație gata pentru producție pentru React",
+            "level": "Avansat",
+            "years": "2+",
+            "projects": "100+",
+            "features": ["Animații Fluide", "Recunoașterea Gesturilor", "Animații Layout", "Animație SVG"]
+          }
+        ]
+      },
+      "backend": {
+        "title": "Dezvoltare Backend",
+        "description": "Soluții scalabile server-side și API-uri robuste",
+        "technologies": [
+          {
+            "name": "Node.js",
+            "description": "Runtime JavaScript pentru aplicații de rețea scalabile",
+            "level": "Expert",
+            "years": "5+",
+            "projects": "180+",
+            "features": ["Express.js", "Aplicații Real-time", "Microservicii", "API-uri RESTful"]
+          },
+          {
+            "name": "Python",
+            "description": "Limbaj de programare versatil pentru web și data science",
+            "level": "Expert",
+            "years": "6+",
+            "projects": "200+",
+            "features": ["Framework Django", "Flask", "FastAPI", "Procesarea Datelor"]
+          },
+          {
+            "name": "Java",
+            "description": "Limbaj de programare de nivel enterprise",
+            "level": "Avansat",
+            "years": "4+",
+            "projects": "90+",
+            "features": ["Spring Boot", "Microservicii", "JPA/Hibernate", "Maven/Gradle"]
+          },
+          {
+            "name": ".NET",
+            "description": "Platforma Microsoft pentru construirea aplicațiilor moderne",
+            "level": "Avansat",
+            "years": "3+",
+            "projects": "70+",
+            "features": ["ASP.NET Core", "Entity Framework", "Integrare Azure", "Limbajul C#"]
+          },
+          {
+            "name": "PHP",
+            "description": "Limbaj de scripting server-side pentru dezvoltarea web",
+            "level": "Avansat",
+            "years": "5+",
+            "projects": "120+",
+            "features": ["Framework Laravel", "Symfony", "WordPress", "Composer"]
+          },
+          {
+            "name": "Go",
+            "description": "Limbaj rapid, tipizat static pentru aplicații moderne",
+            "level": "Intermediar",
+            "years": "2+",
+            "projects": "40+",
+            "features": ["Concurență", "Microservicii", "Performanță Înaltă", "Suport Docker"]
+          }
+        ]
+      },
+      "mobile": {
+        "title": "Dezvoltare Mobile",
+        "description": "Aplicații mobile native și cross-platform",
+        "technologies": [
+          {
+            "name": "React Native",
+            "description": "Aplicații mobile cross-platform folosind React",
+            "level": "Expert",
+            "years": "4+",
+            "projects": "80+",
+            "features": ["Cross-Platform", "Performanță Nativă", "Hot Reloading", "Integrare Terțe"]
+          },
+          {
+            "name": "Flutter",
+            "description": "Toolkit-ul UI de la Google pentru construirea aplicațiilor compilate nativ",
+            "level": "Avansat",
+            "years": "3+",
+            "projects": "60+",
+            "features": ["Cod Unic", "Bazat pe Widget-uri", "Hot Reload", "Material Design"]
+          },
+          {
+            "name": "Swift",
+            "description": "Limbajul de programare Apple pentru dezvoltarea iOS",
+            "level": "Avansat",
+            "years": "4+",
+            "projects": "50+",
+            "features": ["iOS Nativ", "SwiftUI", "Core Data", "Optimizare App Store"]
+          },
+          {
+            "name": "Kotlin",
+            "description": "Limbaj de programare modern pentru dezvoltarea Android",
+            "level": "Avansat",
+            "years": "3+",
+            "projects": "45+",
+            "features": ["Android Nativ", "Jetpack Compose", "Coroutines", "Google Play Store"]
+          }
+        ]
+      },
+      "database": {
+        "title": "Baze de Date și Stocare",
+        "description": "Soluții robuste de stocare și gestionare a datelor",
+        "technologies": [
+          {
+            "name": "PostgreSQL",
+            "description": "Bază de date relațională avansată open-source",
+            "level": "Expert",
+            "years": "5+",
+            "projects": "150+",
+            "features": ["Conformitate ACID", "Suport JSON", "Căutare Full-text", "Scalabilitate"]
+          },
+          {
+            "name": "MongoDB",
+            "description": "Bază de date NoSQL orientată pe documente",
+            "level": "Expert",
+            "years": "4+",
+            "projects": "120+",
+            "features": ["Stocare Documente", "Scalare Orizontală", "Pipeline Agregare", "Atlas Cloud"]
+          },
+          {
+            "name": "MySQL",
+            "description": "Bază de date relațională populară open-source",
+            "level": "Expert",
+            "years": "6+",
+            "projects": "200+",
+            "features": ["Performanță Înaltă", "Replicare", "Partiționare", "Motor InnoDB"]
+          },
+          {
+            "name": "Redis",
+            "description": "Stocare structuri de date în memorie pentru cache",
+            "level": "Avansat",
+            "years": "3+",
+            "projects": "100+",
+            "features": ["Cache", "Stocare Sesiune", "Analiză Real-time", "Mesagerie Pub/Sub"]
+          },
+          {
+            "name": "Firebase",
+            "description": "Platforma Google pentru construirea aplicațiilor mobile și web",
+            "level": "Avansat",
+            "years": "3+",
+            "projects": "80+",
+            "features": ["Bază Date Real-time", "Autentificare", "Cloud Functions", "Hosting"]
+          }
+        ]
+      },
+      "devops": {
+        "title": "DevOps și Cloud",
+        "description": "Implementare modernă, scalare și gestionarea infrastructurii",
+        "technologies": [
+          {
+            "name": "AWS",
+            "description": "Platforma cuprinzătoare de cloud computing Amazon",
+            "level": "Expert",
+            "years": "5+",
+            "projects": "180+",
+            "features": ["EC2", "S3", "Lambda", "RDS", "CloudFront", "EKS"]
+          },
+          {
+            "name": "Docker",
+            "description": "Platformă de containerizare pentru implementarea aplicațiilor",
+            "level": "Expert",
+            "years": "4+",
+            "projects": "200+",
+            "features": ["Containerizare", "Build-uri Multi-etapă", "Docker Compose", "Optimizare Imagini"]
+          },
+          {
+            "name": "Kubernetes",
+            "description": "Platformă de orchestrare containere",
+            "level": "Avansat",
+            "years": "3+",
+            "projects": "80+",
+            "features": ["Orchestrare Containere", "Auto-scalare", "Descoperire Servicii", "Actualizări Rolling"]
+          },
+          {
+            "name": "Google Cloud",
+            "description": "Serviciile de cloud computing Google",
+            "level": "Avansat",
+            "years": "3+",
+            "projects": "90+",
+            "features": ["Compute Engine", "Cloud Storage", "BigQuery", "Cloud Functions"]
+          },
+          {
+            "name": "Terraform",
+            "description": "Instrument Infrastructure as Code (IaC)",
+            "level": "Avansat",
+            "years": "2+",
+            "projects": "60+",
+            "features": ["Infrastructure ca Cod", "Multi-cloud", "Managementul Stării", "Grafic Resurse"]
+          },
+          {
+            "name": "Jenkins",
+            "description": "Server de automatizare open-source pentru CI/CD",
+            "level": "Avansat",
+            "years": "4+",
+            "projects": "120+",
+            "features": ["Pipeline-uri CI/CD", "Ecosistem Plugin", "Build-uri Distribuite", "Integrare"]
+          }
+        ]
+      }
+    },
+    "principles": {
+      "title": "Principiile Noastre de Dezvoltare",
+      "description": "Principiile fundamentale care ghidează fiecare decizie tehnică pe care o luăm",
+      "items": [
+        {
+          "title": "Performanța pe Primul Loc",
+          "description": "Optimizăm fiecare linie de cod pentru viteză, eficiență și scalabilitate."
+        },
+        {
+          "title": "Securitate prin Design",
+          "description": "Securitatea nu este o gândire ulterioară - este integrată în tot ce creăm."
+        },
+        {
+          "title": "Arhitectură Scalabilă",
+          "description": "Soluțiile noastre cresc odată cu afacerea ta, gestionând încărcătura crescută fără probleme."
+        },
+        {
+          "title": "Design Centrat pe Utilizator",
+          "description": "Tehnologia ar trebui să îmbunătățească experiența utilizatorului, nu să o complice."
+        }
+      ]
+    },
+    "levels": {
+      "expert": "Expert",
+      "advanced": "Avansat",
+      "intermediate": "Intermediar"
+    },
+    "labels": {
+      "experience": "Experiență",
+      "projects": "Proiecte",
+      "keyCapabilities": "Capabilități Cheie:"
+    },
+    "toast": {
+      "notImplemented": "🚧 Această funcție nu este încă implementată—dar nu-ți face griji! O poți cere în următoarea ta solicitare! 🚀"
+    }
+  },
+   "caseStudyDetail": {
+    "meta": {
+      "titleSuffix": "- Studiu de Caz | Markefy"
+    },
+    "notFound": {
+      "title": "Studiu de Caz Nu a Fost Găsit",
+      "backButton": "Înapoi la Rezultate"
+    },
+    "sections": {
+      "challenge": "Provocarea",
+      "solution": "Soluția Noastră",
+      "keyFeatures": "Caracteristici Cheie",
+      "techStack": "Stiva Tehnologică",
+      "projectGallery": "Galeria Proiectului",
+      "resultsImpact": "Rezultate și Impact"
+    },
+    "labels": {
+      "duration": "Durată",
+      "teamSize": "Mărimea Echipei",
+      "timeline": "Cronologie"
+    },
+    "cta": {
+      "title": "Gata să Începi Povestea Ta de Succes?",
+      "description": "Să discutăm cum te putem ajuta să obții rezultate similare pentru afacerea ta.",
+      "button": "Începe Proiectul"
+    },
+    "caseStudies": {
+      "fst-trading": {
+        "client": "FST Trading",
+        "title": "Platformă Multilingvă de Recrutare și Potrivire Locuri de Muncă Livrată în 4 Zile.",
+        "description": "Am dezvoltat un portal de joburi rapid și complet funcțional care conectează persoanele în căutarea unui job cu afacerile, complet cu panou admin și suport bilingv în olandeză și engleză.",
+        "longDescription": "Am construit platforma de recrutare FST Trading pentru a face legătura între persoanele în căutarea unui loc de muncă și afacerile care au nevoie de talente. Sistemul are fluxuri de formulare separate pentru angajatori și candidați, gestionarea postărilor de joburi și aplicațiilor, și un panou admin robust pentru control complet. Website-ul suportă atât olandeza, cât și engleza, adresându-se unei audiențe mai largi în Olanda și nu numai. Livrată în doar 4 zile, platforma este complet operațională și ușor de folosit.",
+        "duration": "4 zile",
+        "teamSize": "3 persoane",
+        "timeline": "T2 2025",
+        "challenge": "FST Trading avea nevoie de o platformă de recrutare bilingvă gata în mai puțin de o săptămână, cu fluxuri separate pentru angajatori și candidați, un dashboard admin și control complet backend asupra postărilor de joburi și aplicațiilor.",
+        "solution": "Am proiectat și dezvoltat o aplicație web responsive cu React, Node.js, Express și PostgreSQL. Include un panou admin puternic pentru a gestiona postările de joburi, cererile angajatorilor și aplicațiile pentru joburi, cu suport multilingv și UI ușor de folosit pentru desktop și mobil.",
+        "features": [
+          {
+            "title": "Gestionarea Joburilor",
+            "description": "Postează, editează și gestionează listele de joburi direct din dashboard-ul admin."
+          },
+          {
+            "title": "Portaluri Angajator și Candidat",
+            "description": "Pagini de formulare separate pentru angajatori și persoane în căutarea unui job pentru experiențe personalizate."
+          },
+          {
+            "title": "Gestionarea Aplicațiilor",
+            "description": "Urmărește și gestionează aplicațiile în timp real cu opțiuni de filtrare și export."
+          },
+          {
+            "title": "Responsive și Accesibil",
+            "description": "Complet optimizat pentru dispozitive desktop, tabletă și mobile."
+          },
+          {
+            "title": "Suport Multilingv",
+            "description": "Disponibil în olandeză și engleză pentru a deservi o audiență diversă."
+          },
+          {
+            "title": "Panou de Control Admin",
+            "description": "Panou admin centralizat pentru a gestiona tot conținutul site-ului și activitatea utilizatorilor."
+          }
+        ],
+        "projectImages": [
+          {
+            "title": "Liste de Joburi",
+            "description": "Lista joburilor disponibile cu opțiuni de căutare și filtrare."
+          },
+          {
+            "title": "Formularul Angajatorului",
+            "description": "Formular dedicat pentru afaceri să trimită cereri de personal."
+          },
+          {
+            "title": "Formularul Angajatului",
+            "description": "Formular dedicat pentru persoane să se înscrie la joburi"
+          },
+          {
+            "title": "Dashboard Admin",
+            "description": "Control complet asupra postărilor de joburi, aplicațiilor și activității utilizatorilor."
+          },
+          {
+            "title": "Dashboard Admin Joburi",
+            "description": "Admin-ul poate gestiona joburile și aplicațiile din această pagină."
+          }
+        ],
+        "results": [
+          {
+            "metric": "4 Zile",
+            "title": "Livrare Rapidă",
+            "description": "Platforma bilingvă completă livrată în timp record."
+          },
+          {
+            "metric": "100%",
+            "title": "Control Admin",
+            "description": "Gestionarea completă a conținutului și aplicațiilor dintr-un singur loc."
+          },
+          {
+            "metric": "2 Limbi",
+            "title": "Bilingv",
+            "description": "Suportă utilizatorii atât în olandeză, cât și în engleză."
+          }
+        ]
+      },
+      "treasury-management": {
+        "client": "FinEdge Solutions",
+        "title": "Sistem End-to-End de Gestionare Trezorerie cu Aprobare Ierarhică și Automatizare în Timp Real.",
+        "description": "Am livrat o platformă securizată de management financiar de nivel enterprise care automatizează salariile, urmărirea facturilor și aprobările interne cu dashboard-uri în timp real și acces bazat pe roluri.",
+        "longDescription": "Am dezvoltat o soluție puternică de management trezorerie pentru FinEdge Solutions, proiectată să centralizeze toate operațiunile financiare din organizație. Sistemul eficientizează sarcini precum procesarea salariilor, aprobările facturilor, urmărirea cheltuielilor în timp real și delegarea sarcinilor—toate într-o interfață securizată și ușor de folosit. Cu un sistem de aprobare ierarhic integrat, fiecare tranzacție și decizie financiară trece prin lanțul de comandă potrivit. Platforma este scalabilă, pregătită multilingv și adaptată pentru echipele de finanțe și HR. Construită pe stiva robustă MERN, oferă performanță înaltă și securitate pentru utilizare de nivel enterprise.",
+        "duration": "2 săptămâni",
+        "teamSize": "2 persoane",
+        "timeline": "T1 2025",
+        "challenge": "FinEdge Solutions avea nevoie de o platformă scalabilă pentru a gestiona eficient operațiunile de trezorerie. Se confruntau cu întârzieri în aprobări, urmărirea dispersată a cheltuielilor și procesarea manuală a salariilor—ducând la ineficiențe operaționale și riscuri de pierdere a datelor.",
+        "solution": "Am proiectat un sistem centralizat de management trezorerie folosind stiva MERN. Platforma reunește dashboard-uri în timp real, calculuri automate de salarii, aprobări facturi și delegarea sarcinilor. Cu permisiuni granulare ale utilizatorilor și control ierarhic al rolurilor, fiecare acțiune este urmărită, autorizată și înregistrată. Am implementat și alerte, jurnale de audit și rapoarte gata pentru export pentru transparență financiară.",
+        "features": [
+          {
+            "title": "Dashboard Financiar în Timp Real",
+            "description": "Vizualizare live a fluxului de numerar, aprobărilor în așteptare și distribuției cheltuielilor."
+          },
+          {
+            "title": "Motor Automat de Salarii",
+            "description": "Auto-generează salariile pe baza prezenței, rolului, avansurilor și indemnizațiilor."
+          },
+          {
+            "title": "Trimiterea și Aprobarea Facturilor",
+            "description": "Trimite facturi, încarcă chitanțe și obține aprobări prin workflow-uri bazate pe roluri."
+          },
+          {
+            "title": "Aprobări Ierarhice Bazate pe Roluri",
+            "description": "Sistem de aprobare multi-nivel bazat pe rolurile utilizatorilor și departamente."
+          },
+          {
+            "title": "Sistem de Delegare Sarcini",
+            "description": "Atribuie și urmărește sarcini financiare și operaționale pe departamente."
+          },
+          {
+            "title": "Securitate și Jurnale de Audit",
+            "description": "Toate acțiunile sunt înregistrate și urmărite pentru responsabilitate și auditare."
+          }
+        ],
+        "projectImages": [
+          {
+            "title": "Dashboard Live",
+            "description": "Urmărește toate operațiunile financiare și KPI-urile într-un singur loc."
+          },
+          {
+            "title": "Gestionarea Sarcinilor",
+            "description": "Atribuie și monitorizează sarcinile legate de trezorerie în echipe."
+          }
+        ],
+        "results": [
+          {
+            "metric": "100%",
+            "title": "Transformare Digitală",
+            "description": "A înlocuit foile de calcul și aprobările manuale cu un sistem web modern."
+          },
+          {
+            "metric": "Timp Real",
+            "title": "Perspective Instantanee",
+            "description": "Nu mai e nevoie să aștepți rezumate lunare—date live dintr-o privire."
+          },
+          {
+            "metric": "5+",
+            "title": "Departamente Conectate",
+            "description": "HR, Finanțele și Administrația operează acum pe un singur sistem partajat."
+          }
+        ]
+      },
+      "sklepoll-ecommerce": {
+        "client": "Sklepoll",
+        "title": "Platformă eCommerce Personalizată Bazată pe PHP cu Dashboard Admin și Integrare Plăți Shopify.",
+        "description": "Am dezvoltat un site eCommerce cu toate funcțiile cu control backend complet asupra produselor, categoriilor și comenzilor—construit folosind PHP și proiectat pentru scalabilitate.",
+        "longDescription": "Am creat o platformă eCommerce făcută la comandă pentru Sklepoll, o afacere de retail care căuta o alternativă flexibilă și self-hosted la Shopify. Construită în întregime cu PHP, platforma are o vitrină curată și un dashboard admin robust pentru a gestiona produsele, inventarul, comenzile, categoriile și clienții. Sistemul suportă prețuri dinamice, starea stocului și setările promoționale. Are și integrare opțională Shopify Checkout, permițând o experiență de plată seamless cu furnizori de încredere precum iDEAL și Bancontact păstrând în același timp controlul complet asupra gestionării produselor în sistemul nativ.",
+        "duration": "10 zile",
+        "teamSize": "2 persoane",
+        "timeline": "T1 2025",
+        "challenge": "Clientul avea nevoie de un website eCommerce complet fără a se baza pe platforme CMS terțe. Voiau și o modalitate de a integra Shopify Checkout ca o poartă de plată securizată și ușor de folosit, păstrând în același timp controlul complet asupra catalogului de produse și funcțiilor admin.",
+        "solution": "Am construit o platformă eCommerce ușoară dar puternică în PHP de bază, cu un dashboard admin personalizat pentru gestionarea produselor, categoriilor și comenzilor. Frontend-ul este optimizat pentru navigare fluidă, iar backend-ul include analize, gestionarea inventarului și opțiuni de integrare. Shopify Checkout a fost integrat printr-un sistem dinamic de redirect și webhook pentru a gestiona plățile securizate extern și a actualiza statusul comenzii intern.",
+        "features": [
+          {
+            "title": "Funcționalitate eCommerce Completă",
+            "description": "Liste de produse, filtrare, coș, checkout și prețuri dinamice—toate construite de la zero în PHP."
+          },
+          {
+            "title": "Dashboard Admin",
+            "description": "Gestionează produsele, categoriile, comenzile și setările cu un panou de login securizat."
+          },
+          {
+            "title": "Gestionarea Inventarului și Comenzilor",
+            "description": "Urmărește stocul, procesează comenzile și actualizează statusul livrării ușor."
+          },
+          {
+            "title": "Integrare Plăți Shopify",
+            "description": "Checkout seamless prin Shopify pentru iDEAL, Bancontact și alte metode de plată."
+          },
+          {
+            "title": "Prețuri și Promoții Personalizate",
+            "description": "Gestionează reducerile, ofertele speciale și vizibilitatea produselor în timp real."
+          },
+          {
+            "title": "Securizat și Ușor",
+            "description": "Construit cu practici de securitate bune și optimizat pentru performanță rapidă."
+          }
+        ],
+        "projectImages": [
+          {
+            "title": "Homepage",
+            "description": "Afișează produse destacate, bannere promoționale și navigarea categoriilor."
+          },
+          {
+            "title": "Pagina Listei de Produse",
+            "description": "Utilizatorii pot răsfoi și filtra produsele după categorie, preț și disponibilitate."
+          },
+          {
+            "title": "Coșul de Cumpărături",
+            "description": "Interfață coș curată și intuitivă cu rezumatul produselor și opțiuni checkout."
+          },
+          {
+            "title": "Dashboard Admin",
+            "description": "Centrul central pentru gestionarea produselor, comenzilor, categoriilor, cloaking și rapoartelor."
+          },
+          {
+            "title": "Gestionarea Categoriilor",
+            "description": "Creează și organizează categoriile de produse pentru filtrarea mai bună frontend."
+          },
+          {
+            "title": "Gestionarea Cloaking",
+            "description": "Gestionează regulile de cloaking și redirecționările pentru marketing sau urmărire."
+          },
+          {
+            "title": "Panou de Monitorizare Live",
+            "description": "Privire de ansamblu în timp real asupra sesiunilor utilizatorilor, activității coșului și vizitelor paginilor."
+          }
+        ],
+        "results": [
+          {
+            "metric": "100%",
+            "title": "Proprietate",
+            "description": "Fără taxe lunare sau închiderea platformei—proprietatea completă a codului sursă."
+          },
+          {
+            "metric": "Shopify+",
+            "title": "Model Hibrid",
+            "description": "Control nativ cu flexibilitatea procesării plăților Shopify."
+          },
+          {
+            "metric": "Rapid",
+            "title": "Optimizat",
+            "description": "Backend minimalist construit pentru viteză și SEO."
+          }
+        ]
+      }
+    }
+  },
+   "resultsPage": {
+    "meta": {
+      "title": "Rezultatele Noastre - Markefy",
+      "description": "Vezi rezultatele tangibile și poveștile de succes pe care le-am livrat pentru clienții noștri."
+    },
+    "hero": {
+      "title": "Povești de Succes",
+      "description": "Nu construim doar produse; construim parteneriate care generează impact în lumea reală."
+    },
+    "caseStudy": {
+      "readButton": "Citește Studiul de Caz"
+    },
+    "toast": {
+      "notImplemented": "🚧 Această funcție nu este încă implementată—dar nu-ți face griji! O poți cere în următoarea ta solicitare! 🚀"
+    }
+  }
+  , "footer": {
+    "about": "Markefy este o companie de soluții digitale care oferă dezvoltare web de impact înalt, software, SEO și campanii de marketing. Ajutăm afacerile să crească cu creativitate, tehnologie și strategii orientate spre rezultate.",
+    "sections": {
+      "contact": "Contact",
+      "services": "Servicii",
+      "company": "Companie",
+      "legal": "Legal"
+    },
+    "services": {
+      "webDevelopment": "Dezvoltare Web",
+      "seoOptimization": "Optimizare SEO",
+      "customSoftware": "Software Personalizat",
+      "aiSolutions": "Soluții AI"
+    },
+    "company": {
+      "aboutUs": "Despre Noi",
+      "ourProcess": "Procesul Nostru",
+      "technologies": "Tehnologii"
+    },
+    "legal": {
+      "privacyPolicy": "Politica de Confidențialitate",
+      "termsOfService": "Termeni și Condiții",
+      "cookiePolicy": "Politica Cookie",
+      "disclaimer": "Disclamer"
+    },
+    "contact": {
+      "email": "support@markefy.ai",
+      "address": "Str. Dunarii Nr 146-148\nBragadiru, România"
+    },
+    "copyright": "©2025 Markefy.ai. Toate drepturile rezervate."
+  }
+,
+"privacyPolicy": {
+    "meta": {
+      "title": "Politica de Confidențialitate - Markefy",
+      "description": "Află cum Markefy colectează, folosește și protejează informațiile tale personale. Drepturile tale de confidențialitate și protecția datelor explicate."
+    },
+    "header": {
+      "title": "Politica de Confidențialitate",
+      "subtitle": "Drepturile tale de confidențialitate și protecția datelor",
+      "lastUpdated": "Ultima actualizare: 30 iulie 2025",
+      "description": "Această politică de confidențialitate descrie cum Markefy (\"noi,\" \"nouă,\" sau \"noastră\") colectează, folosește și protejează informațiile tale personale când folosești site-ul nostru web și serviciile."
+    },
+    "sections": {
+      "informationCollection": {
+        "title": "Informațiile Pe Care Le Colectăm",
+        "personalInfo": {
+          "subtitle": "Informații Personale",
+          "text": "Când interacționezi cu serviciile noastre, putem colecta informații personale pe care le furnizezi voluntar, incluzând dar fără a se limita la: numele tău, adresa de email, numărul de telefon, numele companiei, titlul postului, adresa de facturare și orice alte informații pe care alegi să le furnizezi când ne contactezi, soliciți servicii sau te abonezi la newsletter-ele noastre."
+        },
+        "automaticInfo": {
+          "subtitle": "Informații Colectate Automat",
+          "text": "Colectăm automat anumite informații când vizitezi site-ul nostru web, incluzând: adresa IP, tipul și versiunea browserului, sistemul de operare, URL-urile de referință, paginile vizualizate, timpul petrecut pe pagini, datele de click-through, informațiile despre dispozitiv și locația geografică generală bazată pe adresa IP."
+        },
+        "cookies": {
+          "subtitle": "Cookie-uri și Tehnologii de Urmărire",
+          "text": "Folosim cookie-uri, web beacons și tehnologii similare de urmărire pentru a îmbunătăți experiența ta pe site-ul nostru web, a analiza modelele de utilizare și a livra conținut personalizat. Poți controla setările cookie-urilor prin preferințele browserului tău."
+        },
+        "thirdParty": {
+          "subtitle": "Informații de la Terțe Părți",
+          "text": "Putem primi informații despre tine din surse terțe, cum ar fi platformele de social media, partenerii de afaceri, vendorii de marketing și sursele disponibile public, pe care le putem combina cu informațiile pe care le colectăm direct de la tine."
+        }
+      },
+      "informationUse": {
+        "title": "Cum Folosim Informațiile Tale",
+        "serviceProvision": {
+          "subtitle": "Furnizarea Serviciilor",
+          "text": "Folosim informațiile tale pentru a furniza, menține și îmbunătăți serviciile noastre, incluzând dezvoltarea site-urilor web, soluțiile software, optimizarea SEO, campaniile de marketing și suportul continuu. Aceasta include comunicarea cu tine despre proiecte, trimiterea actualizărilor și livrarea serviciilor solicitate."
+        },
+        "communication": {
+          "subtitle": "Comunicare",
+          "text": "Putem folosi informațiile tale de contact pentru a răspunde la întrebări, a trimite notificări legate de servicii, a oferi suport pentru clienți, a trimite newsletter-e și comunicări de marketing (cu consimțământul tău) și a te informa despre servicii noi, funcții sau actualizări importante."
+        },
+        "analytics": {
+          "subtitle": "Analiză și Îmbunătățire",
+          "text": "Analizăm modelele de utilizare și comportamentul utilizatorilor pentru a îmbunătăți funcționalitatea site-ului nostru web, a spori experiența utilizatorului, a dezvolta funcții și servicii noi, a efectua cercetări de piață și a optimiza eforturile noastre de marketing."
+        },
+        "legal": {
+          "subtitle": "Legal și Securitate",
+          "text": "Putem folosi informațiile tale pentru a respecta obligațiile legale, a proteja drepturile și proprietatea noastră, a preveni frauda și abuzul, a asigura securitatea sistemelor noastre, a rezolva disputele și a pune în aplicare termenii și condițiile noastre."
+        }
+      },
+      "informationSharing": {
+        "title": "Partajarea și Divulgarea Informațiilor",
+        "serviceProviders": {
+          "subtitle": "Furnizori de Servicii",
+          "text": "Putem partaja informațiile tale cu furnizori de servicii terți de încredere care ne asistă în operarea site-ului nostru web, desfășurarea afacerii sau deservirea ta. Acești furnizori sunt obligați contractual să păstreze informațiile tale confidențiale și să le folosească doar pentru scopurile pe care le specificăm."
+        },
+        "businessTransfers": {
+          "subtitle": "Transferuri de Afaceri",
+          "text": "În cazul unei fuziuni, achiziții, vânzări de active sau faliment, informațiile tale pot fi transferate entității achizitoare. Te vom notifica prin email sau notificare proeminentă pe site-ul nostru web înainte ca informațiile tale să devină supuse unei politici de confidențialitate diferite."
+        },
+        "legalRequirements": {
+          "subtitle": "Cerințe Legale",
+          "text": "Putem divulga informațiile tale când este cerut de lege, în răspuns la procese legale, pentru a proteja drepturile sau proprietatea noastră, pentru a asigura siguranța utilizatorilor sau când credem că divulgarea este necesară pentru a respecta procedurile judiciare, ordinele instanței sau procesele legale."
+        },
+        "consentBased": {
+          "subtitle": "Partajare Bazată pe Consimțământ",
+          "text": "Putem partaja informațiile tale cu consimțământul tău explicit pentru scopuri specifice, cum ar fi prezentarea testimonialului tău pe site-ul nostru web sau partajarea poveștii tale de succes în materialele noastre de marketing."
+        }
+      },
+      "dataSecurity": {
+        "title": "Securitatea și Protecția Datelor",
+        "securityMeasures": {
+          "subtitle": "Măsuri de Securitate",
+          "text": "Implementăm măsuri de securitate standard din industrie pentru a proteja informațiile tale personale, incluzând criptarea SSL, servere securizate, firewall-uri, controlul accesului, audituri de securitate regulate și formarea angajaților în cele mai bune practici de protecție a datelor."
+        },
+        "dataRetention": {
+          "subtitle": "Reținerea Datelor",
+          "text": "Păstrăm informațiile tale personale doar atât timp cât este necesar pentru a îndeplini scopurile prezentate în această politică, a respecta obligațiile legale, a rezolva disputele și a pune în aplicare acordurile noastre. Când informațiile nu mai sunt necesare, le ștergem securizat sau le anonimizăm."
+        },
+        "internationalTransfers": {
+          "subtitle": "Transferuri Internaționale",
+          "text": "Informațiile tale pot fi transferate și procesate în țări altele decât țara ta de reședință. Ne asigurăm că sunt în vigoare măsuri de protecție adecvate pentru a proteja informațiile tale în timpul transferurilor internaționale, incluzând clauze contractuale standard și decizii de adecvare."
+        },
+        "breachNotification": {
+          "subtitle": "Notificarea Încălcării",
+          "text": "În cazul improbabil al unei încălcări a datelor care ar putea afecta informațiile tale personale, îi vom notifica prompt pe utilizatorii afectați și vom lua măsuri imediate pentru a atenua impactul și a preveni încălcările viitoare."
+        }
+      },
+      "userRights": {
+        "title": "Drepturile și Alegerile Tale",
+        "accessCorrection": {
+          "subtitle": "Acces și Corectare",
+          "text": "Ai dreptul să accesezi informațiile tale personale pe care le deținem și să soliciți corecții pentru datele inexacte sau incomplete. Poți actualiza informațiile tale contactându-ne direct sau prin setările contului tău dacă este aplicabil."
+        },
+        "dataPortabilityDeletion": {
+          "subtitle": "Portabilitatea și Ștergerea Datelor",
+          "text": "Poți solicita o copie a informațiilor tale personale într-un format portabil sau poți solicita ștergerea informațiilor tale personale, supusă obligațiilor legale și contractuale. Vom răspunde la astfel de cereri în termene rezonabile conform legii aplicabile."
+        },
+        "communicationPreferences": {
+          "subtitle": "Preferințe de Comunicare",
+          "text": "Te poți dezabona de la comunicările de marketing oricând făcând clic pe linkul de dezabonare din email-urile noastre, ajustând preferințele contului tău sau contactându-ne direct. Notează că poți primi în continuare comunicări legate de servicii."
+        },
+        "cookieControls": {
+          "subtitle": "Controlul Cookie-urilor",
+          "text": "Poți controla preferințele cookie-urilor prin setările browserului tău, incluzând blocarea sau ștergerea cookie-urilor. Te rugăm să reții că dezactivarea anumitor cookie-uri poate afecta funcționalitatea site-ului web și experiența ta de utilizator."
+        }
+      },
+      "specialCategories": {
+        "title": "Categorii Speciale și Date Sensibile",
+        "sensitiveInfo": {
+          "subtitle": "Informații Sensibile",
+          "text": "Nu colectăm în mod intenționat informații personale sensibile cum ar fi datele de sănătate, informațiile financiare, datele biometrice sau informațiile despre opiniile politice, credințele religioase sau orientarea sexuală, cu excepția cazului în care sunt specifice necesare pentru serviciile noastre și cu consimțământul tău explicit."
+        },
+        "childrenPrivacy": {
+          "subtitle": "Confidențialitatea Copiilor",
+          "text": "Serviciile noastre nu sunt adresate copiilor sub 16 ani. Nu colectăm în mod conștient informații personale de la copii sub 16 ani. Dacă aflăm că am colectat informații personale de la un copil sub 16 ani, vom lua măsuri pentru a șterge prompt astfel de informații."
+        },
+        "employmentInfo": {
+          "subtitle": "Informații de Angajare",
+          "text": "Dacă aplici pentru angajare la noi, putem colecta informații adiționale cum ar fi detaliile CV-ului, istoricul angajării, referințele și informațiile de verificare a antecedentelor, pe care le folosim exclusiv pentru scopuri de recrutare și angajare."
+        }
+      },
+      "additionalInfo": {
+        "title": "Informații Adiționale",
+        "thirdPartyLinks": {
+          "subtitle": "Link-uri și Servicii de la Terțe Părți",
+          "text": "Site-ul nostru web poate conține link-uri către site-uri web sau servicii terțe care nu sunt deținute sau controlate de Markefy. Nu avem control și nu ne asumăm responsabilitatea pentru conținutul, politicile de confidențialitate sau practicile oricăror site-uri web sau servicii terțe. Te încurajăm să revizuiești politicile de confidențialitate ale oricăror site-uri terțe pe care le vizitezi."
+        },
+        "policyChanges": {
+          "subtitle": "Modificări la Această Politică de Confidențialitate",
+          "text": "Putem actualiza această politică de confidențialitate din timp în timp pentru a reflecta modificările în practicile noastre, tehnologia, cerințele legale sau alți factori. Te vom notifica despre orice modificări materiale postând politica actualizată pe site-ul nostru web și actualizând data \"Ultima actualizare\". Te încurajăm să revizuiești periodic această politică pentru a rămâne informat despre cum protejăm informațiile tale."
+        },
+        "governingLaw": {
+          "subtitle": "Legea Aplicabilă",
+          "text": "Această politică de confidențialitate este guvernată și interpretată în conformitate cu legile aplicabile de protecție a datelor, incluzând dar fără a se limita la Regulamentul General privind Protecția Datelor (GDPR), California Consumer Privacy Act (CCPA) și alte legislații relevante de confidențialitate. Orice dispute rezultate din această politică vor fi rezolvate în conformitate cu jurisdicția specificată în Termenii și Condițiile noastre."
+        }
+      }
+    }
+  },
+  "terms": {
+    "header": {
+      "title": "Termeni și Condiții",
+      "subtitle": "Acord legal care guvernează serviciile noastre",
+      "lastUpdated": "Ultima actualizare: {{date}}",
+      "description": "Acești Termeni și Condiții reglementează utilizarea site-ului, serviciilor și soluțiilor digitale Markefy. Vă rugăm să citiți cu atenție înainte de utilizare."
+    },
+    "sections": {
+      "acceptance": {
+        "title": "Acceptarea Termenilor",
+        "items": {
+          "agreement": {
+            "subtitle": "Acord privind Termenii",
+            "text": "Prin accesarea, navigarea sau utilizarea site-ului nostru (markefy.ai), a aplicațiilor mobile sau a serviciilor noastre, confirmați că ați citit, înțeles și sunteți de acord cu acești Termeni și cu Politica de Confidențialitate."
+          },
+          "capacity": {
+            "subtitle": "Capacitatea de a Încheia Acordul",
+            "text": "Declarați și garantați că aveți cel puțin 18 ani și capacitatea legală de a încheia acest acord. Dacă utilizați serviciile în numele unei companii, confirmați că aveți autoritatea de a o reprezenta."
+          },
+          "modifications": {
+            "subtitle": "Modificări ale Termenilor",
+            "text": "Ne rezervăm dreptul de a modifica sau actualiza termenii în orice moment. Schimbările semnificative vor fi comunicate prin email sau notificări vizibile pe site. Utilizarea continuă a serviciilor reprezintă acceptarea versiunii actualizate."
+          },
+          "effectiveDate": {
+            "subtitle": "Data Intrării în Vigoare",
+            "text": "Acești termeni sunt valabili de la ultima actualizare și rămân în vigoare până la reziliere conform prevederilor."
+          }
+        }
+      },
+      "services": {
+        "title": "Descrierea Serviciilor",
+        "items": {
+          "portfolio": {
+            "subtitle": "Portofoliu de Servicii Digitale",
+            "text": "Markefy oferă servicii digitale complete: design și dezvoltare web, SEO, campanii PPC, marketing de conținut, branding, social media și consultanță."
+          },
+          "custom": {
+            "subtitle": "Soluții Personalizate",
+            "text": "Oferim soluții digitale adaptate cerințelor specifice, inclusiv e-commerce, aplicații enterprise, automatizare și consultanță strategică."
+          },
+          "availability": {
+            "subtitle": "Disponibilitatea Serviciilor",
+            "text": "Depunem eforturi pentru a menține disponibilitatea continuă, dar nu garantăm acces neîntrerupt. Pot exista suspendări temporare pentru mentenanță sau factori externi."
+          },
+          "thirdParty": {
+            "subtitle": "Integrarea Terților",
+            "text": "Serviciile pot depinde de platforme și instrumente terțe. Nu suntem responsabili pentru disponibilitatea sau funcționalitatea acestora."
+          }
+        }
+      },
+      "user": {
+        "title": "Obligațiile Utilizatorului",
+        "items": {
+          "lawful": {
+            "subtitle": "Utilizare Legală",
+            "text": "Sunteți de acord să utilizați serviciile numai în scopuri legale și conform termenilor."
+          },
+          "prohibited": {
+            "subtitle": "Activități Interzise",
+            "text": "Este interzis să transmiteți conținut dăunător, să încercați acces neautorizat, să distribuiți malware sau să utilizați serviciile în scopuri frauduloase."
+          },
+          "content": {
+            "subtitle": "Responsabilitatea Conținutului",
+            "text": "Sunteți pe deplin responsabil pentru conținutul furnizat și garantați că nu încalcă drepturi ale terților."
+          },
+          "security": {
+            "subtitle": "Securitatea Contului",
+            "text": "Dacă creați un cont, trebuie să vă protejați datele de acces și să ne anunțați imediat în caz de utilizare neautorizată."
+          }
+        }
+      },
+      "payment": {
+        "title": "Plăți și Facturare",
+        "items": {
+          "obligations": {
+            "subtitle": "Obligații de Plată",
+            "text": "Plățile sunt scadente în 30 de zile, dacă nu s-a convenit altfel. Taxele nu sunt rambursabile decât dacă este specificat."
+          },
+          "pricing": {
+            "subtitle": "Prețuri și Tarife",
+            "text": "Prețurile depind de complexitate și resurse. Ofertele sunt valabile 30 de zile."
+          },
+          "recurring": {
+            "subtitle": "Servicii Recurente",
+            "text": "Pentru servicii continue, facturarea are loc periodic conform acordului. Reînnoirile se aplică dacă nu sunt anulate."
+          },
+          "taxes": {
+            "subtitle": "Taxe și Costuri Suplimentare",
+            "text": "Toate tarifele nu includ taxe. Costurile terților se refacturează cu aprobare prealabilă."
+          }
+        }
+      },
+      "ip": {
+        "title": "Drepturi de Proprietate Intelectuală",
+        "items": {
+          "ours": {
+            "subtitle": "Proprietatea Noastră",
+            "text": "Toate materialele, software-ul și procesele dezvoltate de Markefy rămân proprietatea noastră."
+          },
+          "client": {
+            "subtitle": "Produsul Clientului",
+            "text": "După plata integrală, clientul deține livrabilele proiectului, cu excepția instrumentelor noastre proprietare."
+          },
+          "license": {
+            "subtitle": "Licență de Utilizare",
+            "text": "Acordăm o licență limitată, netransferabilă, pentru utilizarea livrabilelor în scopul convenit."
+          },
+          "thirdParty": {
+            "subtitle": "Drepturi Terțe",
+            "text": "Respectăm drepturile terților și așteptăm același lucru de la clienți."
+          }
+        }
+      },
+      "disclaimers": {
+        "title": "Limitări și Declarații",
+        "items": {
+          "performance": {
+            "subtitle": "Declinări privind Performanța",
+            "text": "Nu putem garanta rezultate specifice sau trafic, fiind influențate de factori externi."
+          },
+          "availability": {
+            "subtitle": "Disponibilitate",
+            "text": "Serviciile sunt furnizate „ca atare”, fără garanții. Pot fi suspendate pentru mentenanță."
+          },
+          "technology": {
+            "subtitle": "Limitări Tehnologice",
+            "text": "Nu putem garanta compatibilitate completă cu toate dispozitivele, dar urmărim suport larg."
+          },
+          "dependencies": {
+            "subtitle": "Dependențe Externe",
+            "text": "Schimbările la platformele terțe pot afecta serviciile; nu suntem răspunzători pentru acestea."
+          }
+        }
+      },
+      "liability": {
+        "title": "Răspundere și Despăgubiri",
+        "items": {
+          "limitation": {
+            "subtitle": "Limitarea Răspunderii",
+            "text": "Răspunderea noastră totală este limitată la suma plătită pentru serviciul respectiv în ultimele 12 luni."
+          },
+          "indemnification": {
+            "subtitle": "Despăgubirea Clientului",
+            "text": "Clientul este de acord să despăgubească Markefy pentru daunele cauzate prin utilizarea necorespunzătoare."
+          },
+          "professional": {
+            "subtitle": "Răspundere Profesională",
+            "text": "Răspunderea noastră se limitează la corectarea defectelor sau returnarea taxelor pentru serviciile defectuoase."
+          },
+          "forceMajeure": {
+            "subtitle": "Forță Majoră",
+            "text": "Nicio parte nu este responsabilă pentru întârzieri cauzate de circumstanțe neprevăzute."
+          }
+        }
+      },
+      "termination": {
+        "title": "Reziliere și Anulare",
+        "items": {
+          "rights": {
+            "subtitle": "Drepturi de Reziliere",
+            "text": "Oricare parte poate rezilia cu 30 de zile notificare. Rezilierea imediată se aplică în caz de încălcare."
+          },
+          "effect": {
+            "subtitle": "Efectele Rezilierii",
+            "text": "Clientul rămâne responsabil pentru taxele datorate până la data rezilierii."
+          },
+          "data": {
+            "subtitle": "Date și Conținut",
+            "text": "Datele sunt păstrate o perioadă rezonabilă apoi șterse, dacă nu există obligații legale."
+          },
+          "survival": {
+            "subtitle": "Clauze care Supraviețuiesc",
+            "text": "Obligațiile privind plată, IP, confidențialitate și răspundere rămân valabile după reziliere."
+          }
+        }
+      },
+      "legal": {
+        "title": "Dispoziții Legale și Diverse",
+        "items": {
+          "governing": {
+            "subtitle": "Legea Aplicabilă și Jurisdicția",
+            "text": "Acești termeni sunt guvernați de legea jurisdicției unde are sediul Markefy."
+          },
+          "dispute": {
+            "subtitle": "Soluționarea Disputelor",
+            "text": "Disputele se rezolvă mai întâi informal, apoi prin arbitraj dacă este necesar."
+          },
+          "severability": {
+            "subtitle": "Divizibilitate și Acord Integral",
+            "text": "Dacă o clauză este invalidă, restul rămâne valabil. Acești termeni înlocuiesc acordurile anterioare."
+          },
+          "assignment": {
+            "subtitle": "Cesionare și Drepturi Terțe",
+            "text": "Clienții nu pot cesiona drepturi fără consimțământ. Nu se creează drepturi terțe."
+          },
+          "electronic": {
+            "subtitle": "Comunicări Electronice",
+            "text": "Prin utilizare, acceptați comunicările electronice ca fiind echivalente legal cu cele scrise."
+          }
+        }
+      }
+    }
+  },
+   "cookie": {
+    "header": {
+      "title": "Politica de Cookie-uri",
+      "subtitle": "Cum folosim cookie-urile și tehnologiile de urmărire",
+      "lastUpdated": "Ultima actualizare: {{date}}",
+      "description": "Această Politică privind Cookie-urile explică modul în care Markefy folosește cookie-uri și tehnologii similare de urmărire pe site-ul și serviciile noastre."
+    },
+    "sections": {
+      "what": {
+        "title": "Ce sunt cookie-urile",
+        "items": {
+          "definition": {
+            "subtitle": "Definiție și scop",
+            "text": "Cookie-urile sunt fișiere text mici stocate pe dispozitivul dumneavoastră (computer, smartphone sau tabletă) atunci când vizitați site-ul nostru. Aceste fișiere conțin informații care ajută site-ul nostru să își amintească preferințele, să îmbunătățească experiența de navigare și să analizeze modul în care este utilizat site-ul. Cookie-urile sunt utilizate pe scară largă pe internet și sunt esențiale pentru multe funcționalități ale site-urilor web."
+          },
+          "how": {
+            "subtitle": "Cum funcționează cookie-urile",
+            "text": "Când vizitați site-ul nostru, browserul dumneavoastră descarcă și stochează cookie-uri pe dispozitiv. Aceste cookie-uri conțin identificatori unici și date care permit site-ului nostru să recunoască browserul la vizitele ulterioare. Informațiile stocate pot include preferințe lingvistice, starea de autentificare, conținutul coșului de cumpărături și alte setări de personalizare."
+          },
+          "lifespan": {
+            "subtitle": "Durata de viață a cookie-urilor",
+            "text": "Cookie-urile au durate de viață diferite, în funcție de tipul și scopul lor. Cookie-urile de sesiune sunt temporare și se șterg atunci când închideți browserul, în timp ce cookie-urile persistente rămân pe dispozitiv pentru o perioadă specificată sau până când le ștergeți manual. Durata fiecărui tip de cookie este determinată de funcția sa și de cerințele legale."
+          },
+          "security": {
+            "subtitle": "Securitatea datelor",
+            "text": "Cookie-urile în sine nu pot dăuna dispozitivului dumneavoastră și nu conțin viruși. Ele sunt fișiere text simple care nu pot executa programe sau transporta malware. Totuși, informațiile conținute pot fi folosite pentru a urmări comportamentul de navigare, motiv pentru care suntem transparenți cu privire la utilizarea cookie-urilor și vă oferim control asupra preferințelor."
+          }
+        }
+      },
+      "types": {
+        "title": "Tipuri de cookie-uri pe care le folosim",
+        "items": {
+          "essential": {
+            "subtitle": "Cookie-uri esențiale/obligatorii",
+            "text": "Aceste cookie-uri sunt absolut necesare pentru ca site-ul nostru să funcționeze corect și nu pot fi dezactivate. Ele permit funcționalități de bază precum securitate, gestionarea rețelei și accesibilitate. Cookie-urile esențiale includ cookie-uri de autentificare care vă mențin conectat, cookie-uri de securitate care previn activitățile frauduloase și cookie-uri de echilibrare a încărcării care asigură funcționarea eficientă a site-ului nostru pe mai multe servere."
+          },
+          "performance": {
+            "subtitle": "Cookie-uri de performanță și analiză",
+            "text": "Folosim cookie-uri de performanță pentru a colecta informații anonime despre modul în care vizitatorii utilizează site-ul nostru. Aceste cookie-uri ne ajută să înțelegem care pagini sunt cele mai populare, cât timp petrec vizitatorii pe site și unde întâmpină probleme. Datele sunt agregate și anonime, ajutându-ne să îmbunătățim performanța și experiența utilizatorului fără a identifica persoane individuale."
+          },
+          "functionality": {
+            "subtitle": "Cookie-uri de funcționalitate",
+            "text": "Cookie-urile de funcționalitate rețin preferințele și alegerile dumneavoastră pentru a oferi caracteristici personalizate. Ele pot memora preferința lingvistică, regiunea, numele de utilizator sau aspecte personalizate ale paginii. Aceste cookie-uri ne permit să oferim funcționalități extinse, cum ar fi reținerea informațiilor introduse în formulare sau setările preferate de comunicare."
+          },
+          "marketing": {
+            "subtitle": "Cookie-uri de marketing și publicitate",
+            "text": "Aceste cookie-uri sunt folosite pentru a livra reclame relevante și pentru a urmări eficiența campaniilor noastre de marketing. Ele ne ajută să înțelegem interesele dumneavoastră pe baza comportamentului de navigare și să afișăm conținut și reclame personalizate. De asemenea, previn afișarea repetată a aceleiași reclame și măsoară eficacitatea campaniilor publicitare pe diferite site-uri și platforme."
+          }
+        }
+      },
+      "specific": {
+        "title": "Cookie-uri specifice pe care le folosim",
+        "items": {
+          "analytics": {
+            "subtitle": "Google Analytics",
+            "text": "Folosim Google Analytics pentru a înțelege modul în care vizitatorii interacționează cu site-ul nostru. Aceste cookie-uri colectează informații anonime despre vizualizările de pagini, durata sesiunilor, ratele de respingere și sursele de trafic. Datele ne ajută să optimizăm conținutul și să îmbunătățim experiența utilizatorului. Cookie-urile Google Analytics includ _ga, _gid și _gat, care au perioade de expirare variabile, de la sesiune până la 2 ani."
+          },
+          "social": {
+            "subtitle": "Cookie-uri de rețele sociale",
+            "text": "Site-ul nostru include butoane de partajare pe rețele sociale și conținut încorporat de pe platforme precum Facebook, Twitter, LinkedIn și YouTube. Aceste platforme pot seta cookie-uri pe dispozitiv pentru a urmări interacțiunea cu conținutul lor și pentru a oferi experiențe personalizate pe rețelele lor. Nu controlăm aceste cookie-uri terțe și recomandăm consultarea politicilor de confidențialitate ale platformelor respective."
+          },
+          "marketingPlatform": {
+            "subtitle": "Cookie-uri ale platformelor de marketing",
+            "text": "Folosim diverse platforme de marketing și publicitate, cum ar fi Google Ads, Facebook Pixel și LinkedIn Insight Tag. Aceste cookie-uri ne ajută să urmărim conversiile, să retargetăm vizitatorii cu reclame relevante și să măsurăm eficiența campaniilor de marketing pe diferite canale. Ele ne permit să vă arătăm conținut personalizat pe baza intereselor și interacțiunilor anterioare cu site-ul nostru."
+          },
+          "support": {
+            "subtitle": "Cookie-uri pentru suport clienți",
+            "text": "Sistemele noastre de suport pentru clienți, inclusiv widget-uri de chat live și instrumente de help desk, pot utiliza cookie-uri pentru a menține istoricul conversațiilor, pentru a vă reține preferințele și pentru a oferi o experiență personalizată de asistență. Aceste cookie-uri ajută echipa noastră de suport să ofere asistență mai bună prin reținerea interacțiunilor și cererilor anterioare."
+          }
+        }
+      },
+      "thirdParty": {
+        "title": "Cookie-uri ale terților",
+        "items": {
+          "providers": {
+            "subtitle": "Furnizori de servicii externi",
+            "text": "Site-ul nostru utilizează servicii de la diverși furnizori terți care pot seta propriile cookie-uri. Aceștia includ furnizori de analiză (Google Analytics, Hotjar), rețele publicitare (Google Ads, Facebook), rețele de livrare de conținut (Cloudflare) și instrumente de suport pentru clienți (Intercom, Zendesk). Fiecare dintre aceste servicii are propria politică de confidențialitate și practici privind cookie-urile."
+          },
+          "adNetworks": {
+            "subtitle": "Rețele de publicitate",
+            "text": "Colaborăm cu rețele de publicitate și parteneri pentru a afișa reclame relevante vizitatorilor noștri. Aceste rețele pot utiliza cookie-uri pentru a urmări comportamentul de navigare pe mai multe site-uri pentru a construi un profil al intereselor dumneavoastră. Acest lucru le permite să afișeze reclame mai relevante atât pe site-ul nostru, cât și pe alte site-uri pe care le vizitați."
+          },
+          "social": {
+            "subtitle": "Integrare cu rețele sociale",
+            "text": "Site-ul nostru se integrează cu platforme sociale pentru a permite partajarea ușoară a conținutului și afișarea fluxurilor sociale. Când interacționați cu aceste funcționalități, platformele respective pot seta cookie-uri pe dispozitiv. Aceste cookie-uri sunt guvernate de politicile de confidențialitate ale platformelor sociale, nu de politica noastră de cookie-uri."
+          },
+          "control": {
+            "subtitle": "Controlul terților",
+            "text": "Nu avem control direct asupra cookie-urilor terțe setate de servicii externe. Aceste cookie-uri sunt guvernate de politicile de confidențialitate și practicile privind cookie-urile ale terților respectivi. Vă recomandăm să consultați politicile acestora pentru a înțelege cum utilizează cookie-urile și cum vă puteți gestiona preferințele direct cu aceștia."
+          }
+        }
+      },
+      "management": {
+        "title": "Gestionarea preferințelor de cookie-uri",
+        "items": {
+          "browser": {
+            "subtitle": "Setările browserului",
+            "text": "Majoritatea browserelor web vă permit să controlați cookie-urile prin setările lor. De obicei, găsiți aceste opțiuni în secțiunea de confidențialitate sau securitate. Puteți alege să blocați toate cookie-urile, să permiteți doar cookie-urile de primă parte sau să fiți notificat când sunt setate cookie-uri. Totuși, blocarea anumitor cookie-uri poate afecta experiența de navigare și poate limita funcționalitatea site-ului."
+          },
+          "optout": {
+            "subtitle": "Instrumente de renunțare",
+            "text": "Multe rețele publicitare oferă instrumente de renunțare care vă permit să împiedicați colectarea și utilizarea datelor pentru scopuri publicitare. Puteți vizita pagina de renunțare a Digital Advertising Alliance, Network Advertising Initiative sau European Interactive Digital Advertising Alliance pentru a gestiona preferințele de cookie-uri publicitare pe mai multe rețele."
+          },
+          "mobile": {
+            "subtitle": "Setările dispozitivelor mobile",
+            "text": "Dacă folosiți un dispozitiv mobil, puteți gestiona preferințele de cookie-uri prin setările browserului sau aplicațiilor. Sistemele de operare mobile oferă și identificatori de publicitate care limitează urmărirea reclamelor între aplicații. Aceste setări se găsesc de obicei în secțiunile de confidențialitate sau publicitate ale dispozitivului."
+          },
+          "consent": {
+            "subtitle": "Gestionarea consimțământului pentru cookie-uri",
+            "text": "Oferim un banner de consimțământ pentru cookie-uri la prima vizită pe site-ul nostru, permițându-vă să alegeți tipurile de cookie-uri acceptate. Puteți modifica preferințele oricând prin setările cookie-urilor, accesibile printr-un link din subsolul site-ului sau prin setările contului, dacă v-ați înregistrat."
+          }
+        }
+      },
+      "legalBasis": {
+        "title": "Temeiul legal pentru prelucrarea cookie-urilor",
+        "items": {
+          "consent": {
+            "subtitle": "Consimțământ",
+            "text": "Pentru cookie-urile neesențiale, ne bazăm pe consimțământul dumneavoastră explicit ca temei legal. La vizitarea site-ului, vă prezentăm informații clare despre utilizarea cookie-urilor și vă cerem consimțământul înainte de a seta cookie-uri neesențiale. Aveți dreptul să vă retrageți consimțământul în orice moment și vă oferim instrumente simple pentru gestionarea preferințelor."
+          },
+          "interest": {
+            "subtitle": "Interes legitim",
+            "text": "Pentru anumite cookie-uri, ne putem baza pe interesul legitim, în special pentru cele de analiză care ne ajută să îmbunătățim performanța și experiența utilizatorilor. Echilibrăm interesele noastre de afaceri cu drepturile dumneavoastră la confidențialitate și ne asigurăm că utilizarea cookie-urilor este proporțională și nu excesiv de intruzivă."
+          },
+          "contract": {
+            "subtitle": "Necesitatea contractuală",
+            "text": "Unele cookie-uri sunt necesare pentru executarea contractului cu dumneavoastră sau pentru furnizarea serviciilor solicitate. Aceste cookie-uri esențiale permit funcționalități de bază ale site-ului, caracteristici de securitate și livrarea serviciilor. Ele sunt necesare și nu pot fi dezactivate cât timp folosiți serviciile noastre."
+          },
+          "compliance": {
+            "subtitle": "Respectarea reglementărilor",
+            "text": "Practicile noastre privind cookie-urile respectă legile aplicabile privind confidențialitatea, inclusiv Regulamentul General privind Protecția Datelor (GDPR), Directiva ePrivacy, California Consumer Privacy Act (CCPA) și alte reglementări relevante. Revizuim și actualizăm periodic practicile noastre pentru a menține conformitatea cu legislația în evoluție."
+          }
+        }
+      },
+      "retention": {
+        "title": "Păstrarea și ștergerea datelor cookie",
+        "items": {
+          "periods": {
+            "subtitle": "Perioade de păstrare",
+            "text": "Cookie-urile au perioade de păstrare diferite, în funcție de scop și cerințe legale. Cookie-urile de sesiune se șterg automat când închideți browserul, în timp ce cele persistente pot rămâne pe dispozitiv zile sau ani. Stabilim perioade de păstrare proporționale scopului și le revizuim periodic pentru a rămâne adecvate."
+          },
+          "automatic": {
+            "subtitle": "Ștergere automată",
+            "text": "Multe cookie-uri sunt șterse automat după expirarea perioadei setate. Cookie-urile de sesiune expiră la închiderea browserului, iar cele persistente au date fixe de expirare. Unele cookie-uri pot fi reîmprospătate în timpul sesiunii pentru a menține funcționalitatea, dar vor expira conform duratei stabilite."
+          },
+          "manual": {
+            "subtitle": "Ștergere manuală",
+            "text": "Puteți șterge manual cookie-urile în orice moment din setările browserului. Majoritatea browserelor oferă opțiuni pentru a șterge toate cookie-urile, pe cele de la anumite site-uri sau din anumite perioade. Puteți seta și ștergerea automată a cookie-urilor la închiderea browserului sau după o anumită perioadă de inactivitate."
+          },
+          "minimization": {
+            "subtitle": "Minimizarea datelor",
+            "text": "Urmăm principiile de minimizare a datelor și colectăm doar informațiile necesare scopului specificat. Revizuim periodic utilizarea cookie-urilor pentru a ne asigura că nu colectăm date excesive și că perioadele de păstrare sunt adecvate. Datele inutile sau expirate sunt eliminate automat din sistemele noastre."
+          }
+        }
+      },
+      "additional": {
+        "title": "Informații suplimentare",
+        "items": {
+          "updates": {
+            "subtitle": "Actualizări ale acestei politici de cookie-uri",
+            "text": "Putem actualiza această Politică privind Cookie-urile periodic pentru a reflecta schimbări în practici, actualizări tehnologice sau cerințe legale. Când facem modificări importante, vă vom notifica prin actualizarea datei de „Ultima actualizare” și, dacă este cazul, prin notificări suplimentare pe site sau prin e-mail."
+          },
+          "vsPrivacy": {
+            "subtitle": "Politica de cookie-uri vs Politica de confidențialitate",
+            "text": "Această Politică privind Cookie-urile trebuie citită împreună cu Politica noastră de confidențialitate, care oferă informații complete despre modul în care colectăm, folosim și protejăm datele personale. În timp ce această politică se concentrează pe utilizarea cookie-urilor, Politica de confidențialitate acoperă activități mai ample de prelucrare a datelor și drepturile dumneavoastră."
+          },
+          "transfers": {
+            "subtitle": "Transferuri internaționale de date",
+            "text": "Unele dintre serviciile terțe pe care le utilizăm pot transfera și prelucra datele cookie în țări din afara jurisdicției dumneavoastră. Aceste transferuri se fac în conformitate cu legile aplicabile privind protecția datelor și includ garanții adecvate, cum ar fi clauze contractuale standard sau decizii de adecvare pentru protejarea datelor."
+          },
+          "compatibility": {
+            "subtitle": "Compatibilitatea browserelor",
+            "text": "Site-ul nostru este proiectat să funcționeze cu browsere moderne care acceptă standardele actuale privind cookie-urile. Dacă folosiți o versiune mai veche de browser, anumite funcționalități bazate pe cookie-uri pot să nu funcționeze corect. Recomandăm actualizarea browserului la cea mai recentă versiune pentru o experiență optimă de securitate și funcționalitate."
+          }
+        }
+      }
+    }
+  },
+  "disclaimer": {
+    "header": {
+      "title": "Declinarea responsabilității",
+      "subtitle": "Limitări și dezvăluiri importante",
+      "lastUpdated": "Ultima actualizare: {{date}}",
+      "description": "Această declinare prezintă limitări importante privind serviciile, sfaturile și conținutul nostru. Vă rugăm să citiți cu atenție înainte de a utiliza serviciile noastre."
+    },
+    "notice": {
+      "title": "Notificare importantă",
+      "text": "Prin utilizarea serviciilor noastre, confirmați că ați citit, înțeles și sunteți de acord să respectați această declinare. Rezultatele nu sunt garantate, iar dumneavoastră vă asumați întreaga responsabilitate pentru deciziile luate pe baza recomandărilor noastre. Această declinare face parte integrantă din Termenii și condițiile noastre."
+    },
+    "sections": {
+      "general": {
+        "title": "Declinare generală",
+        "items": {
+          "infoPurpose": {
+            "subtitle": "Doar în scop informativ",
+            "text": "Toate informațiile, conținutul, materialele, sfaturile și serviciile furnizate de Markefy au un scop strict informativ și educațional. Acest conținut nu constituie sfat profesional și nu trebuie utilizat ca unic fundament pentru luarea deciziilor de afaceri, financiare sau strategice. Recomandăm cu tărie consultarea unor profesioniști calificați înainte de implementarea oricăror strategii sau luarea unor decizii importante."
+          },
+          "noRelationship": {
+            "subtitle": "Nicio relație profesională",
+            "text": "Informațiile furnizate pe site-ul nostru, în consultații sau prin intermediul serviciilor noastre nu creează o relație oficială de consilier-client decât dacă este stabilită explicit printr-un acord formal de servicii. Sfaturile ocazionale, conținutul de pe blog, postările pe rețele sociale sau comunicările informale nu trebuie considerate consultanță profesională sau recomandări obligatorii."
+          },
+          "ownRisk": {
+            "subtitle": "Utilizare pe propriul risc",
+            "text": "Recunoașteți că orice utilizare a informațiilor, strategiilor sau recomandărilor noastre se face exclusiv pe propriul risc. Nu suntem responsabili pentru deciziile luate pe baza informațiilor furnizate, nici pentru consecințele care pot apărea în urma implementării sugestiilor noastre sau a respectării indicațiilor oferite."
+          },
+          "noWarranties": {
+            "subtitle": "Fără garanții",
+            "text": "Nu facem nicio declarație și nu oferim garanții privind acuratețea, fiabilitatea, completitudinea sau actualitatea informațiilor furnizate. Tot conținutul este oferit „ca atare”, fără garanții exprese sau implicite, inclusiv, dar fără a se limita la, garanții de vandabilitate, adecvare pentru un anumit scop sau respectarea drepturilor de autor."
+          }
+        }
+      },
+      "marketing": {
+        "title": "Declinarea responsabilității pentru rezultate de marketing și SEO",
+        "items": {
+          "results": {
+            "subtitle": "Rezultatele pot varia",
+            "text": "Rezultatele de marketing și SEO variază semnificativ în funcție de numeroși factori, inclusiv concurența din industrie, condițiile pieței, bugetul, calitatea implementării, momentul și factori externi care nu sunt sub controlul nostru. Performanțele anterioare nu garantează rezultate viitoare. Ceea ce funcționează pentru o afacere poate să nu funcționeze pentru alta, din cauza circumstanțelor și condițiilor unice."
+          },
+          "rankings": {
+            "subtitle": "Clasamentele SEO nu sunt garantate",
+            "text": "Nu putem și nu garantăm poziții specifice în motoarele de căutare, creșteri ale traficului sau îmbunătățiri ale conversiilor. Algoritmii motoarelor de căutare se schimbă frecvent și imprevizibil, iar clasamentele sunt influențate de sute de factori, inclusiv activitățile concurenților, actualizările algoritmilor și dinamica pieței. Deși folosim strategii SEO dovedite, nu putem controla rezultatele motoarelor de căutare."
+          },
+          "timeline": {
+            "subtitle": "Estimări de timp",
+            "text": "Orice estimări privind perioada necesară pentru obținerea rezultatelor sunt bazate pe experiența noastră și pe medii din industrie. Rezultatele reale pot apărea mai repede sau mai târziu. De obicei, rezultatele SEO sunt vizibile după 3-6 luni, însă acest lucru poate varia în funcție de autoritatea site-ului, nivelul de concurență și strategiile implementate."
+          },
+          "external": {
+            "subtitle": "Factori externi",
+            "text": "Performanța marketingului și SEO poate fi afectată de factori din afara controlului nostru, inclusiv: modificări ale algoritmilor, condiții economice, fluctuații sezoniere, acțiuni ale concurenților, schimbări legislative sau evenimente globale. Nu suntem răspunzători pentru efectele negative cauzate de acești factori."
+          }
+        }
+      },
+      "business": {
+        "title": "Declinarea responsabilității pentru strategii și sfaturi de afaceri",
+        "items": {
+          "notAdvice": {
+            "subtitle": "Nu constituie sfat profesional de afaceri",
+            "text": "Orice strategii, recomandări sau sfaturi oferite de Markefy nu trebuie considerate consultanță profesională de afaceri, financiară, juridică sau investițională. Sugestiile noastre sunt bazate pe bune practici de marketing digital și experiența noastră, dar pot să nu fie adecvate situației specifice a afacerii dumneavoastră."
+          },
+          "individual": {
+            "subtitle": "Circumstanțe individuale",
+            "text": "Fiecare afacere este unică, cu obiective, resurse, provocări și condiții de piață diferite. Strategiile care funcționează pentru unele afaceri pot să nu fie potrivite pentru altele. Recomandăm efectuarea de cercetări suplimentare, testarea pe scară mică și consultarea profesioniștilor relevanți înainte de a implementa schimbări majore."
+          },
+          "research": {
+            "subtitle": "Responsabilitatea pentru cercetarea pieței",
+            "text": "Sunteți responsabil pentru efectuarea cercetării de piață, analiza concurenței și verificarea fezabilității strategiilor propuse. Noi oferim îndrumări generale, dar dumneavoastră trebuie să validați dacă acestea sunt potrivite pentru piața și modelul de afaceri propriu."
+          },
+          "implementation": {
+            "subtitle": "Responsabilitatea implementării",
+            "text": "Succesul oricărei strategii depinde în mare măsură de implementarea corectă, execuția consecventă și optimizarea continuă. Nu suntem responsabili pentru implementări defectuoase sau pentru lipsa adaptării strategiilor la schimbări și rezultate."
+          }
+        }
+      },
+      "financial": {
+        "title": "Declinarea responsabilității financiare",
+        "items": {
+          "noIncome": {
+            "subtitle": "Fără garanții de venit",
+            "text": "Nu garantăm rezultate financiare specifice, creșteri de venituri, profituri sau rentabilitate a investițiilor. Orice afirmații privind venituri sau rezultate financiare sunt exemple și nu trebuie considerate tipice sau garantate."
+          },
+          "investment": {
+            "subtitle": "Risc investițional",
+            "text": "Activitățile de marketing și dezvoltare implică riscuri financiare. Este posibil să investiți timp, bani și resurse în strategii care nu produc rezultatele dorite. Recomandăm începerea cu bugete mici, testarea și extinderea treptată pe baza rezultatelor dovedite."
+          },
+          "costs": {
+            "subtitle": "Considerații privind costurile",
+            "text": "Implementarea recomandărilor noastre poate necesita investiții suplimentare în instrumente, software, publicitate, personal sau alte resurse. Nu suntem responsabili pentru costurile suplimentare pe care le puteți suporta. Luați întotdeauna în considerare bugetul și capacitatea financiară."
+          },
+          "economy": {
+            "subtitle": "Factori economici",
+            "text": "Condițiile economice, fluctuațiile pieței și schimbările din industrie pot afecta semnificativ performanța afacerii, indiferent de calitatea strategiilor aplicate. Nu putem controla sau anticipa acești factori."
+          }
+        }
+      },
+      "liability": {
+        "title": "Limitarea răspunderii",
+        "items": {
+          "indirect": {
+            "subtitle": "Fără răspundere pentru daune indirecte",
+            "text": "În nicio circumstanță Markefy, proprietarii, angajații, colaboratorii sau afiliații săi nu vor fi răspunzători pentru daune indirecte, incidentale, speciale sau punitive rezultate din utilizarea serviciilor noastre, a informațiilor sau recomandărilor. Aceasta include, dar nu se limitează la, pierderi de profit, venituri sau oportunități de afaceri."
+          },
+          "max": {
+            "subtitle": "Limită maximă a răspunderii",
+            "text": "Răspunderea totală pentru orice pretenții legate de serviciile noastre nu va depăși suma totală plătită de dumneavoastră către Markefy pentru serviciul respectiv în ultimele 12 luni. Această limită se aplică indiferent de temeiul legal invocat."
+          },
+          "thirdParty": {
+            "subtitle": "Acțiuni ale terților",
+            "text": "Nu suntem responsabili pentru daune, pierderi sau consecințe cauzate de acțiuni ale terților, inclusiv motoare de căutare, platforme sociale, rețele publicitare, concurenți sau autorități. Modificările politicilor sau termenilor acestora nu sunt sub controlul nostru."
+          },
+          "client": {
+            "subtitle": "Implementarea de către client",
+            "text": "Nu suntem răspunzători pentru daune rezultate din implementarea incorectă a recomandărilor noastre, nerespectarea indicațiilor sau modificările aduse strategiilor fără consultarea noastră."
+          }
+        }
+      },
+      "industry": {
+        "title": "Declinări specifice industriei",
+        "items": {
+          "regulated": {
+            "subtitle": "Industrii reglementate",
+            "text": "Dacă activați într-o industrie reglementată (sănătate, financiar, juridic, farmaceutic etc.), sunteți responsabil pentru respectarea cerințelor specifice. Nu suntem experți în aceste domenii și nu putem garanta conformitatea."
+          },
+          "policy": {
+            "subtitle": "Schimbări ale politicilor platformelor",
+            "text": "Platformele digitale (Google, Facebook, LinkedIn etc.) își actualizează frecvent politicile, algoritmii și termenii. Strategiile eficiente azi pot deveni ineficiente sau interzise în viitor. Nu suntem răspunzători pentru efectele negative ale acestor schimbări."
+          },
+          "competition": {
+            "subtitle": "Peisaj competitiv",
+            "text": "Concurența poate influența semnificativ eficiența strategiilor. Intrarea unor noi concurenți sau acțiuni agresive pot reduce eficiența strategiilor. Nu putem controla dinamica pieței."
+          },
+          "technology": {
+            "subtitle": "Dependențe tehnologice",
+            "text": "Strategiile noastre se pot baza pe tehnologii și platforme supuse erorilor, întreruperilor sau întreruperii serviciului. Nu suntem responsabili pentru perturbări cauzate de eșecuri tehnologice sau indisponibilitatea serviciilor terților."
+          }
+        }
+      },
+      "content": {
+        "title": "Declinarea responsabilității pentru conținut și informații",
+        "items": {
+          "accuracy": {
+            "subtitle": "Acuratețea informațiilor",
+            "text": "Deși depunem eforturi să oferim informații corecte și actualizate, nu putem garanta completitudinea sau actualitatea acestora. Practicile de marketing digital, politicile platformelor și standardele industriei se schimbă rapid. Informațiile pot deveni depășite în timp."
+          },
+          "thirdParty": {
+            "subtitle": "Conținut al terților",
+            "text": "Site-ul și materialele noastre pot include referințe la resurse sau informații externe. Nu garantăm acuratețea sau calitatea conținutului terților. Utilizați aceste resurse pe propriul risc."
+          },
+          "examples": {
+            "subtitle": "Studii de caz și exemple",
+            "text": "Orice studii de caz sau exemple prezentate sunt doar în scop ilustrativ și pot să nu reflecte rezultate tipice. Acestea pot implica circumstanțe sau resurse speciale care nu pot fi replicate."
+          },
+          "education": {
+            "subtitle": "Conținut educațional",
+            "text": "Articolele, ghidurile și tutorialele noastre sunt furnizate în scop educațional general și nu trebuie considerate instruire completă sau substitut pentru educație profesională. Recomandăm completarea cu cercetări suplimentare și dezvoltare profesională."
+          }
+        }
+      }
+    },
+    "additional": {
+      "title": "Informații legale suplimentare",
+      "items": {
+        "relationship": {
+          "subtitle": "Relația cu alte documente legale",
+          "text": "Această declinare trebuie citită împreună cu Termenii și condițiile și Politica de confidențialitate. În caz de conflict, se aplică prevederile cele mai restrictive. Împreună, aceste documente constituie acordul complet între dumneavoastră și Markefy."
+        },
+        "professional": {
+          "subtitle": "Recomandarea consultanței profesionale",
+          "text": "Recomandăm consultarea unor profesioniști calificați, inclusiv avocați, contabili și consultanți de afaceri, înainte de a lua decizii majore bazate pe recomandările noastre."
+        },
+        "modification": {
+          "subtitle": "Modificări și actualizări",
+          "text": "Ne rezervăm dreptul de a modifica această declinare în orice moment fără notificare prealabilă. Modificările intră în vigoare imediat după publicare. Utilizarea continuă a serviciilor noastre reprezintă acceptarea noii versiuni."
+        },
+        "jurisdiction": {
+          "subtitle": "Jurisdicție și lege aplicabilă",
+          "text": "Această declinare este guvernată de aceleași legi și jurisdicții specificate în Termenii și condițiile noastre. Dacă o prevedere este considerată neexecutorie, restul rămâne în vigoare."
+        }
+      }
+    }
+  }
+}

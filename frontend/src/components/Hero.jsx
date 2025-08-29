@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from "react-i18next";
+
 
 // Animated Typing Text Component - Optimized
 const AnimatedTypingText = React.memo(() => {
@@ -8,13 +10,8 @@ const AnimatedTypingText = React.memo(() => {
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const texts = useMemo(() => [
-    'We Build Custom Web & App Solutions',
-    'We Create AI-Powered Software & ERPs',
-    'We Design Mobile Apps for iOS & Android', 
-    'We Deliver AI-Optimized SEO & Marketing',
-    'We Drive Growth with Data-Driven Analytics'
-  ], []);
+ const { t } = useTranslation();
+  const texts = useMemo(() => t("home.hero.rotating", { returnObjects: true }), [t]);
 
   useEffect(() => {
     const currentFullText = texts[currentTextIndex];
@@ -326,6 +323,7 @@ const NeuralNetworkBackground = React.memo(() => {
 });
 
 const Hero = ({ onNotImplemented }) => {
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 bg-black">
       {/* Neural Network Background */}
@@ -350,16 +348,16 @@ const Hero = ({ onNotImplemented }) => {
               className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-300 text-xs sm:text-sm font-medium backdrop-blur-sm"
             >
               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-400 rounded-full mr-2 animate-pulse"></div>
-              Crafting Digital Excellence with AI & Expertise
+              {t("home.hero.badge")}
             </motion.div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tight">
               <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-2xl">
-                Building the Future of
+                 {t("home.hero.title_line1")}
               </span>
               <br />
               <span className="bg-gradient-to-r from-blue-400 via-blue-300 to-cyan-300 bg-clip-text text-transparent">
-                Digital Experiences
+                {t("home.hero.title_line2")}
               </span>
             </h1>
             
@@ -374,7 +372,7 @@ const Hero = ({ onNotImplemented }) => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4"
           >
-            From idea to execution, Markefy.ai turns your vision into scalable, high-performing digital solutions — powered by AI and built for growth.
+           {t("home.hero.subtitle")}
           </motion.p>
           
           {/* Call to Action Buttons */}
@@ -395,7 +393,7 @@ const Hero = ({ onNotImplemented }) => {
                 className="relative bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-full px-6 py-5 sm:px-8 md:px-10 sm:py-6 md:py-7 text-base sm:text-lg font-semibold shadow-2xl border border-blue-500/50 w-full sm:w-auto"
                 size="lg"
               >
-                Get Started Free
+                {t("home.hero.cta_primary")}
                 <motion.div
                   className="ml-2 inline-block"
                   animate={{ x: [0, 4, 0] }}
@@ -431,7 +429,7 @@ const Hero = ({ onNotImplemented }) => {
     "
     size="lg"
   >
-    <span className="relative z-10">Learn More</span>
+    <span className="relative z-10">{t("home.hero.cta_secondary")}</span>
     <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
   </Button>
 </motion.a>
@@ -450,7 +448,7 @@ const Hero = ({ onNotImplemented }) => {
               transition={{ duration: 2, repeat: Infinity }}
               className="flex flex-col items-center text-gray-400"
             >
-              <span className="text-xs mb-2 uppercase tracking-wider hidden sm:block">Scroll to explore</span>
+              <span className="text-xs mb-2 uppercase tracking-wider hidden sm:block"> {t("home.hero.scroll")}</span>
               <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-400 rounded-full flex justify-center">
                 <motion.div
                   animate={{ y: [0, 8, 0] }}
