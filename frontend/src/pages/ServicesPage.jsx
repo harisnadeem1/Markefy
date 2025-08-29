@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
+import TangibleResults from '@/components/TangibleResults';
+
 import { useTranslation } from 'react-i18next';
 import { 
   Code, 
@@ -162,45 +164,10 @@ const ServicesPage = () => {
           </div>
         </motion.section>
 
-        {/* Enhanced Stats Section */}
-        <motion.section 
-          className="py-12 md:py-20 bg-white border-b border-gray-100"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              {stats.map((stat, index) => {
-                const StatIcon = statIcons[index];
-                return (
-                  <motion.div
-                    key={index}
-                    className="text-center group bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-2xl hover:shadow-lg transition-all duration-300"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform">
-                      <StatIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
-                    </div>
-                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-1 md:mb-2">
-                      {stat.number}
-                    </div>
-                    <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-700 mb-1 md:mb-2">
-                      {stat.label}
-                    </div>
-                    <div className="text-xs sm:text-sm text-gray-500">
-                      {stat.desc}
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </motion.section>
+              <TangibleResults  />
+
+
+        
 
         {/* Comprehensive Services Section */}
         <motion.section 
