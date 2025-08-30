@@ -3,16 +3,11 @@ import { useParams, Link } from "react-router-dom";
 import { useCart } from "@/context/CartContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { PlayCircle } from "lucide-react"; // play icon
+import { PlayCircle } from "lucide-react";
 import ProductVideoSection from "./ProductVideoSection";
 import ProductFAQSection from "./ProductFAQSection";
-import ReviewsSection from "../ReviewsSection"
+import ReviewsSection from "../ReviewsSection";
 
-
-// inside return of ProductPage (below description, or at very bottom)
-
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -50,7 +45,7 @@ const ProductPage = () => {
     return (
       <div className="w-[80%] mx-auto py-16 text-center">
         <h2 className="text-2xl font-bold text-red-600">Product not found</h2>
-        <Link to="/shop/collection" className="text-[#0071bc] underline mt-4 block">
+        <Link to="/shop/collection" className="text-blue-600 underline mt-4 block">
           Back to Collection
         </Link>
       </div>
@@ -59,7 +54,7 @@ const ProductPage = () => {
 
   const isInCart = cart.some((item) => item.id === product.id);
 
-  // ✅ All media (images first, then videos)
+  // ✅ All media
   const allImages = [product.preview_url, ...(product.preview_images || [])].filter(Boolean);
   const allVideos = product.preview_videos || [];
   const allMedia = [
@@ -125,22 +120,22 @@ const ProductPage = () => {
                     <img
                       src={`${API_BASE}${media.src}`}
                       alt={`Thumb ${i}`}
-                      className={`w-20 h-20 object-cover rounded border-2 ${activeIndex === i ? "border-[#0071bc]" : "border-transparent"
-                        }`}
+                      className={`w-20 h-20 object-cover rounded border-2 ${
+                        activeIndex === i ? "border-blue-600" : "border-transparent"
+                      }`}
                     />
                   ) : (
                     <div
-                      className={`relative w-20 h-20 rounded overflow-hidden border-2 ${activeIndex === i ? "border-[#0071bc]" : "border-transparent"
-                        }`}
+                      className={`relative w-20 h-20 rounded overflow-hidden border-2 ${
+                        activeIndex === i ? "border-blue-600" : "border-transparent"
+                      }`}
                     >
-                      {/* 👇 Show first frame as cover (poster) */}
                       <video
                         src={`${API_BASE}${media.src}`}
                         className="w-full h-full object-cover"
                         preload="metadata"
                         muted
                       />
-                      {/* Overlay play icon */}
                       <div className="absolute inset-0 flex items-center justify-center bg-black/40">
                         <PlayCircle className="text-white w-6 h-6" />
                       </div>
@@ -155,17 +150,11 @@ const ProductPage = () => {
         {/* ---------- RIGHT: PRODUCT DETAILS ---------- */}
         <div className="md:col-span-1 flex flex-col items-start">
           {product.collection_name && (
-            <p
-              className="text-sm uppercase tracking-wide  mb-2"
-              style={{ fontFamily: "'Inconsolata', monospace", color: "#0071bc" }}
-            >
+            <p className="text-sm uppercase tracking-wide text-blue-600 mb-2">
               {product.collection_name}
             </p>
           )}
-          <h1
-            className="text-4xl font-bold mb-4"
-            style={{ fontFamily: "'Nunito Sans', sans-serif", color: "#0071bc" }}
-          >
+          <h1 className="text-4xl font-bold mb-4 text-blue-600">
             {product.name}
           </h1>
 
@@ -175,8 +164,7 @@ const ProductPage = () => {
               {Array.from({ length: 5 }).map((_, idx) => (
                 <span
                   key={idx}
-                  className={`text-lg ${idx < product.rating ? "text-[#0071bc]" : "text-gray-300"
-                    }`}
+                  className={`text-lg ${idx < product.rating ? "text-blue-600" : "text-gray-300"}`}
                 >
                   ★
                 </span>
@@ -187,65 +175,40 @@ const ProductPage = () => {
           {/* Price */}
           {product.sale_price ? (
             <p className="text-2xl mb-6 flex items-center gap-3">
-              <span
-                className="line-through text-gray-500"
-                style={{ fontFamily: "'Inconsolata', monospace" }}
-              >
-                ${product.regular_price}
-              </span>
-              <span
-                style={{
-                  color: "#871120",
-                  fontFamily: "'Inconsolata', monospace",
-                }}
-              >
-                ${product.sale_price}
-              </span>
+              <span className="line-through text-gray-500">${product.regular_price}</span>
+              <span className="text-red-600 font-bold">${product.sale_price}</span>
             </p>
           ) : (
-            <p
-              className="text-xl mb-6"
-              style={{
-                color: "#871120",
-                fontFamily: "'Inconsolata', monospace",
-              }}
-            >
+            <p className="text-xl mb-6 text-blue-600 font-semibold">
               ${product.regular_price}
             </p>
           )}
-         {/* Add to Cart */}
-<button
-  onClick={() => addToCart(product)}
-  disabled={isInCart}
-  className={`w-full mb-6 px-8 py-3 uppercase tracking-wide text-sm rounded transition ${
-    isInCart
-      ? "bg-gray-400 cursor-not-allowed"
-      : "bg-[#0071bc] text-white hover:bg-[#005a94]"
-  }`}
-  style={{ fontFamily: "'Inconsolata', monospace" }}
->
-  {isInCart ? "Already in Cart" : "Add to Cart"}
-</button>
 
-
-
+          {/* Add to Cart */}
+          <button
+            onClick={() => addToCart(product)}
+            disabled={isInCart}
+            className={`w-full mb-6 px-8 py-3 uppercase tracking-wide text-sm rounded-2xl transition font-semibold shadow-md ${
+              isInCart
+                ? "bg-gray-400 cursor-not-allowed text-white"
+                : "bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:shadow-lg hover:scale-[1.02]"
+            }`}
+          >
+            {isInCart ? "Already in Cart" : "Add to Cart"}
+          </button>
 
           <div
-            className="product-description text-gray-700 mb-6 leading-relaxed animate-in fade-in duration-500"
+            className="product-description text-gray-700 mb-6 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: product.description }}
           />
-
-
         </div>
       </div>
 
-<ProductVideoSection videoUrl={product.preview_videos?.[0]} />
-<ProductFAQSection />
-<ReviewsSection/>
-
+      {/* Related Sections */}
+      <ProductVideoSection videoUrl={product.preview_videos?.[0]} />
+      <ProductFAQSection />
+      <ReviewsSection />
     </section>
-
-    
   );
 };
 

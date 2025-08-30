@@ -13,7 +13,7 @@ const ProductFAQSection = () => {
     {
       question: "Can I use these sections on any theme?",
       answer:
-        "Our sections should work with any theme. However, if you have any issues with yours (especially if your theme is heavily customized), please contact us.",
+        "Our sections should work with any theme. However, if your theme is heavily customized and you face issues, just reach out to us for help.",
     },
     {
       question: "How do I install it?",
@@ -23,32 +23,28 @@ const ProductFAQSection = () => {
     {
       question: "Why is the price higher than other solutions?",
       answer:
-        "Because we provide premium, customizable, and fully supported code blocks that save you time.",
+        "Because we provide premium, customizable, and fully supported code blocks that save you time and deliver long-term value.",
     },
   ];
 
   return (
-    <section
-      className="w-[80%] mx-auto py-16 rounded-lg"
-      style={{
-        fontFamily: "'Nunito Sans', sans-serif",
-        backgroundColor: "#0071bc",
-      }}
-    >
-      <h2 className="text-3xl font-bold text-center text-white mb-8">
+    <section className="w-[80%] mx-auto py-16 rounded-3xl bg-gradient-to-r from-blue-600 to-blue-700 shadow-xl">
+      <h2 className="text-4xl font-bold text-center text-white mb-10">
         Questions about this section?
       </h2>
 
-      <div className="max-w-3xl mx-auto divide-y divide-white/50">
+      <div className="max-w-3xl mx-auto divide-y divide-white/40">
         {faqs.map((faq, index) => (
           <div key={index} className="py-4">
             <button
-              className="flex justify-between items-center w-full text-left text-white font-semibold text-xl focus:outline-none"
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              className="flex justify-between items-center w-full text-left text-white font-semibold text-lg md:text-xl focus:outline-none"
+              onClick={() =>
+                setOpenIndex(openIndex === index ? null : index)
+              }
             >
               {faq.question}
               <ChevronDown
-                className={`w-5 h-5 transform transition-transform duration-300 ${
+                className={`w-5 h-5 transition-transform duration-300 ${
                   openIndex === index ? "rotate-180" : ""
                 }`}
               />
@@ -56,13 +52,12 @@ const ProductFAQSection = () => {
 
             <div
               className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                openIndex === index ? "max-h-40 opacity-100 mt-3" : "max-h-0 opacity-0"
+                openIndex === index
+                  ? "max-h-40 opacity-100 mt-3"
+                  : "max-h-0 opacity-0"
               }`}
             >
-              <p
-                className="text-white/90 text-base pl-6 border-l-2 border-white/50"
-                style={{ fontFamily: "'Inconsolata', monospace" }}
-              >
+              <p className="text-white/90 text-base pl-6 border-l-2 border-white/40 leading-relaxed">
                 {faq.answer}
               </p>
             </div>
