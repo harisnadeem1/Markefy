@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { CheckCircle, X, Lightbulb, Mail, User, MessageSquare, ArrowRight } from "lucide-react";
 
 const SuggestionForm = () => {
   const [form, setForm] = useState({ name: "", email: "", suggestion: "" });
@@ -21,7 +23,7 @@ const SuggestionForm = () => {
     const formData = { ...form };
 
     setForm({ name: "", email: "", suggestion: "" });
-    showToast("Thank you! Your suggestion has been sent successfully. We appreciate your feedback.", "success");
+    showToast("Thank you! Your suggestion has been sent successfully.", "success");
 
     fetch(`${import.meta.env.VITE_API_BASE_URL}/forms/suggestion`, {
       method: "POST",
@@ -33,149 +35,187 @@ const SuggestionForm = () => {
   };
 
   return (
-    <section className="w-full py-20 bg-gray-50 relative">
-      {/* Toast Notification */}
+    <section className="w-full py-24 bg-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-40 h-40 bg-blue-500 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 right-20 w-60 h-60 bg-blue-600 rounded-full blur-3xl"></div>
+      </div>
+
+      {/* Toast */}
       {toast.show && (
-        <div className="fixed top-6 right-6 z-50 animate-slide-in">
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: 100, opacity: 0 }}
+          className="fixed top-6 right-6 z-50"
+        >
           <div
             className={`
-              px-6 py-4 rounded-lg shadow-lg border-l-4 max-w-md
+              px-6 py-4 rounded-2xl shadow-2xl border max-w-md backdrop-blur-sm
               ${toast.type === "success"
-                ? "bg-white border-green-500 text-black"
-                : "bg-white border-red-500 text-black"
+                ? "bg-green-50 border-green-200 text-green-800"
+                : "bg-red-50 border-red-200 text-red-800"
               }
             `}
           >
             <div className="flex items-center">
-              <div className="flex-1">
+              <div className="flex-1 flex items-center gap-3">
+                {toast.type === "success" ? (
+                  <CheckCircle className="w-5 h-5" />
+                ) : (
+                  <X className="w-5 h-5" />
+                )}
                 <p className="text-sm font-medium">{toast.message}</p>
               </div>
               <button
                 onClick={() => setToast({ show: false, message: "", type: "success" })}
                 className="ml-4 text-gray-400 hover:text-gray-600 transition-colors"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <X className="w-4 h-4" />
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
 
-      {/* Top Heading */}
-      <div className="text-center mb-14 px-6">
-        <h1
-          className="text-4xl font-extrabold mb-4"
-          style={{ fontFamily: "'Nunito Sans', sans-serif", color: "#0071bc" }}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
         >
-          Share Your Suggestions
-        </h1>
-        <p
-          className="text-gray-700 max-w-3xl mx-auto text-lg"
-          style={{ fontFamily: "'Nunito Sans', sans-serif" }}
-        >
-          We're constantly improving Markefy to serve developers and designers better. 
-          Your feedback and suggestions help us build new sections, refine existing code snippets, 
-          and deliver the features that matter most to you.
-        </p>
-      </div>
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="inline-flex items-center px-4 py-2 bg-blue-100 border border-blue-200 rounded-full text-blue-600 text-sm font-semibold mb-8"
+          >
+            <Lightbulb className="w-4 h-4 mr-2" />
+            Suggestions
+          </motion.div>
 
-      {/* Two Column Section */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
-        {/* Left Column: Info */}
-        <div className="flex flex-col justify-center">
-          <h2
-            className="text-2xl font-bold mb-6"
-            style={{ fontFamily: "'Nunito Sans', sans-serif", color: "#0071bc" }}
-          >
-            Why your feedback matters
-          </h2>
-          <p
-            className="text-gray-600 leading-relaxed mb-6"
-            style={{ fontFamily: "'Nunito Sans', sans-serif" }}
-          >
-            At Markefy, our goal is to provide high-quality, reusable website 
-            sections that can be integrated into any platform. By sharing your ideas, 
-            you directly influence the products we create and ensure they meet real-world needs.
+          <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+            Share Your{" "}
+            <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 bg-clip-text text-transparent">
+              Feedback
+            </span>
+          </h1>
+
+          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Your ideas help us improve Markefy. Suggest new sections, request features,
+            or share improvements—we’re listening and ready to build together.
           </p>
-          <ul
-            className="list-disc list-inside text-gray-600 space-y-3"
-            style={{ fontFamily: "'Nunito Sans', sans-serif" }}
+        </motion.div>
+
+        {/* Two Column */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          {/* Left */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="space-y-6"
           >
-            <li>Request new design sections or functionality</li>
-            <li>Suggest improvements to existing code snippets</li>
-            <li>Help shape the roadmap for future updates</li>
-          </ul>
-        </div>
+            <h2 className="text-3xl font-bold text-gray-900">Why your feedback matters</h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              We’re committed to providing high-quality, reusable sections.
+              By sharing your suggestions, you help shape our roadmap and ensure
+              we deliver the tools you actually need.
+            </p>
+            <ul className="space-y-4">
+              {[
+                "Request new design sections or features",
+                "Suggest improvements to existing snippets",
+                "Help shape the roadmap for future updates",
+              ].map((item, idx) => (
+                <motion.li
+                  key={idx}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 + idx * 0.1 }}
+                  className="flex items-start gap-3 p-4 bg-gray-50 rounded-2xl"
+                >
+                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">{item}</span>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
 
-        {/* Right Column: Form */}
-        <div
-          className="bg-white shadow-lg rounded-2xl p-8"
-          style={{ fontFamily: "'Nunito Sans', sans-serif" }}
-        >
-          <h3 className="text-xl font-semibold mb-6 text-center" style={{ color: "#0071bc" }}>
-            Submit a Suggestion
-          </h3>
+          {/* Right: Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="bg-white shadow-2xl rounded-3xl p-8 border border-gray-100"
+          >
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                Submit a Suggestion
+              </h3>
+              <p className="text-gray-600">We’ll review and respond quickly</p>
+            </div>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <input
-              className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2"
-              style={{ fontFamily: "'Inconsolata', monospace", borderColor: "#0071bc" }}
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Your Name"
-              required
-            />
-            <input
-              className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2"
-              style={{ fontFamily: "'Inconsolata', monospace", borderColor: "#0071bc" }}
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              className="w-full border rounded-lg p-3 h-28 focus:outline-none focus:ring-2"
-              style={{ fontFamily: "'Inconsolata', monospace", borderColor: "#0071bc" }}
-              name="suggestion"
-              value={form.suggestion}
-              onChange={handleChange}
-              placeholder="Your Suggestion"
-              required
-            />
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="relative">
+                <User className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
+                <input
+                  className="w-full border border-gray-300 rounded-2xl pl-12 pr-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
 
-            <button
-              type="submit"
-              className="w-full font-semibold px-6 py-3 rounded-lg transition"
-              style={{ backgroundColor: "#0071bc", color: "#fff" }}
-            >
-              Submit Suggestion
-            </button>
-          </form>
+              <div className="relative">
+                <Mail className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
+                <input
+                  className="w-full border border-gray-300 rounded-2xl pl-12 pr-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+
+              <div className="relative">
+                <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
+                <textarea
+                  className="w-full border border-gray-300 rounded-2xl pl-12 pr-4 py-4 h-32 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                  name="suggestion"
+                  value={form.suggestion}
+                  onChange={handleChange}
+                  placeholder="Your Suggestion"
+                  required
+                />
+              </div>
+
+              <motion.button
+                type="submit"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className="group w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-4 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Submit Suggestion
+                <motion.div
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <ArrowRight className="w-5 h-5" />
+                </motion.div>
+              </motion.button>
+            </form>
+          </motion.div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes slide-in {
-          from {
-            transform: translateX(100%);
-            opacity: 0;
-          }
-          to {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-
-        .animate-slide-in {
-          animation: slide-in 0.3s ease-out;
-        }
-      `}</style>
     </section>
   );
 };

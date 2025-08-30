@@ -9,10 +9,7 @@ const ScrollingBanner = () => {
   ];
 
   return (
-    <div
-      className="text-white py-2 overflow-hidden relative z-50 uppercase"
-      style={{ fontFamily: "'Inconsolata', sans-serif", backgroundColor: "#0071bc" }}
-    >
+    <div className="bg-blue-600 text-white py-2 overflow-hidden relative z-50">
       <style>
         {`
           .scrolling-wrapper {
@@ -23,20 +20,19 @@ const ScrollingBanner = () => {
 
           @keyframes scroll-left {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-33.33%); } /* only 1 copy scrolls out */
+            100% { transform: translateX(-33.33%); }
           }
         `}
       </style>
 
       <div className="overflow-hidden whitespace-nowrap">
         <div className="scrolling-wrapper">
-          {/* render 3 copies */}
           {Array(3).fill(null).map((_, copyIndex) => (
             <div key={copyIndex} className="flex">
               {bannerItems.map((item, idx) => (
                 <span
                   key={`${copyIndex}-${idx}`}
-                  className="px-6 sm:px-10 md:px-16 text-sm sm:text-sm font-normal whitespace-nowrap"
+                  className="px-6 sm:px-10 md:px-16 text-sm font-normal whitespace-nowrap"
                 >
                   {item}
                 </span>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown, HelpCircle } from "lucide-react";
 
 const FAQPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -88,55 +89,92 @@ const FAQPage = () => {
   ];
 
   return (
-    <section className="w-[80%] mx-auto py-16">
-      <h1
-        className="text-4xl font-bold mb-12 text-center"
-        style={{ color: "#0071bc", fontFamily: "'Nunito Sans', sans-serif" }}
-      >
-        FAQ
-      </h1>
+    <section className="w-full py-24 bg-white relative overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-40 h-40 bg-blue-500 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 right-20 w-60 h-60 bg-blue-600 rounded-full blur-3xl"></div>
+      </div>
 
-      {faqs.map((section, secIndex) => (
-        <div key={secIndex} className="mb-12">
-          <h2
-            className="text-2xl font-bold mb-6"
-            style={{ color: "#0071bc", fontFamily: "'Nunito Sans', sans-serif" }}
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="inline-flex items-center px-4 py-2 bg-blue-100 border border-blue-200 rounded-full text-blue-600 text-sm font-semibold mb-6"
           >
-            {section.category}
-          </h2>
+            <HelpCircle className="w-4 h-4 mr-2" />
+            FAQs
+          </motion.div>
 
-          <div className="divide-y divide-gray-200">
-            {section.items.map((faq, index) => {
-              const currentIndex = `${secIndex}-${index}`;
-              return (
-                <div key={currentIndex} className="py-4">
-                  <button
-                    className="flex justify-between items-center w-full text-left font-semibold text-lg text-gray-800 focus:outline-none"
-                    onClick={() =>
-                      setOpenIndex(openIndex === currentIndex ? null : currentIndex)
-                    }
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Frequently Asked{" "}
+            <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 bg-clip-text text-transparent">
+              Questions
+            </span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            Everything you need to know about our snippets, sections, and services.
+          </p>
+        </motion.div>
+
+        {/* FAQ Sections */}
+        {faqs.map((section, secIndex) => (
+          <div key={secIndex} className="mb-12">
+            <h2 className="text-2xl font-bold mb-6 text-blue-600">{section.category}</h2>
+            <div className="space-y-4">
+              {section.items.map((faq, index) => {
+                const currentIndex = `${secIndex}-${index}`;
+                return (
+                  <motion.div
+                    key={currentIndex}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    className="bg-gray-50 border border-gray-200 rounded-2xl p-5 shadow-sm"
                   >
-                    {faq.question}
-                    <ChevronDown
-                      className={`w-5 h-5 transform transition-transform ${
-                        openIndex === currentIndex ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                  {openIndex === currentIndex && (
-                    <p
-                      className="mt-3 text-gray-600 text-base pl-6 border-l-2 border-[#0071bc]/50 transition-all duration-500 ease-in-out"
-                      style={{ fontFamily: "'Inconsolata', monospace" }}
+                    <button
+                      className="flex justify-between items-center w-full text-left font-semibold text-lg text-gray-800 focus:outline-none"
+                      onClick={() =>
+                        setOpenIndex(openIndex === currentIndex ? null : currentIndex)
+                      }
                     >
-                      {faq.answer}
-                    </p>
-                  )}
-                </div>
-              );
-            })}
+                      {faq.question}
+                      <ChevronDown
+                        className={`w-5 h-5 transform transition-transform ${
+                          openIndex === currentIndex ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    <AnimatePresence>
+                      {openIndex === currentIndex && (
+                        <motion.p
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.4 }}
+                          className="mt-3 text-gray-600 text-base pl-6 border-l-2 border-blue-500/50 leading-relaxed"
+                          style={{ fontFamily: "'Inconsolata', monospace" }}
+                        >
+                          {faq.answer}
+                        </motion.p>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 };

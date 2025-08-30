@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { CheckCircle, X, Mail, Phone, MapPin, Clock, User, MessageSquare, ArrowRight } from "lucide-react";
 
 const ShopContactPage = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -17,8 +19,8 @@ const ShopContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const formData = { ...form };
+
     setForm({ name: "", email: "", message: "" });
     showToast("Your message has been sent successfully. We will get back to you shortly.", "success");
 
@@ -32,172 +34,186 @@ const ShopContactPage = () => {
   };
 
   return (
-    <section className="w-full py-20 bg-gray-50 relative">
+    <section className="w-full py-24 bg-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-40 h-40 bg-blue-500 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 right-20 w-60 h-60 bg-blue-600 rounded-full blur-3xl"></div>
+      </div>
+
       {/* Toast Notification */}
       {toast.show && (
-        <div className="fixed top-6 right-6 z-50 animate-slide-in">
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: 100, opacity: 0 }}
+          className="fixed top-6 right-6 z-50"
+        >
           <div
             className={`
-              px-6 py-4 rounded-lg shadow-lg border-l-4 max-w-md
+              px-6 py-4 rounded-2xl shadow-2xl border max-w-md backdrop-blur-sm
               ${toast.type === "success"
-                ? "bg-white border-green-500 text-black"
-                : "bg-white border-red-500 text-black"
+                ? "bg-green-50 border-green-200 text-green-800"
+                : "bg-red-50 border-red-200 text-red-800"
               }
             `}
           >
             <div className="flex items-center">
-              <div className="flex-1">
+              <div className="flex-1 flex items-center gap-3">
+                {toast.type === "success" ? (
+                  <CheckCircle className="w-5 h-5" />
+                ) : (
+                  <X className="w-5 h-5" />
+                )}
                 <p className="text-sm font-medium">{toast.message}</p>
               </div>
               <button
                 onClick={() => setToast({ show: false, message: "", type: "success" })}
                 className="ml-4 text-gray-400 hover:text-gray-600 transition-colors"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <X className="w-4 h-4" />
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
 
-      {/* Top Heading */}
-      <div className="text-center mb-14 px-6">
-        <h1
-          className="text-4xl font-extrabold mb-4"
-          style={{ fontFamily: "'Nunito Sans', sans-serif", color: "#0071bc" }}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
         >
-          Contact Us
-        </h1>
-        <p
-          className="text-gray-700 max-w-3xl mx-auto text-lg"
-          style={{ fontFamily: "'Nunito Sans', sans-serif" }}
-        >
-          Have questions about our products, need technical support, or want to
-          discuss a partnership? Our team is here to help you. Reach out using
-          the details below or send us a message directly through the form.
-        </p>
-      </div>
-
-      {/* Two Columns */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
-        {/* Left Column: Company Info */}
-        <div className="flex flex-col justify-center bg-white shadow-lg rounded-2xl p-8">
-          <h2
-            className="text-2xl font-bold mb-6"
-            style={{ fontFamily: "'Nunito Sans', sans-serif", color: "#0071bc" }}
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="inline-flex items-center px-4 py-2 bg-blue-100 border border-blue-200 rounded-full text-blue-600 text-sm font-semibold mb-8"
           >
-            Company Details
-          </h2>
+            <Mail className="w-4 h-4 mr-2" />
+            Contact Us
+          </motion.div>
 
-          <div className="space-y-4 text-gray-600">
-            <p style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
-              <strong>Email:</strong> support@markefy.ai
-            </p>
-            <p style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
-              <strong>Phone:</strong> +40 123 456 789
-            </p>
-            <p style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
-              <strong>Address:</strong> Str. Dunarii Nr 146-148, Bragadiru,
-              Romania
-            </p>
-            <p style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
-              <strong>Business Hours:</strong>
-              <br /> Monday – Friday: 9:00 AM – 6:00 PM (EET)
-              <br /> Saturday: 10:00 AM – 2:00 PM
-              <br /> Sunday: Closed
-            </p>
-          </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+            Get in{" "}
+            <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 bg-clip-text text-transparent">
+              Touch
+            </span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Have questions about our products, need support, or want to discuss a partnership?
+            Reach out—we’d love to hear from you.
+          </p>
+        </motion.div>
 
-          <div className="mt-6">
-            <h3
-              className="text-lg font-semibold mb-2"
-              style={{ fontFamily: "'Nunito Sans', sans-serif", color: "#0071bc" }}
-            >
-              Our Commitment
-            </h3>
-            <p
-              className="text-gray-600 leading-relaxed"
-              style={{ fontFamily: "'Nunito Sans', sans-serif" }}
-            >
-              We aim to respond to all inquiries within 24 hours on business
-              days. Whether it's a product question, a technical issue, or a
-              collaboration request, our dedicated team ensures you get clear
-              and helpful answers quickly.
-            </p>
-          </div>
-        </div>
-
-        {/* Right Column: Contact Form */}
-        <div
-          className="bg-white shadow-lg rounded-2xl p-8"
-          style={{ fontFamily: "'Nunito Sans', sans-serif" }}
-        >
-          <h3
-            className="text-xl font-semibold mb-6 text-center"
-            style={{ color: "#0071bc" }}
+        {/* Two Columns */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          {/* Left Column: Info */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="bg-white shadow-2xl rounded-3xl p-8 border border-gray-100"
           >
-            Send us a message
-          </h3>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Company Details</h2>
+            <div className="space-y-6 text-gray-700">
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-blue-600" />
+                <p><strong>Email:</strong> support@markefy.ai</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-blue-600" />
+                <p><strong>Phone:</strong> +40 123 456 789</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="w-5 h-5 text-blue-600" />
+                <p><strong>Address:</strong> Str. Dunarii Nr 146-148, Bragadiru, Romania</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <Clock className="w-5 h-5 text-blue-600 mt-1" />
+                <p>
+                  <strong>Business Hours:</strong><br />
+                  Mon – Fri: 9:00 AM – 6:00 PM (EET)<br />
+                  Sat: 10:00 AM – 2:00 PM<br />
+                  Sun: Closed
+                </p>
+              </div>
+            </div>
+          </motion.div>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <input
-              className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2"
-              style={{ fontFamily: "'Inconsolata', monospace", borderColor: "#0071bc" }}
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Your Name"
-              required
-            />
-            <input
-              className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2"
-              style={{ fontFamily: "'Inconsolata', monospace", borderColor: "#0071bc" }}
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              className="w-full border rounded-lg p-3 h-32 focus:outline-none focus:ring-2"
-              style={{ fontFamily: "'Inconsolata', monospace", borderColor: "#0071bc" }}
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="Your Message"
-              required
-            />
-            <button
-              type="submit"
-              className="w-full font-semibold px-6 py-3 rounded-lg transition"
-              style={{ backgroundColor: "#0071bc", color: "#fff" }}
-            >
-              Send Message
-            </button>
-          </form>
+          {/* Right Column: Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="bg-white shadow-2xl rounded-3xl p-8 border border-gray-100"
+          >
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                Send us a message
+              </h3>
+              <p className="text-gray-600">We’ll get back to you within 24 hours</p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="relative">
+                <User className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
+                <input
+                  className="w-full border border-gray-300 rounded-2xl pl-12 pr-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+
+              <div className="relative">
+                <Mail className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
+                <input
+                  className="w-full border border-gray-300 rounded-2xl pl-12 pr-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+
+              <div className="relative">
+                <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
+                <textarea
+                  className="w-full border border-gray-300 rounded-2xl pl-12 pr-4 py-4 h-32 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="Your Message"
+                  required
+                />
+              </div>
+
+              <motion.button
+                type="submit"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className="group w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-4 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Send Message
+                <motion.div
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <ArrowRight className="w-5 h-5" />
+                </motion.div>
+              </motion.button>
+            </form>
+          </motion.div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes slide-in {
-          from {
-            transform: translateX(100%);
-            opacity: 0;
-          }
-          to {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-
-        .animate-slide-in {
-          animation: slide-in 0.3s ease-out;
-        }
-      `}</style>
     </section>
   );
 };

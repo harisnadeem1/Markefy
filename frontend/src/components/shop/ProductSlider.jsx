@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Star, ArrowRight, Sparkles } from "lucide-react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -30,21 +32,51 @@ const FeaturedProducts = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-black text-white relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-600 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-4 tracking-tight">
-            Featured Products
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
+        >
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="inline-flex items-center px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-300 text-sm font-semibold mb-8"
+          >
+            <Star className="w-4 h-4 mr-2 text-blue-400" />
+            Featured Collection
+          </motion.div>
+
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+            <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-2xl">
+              Featured Products
+            </span>
           </h2>
-          <div className="w-20 h-0.5 bg-white mx-auto mb-6"></div>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
-            Discover our carefully curated selection of premium products
+          
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Discover our carefully curated selection of premium, high-converting section templates
           </p>
-        </div>
+        </motion.div>
 
         {/* Swiper Carousel */}
-        <div className="relative">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="relative mb-16"
+        >
           <Swiper
             modules={[Navigation, Autoplay]}
             spaceBetween={24}
@@ -59,115 +91,152 @@ const FeaturedProducts = () => {
             loop
             className="featured-products-swiper"
           >
-            {products.map((product) => (
+            {products.map((product, index) => (
               <SwiperSlide key={product.id}>
-                <Link to={`/shop/product/${product.id}`} className="group block h-full">
-                  <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-700 h-full flex flex-col">
-                    {/* Image Container */}
-                    <div className="relative aspect-[3/2] overflow-hidden bg-gray-700 flex-shrink-0">
-                      <img
-                        src={`${API_BASE}${product.preview_url}`}
-                        alt={product.name}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      {/* Overlay on hover */}
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-                    </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="group h-full"
+                >
+                  <Link to={`/shop/product/${product.id}`} className="block h-full">
+                    <div className="bg-[#1C1C1C] rounded-2xl overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all duration-500 h-full flex flex-col group-hover:shadow-2xl group-hover:shadow-blue-500/10 hover:-translate-y-2">
+                      {/* Image Container */}
+                      <div className="relative aspect-[16/10] overflow-hidden bg-[#111111]">
+                        <img
+                          src={`${API_BASE}${product.preview_url}`}
+                          alt={product.name}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        
+                        {/* Featured badge */}
+                        <div className="absolute top-4 left-4 px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full flex items-center gap-1">
+                          <Sparkles className="w-3 h-3" />
+                          Featured
+                        </div>
+                        
+                        {/* Sale Badge */}
+                        {product.sale_price && (
+                          <div className="absolute top-4 right-4 px-3 py-1 bg-red-500 text-white text-xs font-semibold rounded-full">
+                            Sale
+                          </div>
+                        )}
+                      </div>
 
-                    {/* Content */}
-                    <div className="p-6 flex-1 flex flex-col justify-between">
-                      <div className="space-y-3">
-                        {/* Title */}
-                        <h3 className="text-lg font-medium text-white group-hover:text-gray-200 transition-colors duration-200 line-clamp-2 min-h-[3.5rem]">
-                          {product.name}
-                        </h3>
+                      {/* Content */}
+                      <div className="p-6 flex-1 flex flex-col">
+                        <div className="flex-1">
+                          {/* Title */}
+                          <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300 line-clamp-2">
+                            {product.name}
+                          </h3>
 
-                        {/* Price */}
-                        <div className="flex items-center gap-3">
-                          {product.sale_price ? (
-                            <>
-                              <span className="text-xl font-semibold text-white">
-                                ${product.sale_price}
-                              </span>
-                              <span className="text-sm text-gray-400 line-through">
+                          {/* Price */}
+                          <div className="flex items-center gap-3 mb-4">
+                            {product.sale_price ? (
+                              <>
+                                <span className="text-2xl font-bold text-white">
+                                  ${product.sale_price}
+                                </span>
+                                <span className="text-lg text-gray-400 line-through">
+                                  ${product.regular_price}
+                                </span>
+                              </>
+                            ) : (
+                              <span className="text-2xl font-bold text-white">
                                 ${product.regular_price}
                               </span>
-                              <span className="px-2 py-1 bg-red-500 text-white text-xs font-medium rounded-full">
-                                Sale
-                              </span>
-                            </>
-                          ) : (
-                            <span className="text-xl font-semibold text-white">
-                              ${product.regular_price}
-                            </span>
-                          )}
+                            )}
+                          </div>
                         </div>
-                      </div>
 
-                      {/* Call to Action */}
-                      <div className="pt-4 mt-auto">
-                        <div className="inline-flex items-center text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
+                        {/* Call to Action */}
+                        <motion.div 
+                          className="inline-flex items-center text-sm font-semibold text-gray-400 group-hover:text-blue-400 transition-colors duration-300"
+                          whileHover={{ x: 4 }}
+                        >
                           View Details
-                          <svg className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                          </svg>
-                        </div>
+                          <motion.div
+                            className="ml-2"
+                            animate={{ x: [0, 4, 0] }}
+                            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                          >
+                            <ArrowRight className="w-4 h-4" />
+                          </motion.div>
+                        </motion.div>
                       </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </motion.div>
 
         {/* View All Link */}
-        <div className="text-center mt-12">
-          <Link
-            to="/shop/collection"
-            className="inline-flex items-center px-8 py-3 border border-gray-600 text-sm font-medium rounded-full text-gray-300 bg-gray-800 hover:bg-gray-700 hover:border-gray-500 hover:text-white transition-all duration-200 shadow-lg hover:shadow-xl"
-          >
-            View All Products
-            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="text-center"
+        >
+          <Link to="/shop/collection">
+            <motion.button
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              className="group inline-flex items-center px-8 py-4 bg-[#1C1C1C] border border-gray-700 text-white rounded-2xl font-semibold text-lg hover:bg-gray-800 hover:border-blue-500/50 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              View All Products
+              <motion.div
+                className="ml-2"
+                animate={{ x: [0, 4, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <ArrowRight className="w-5 h-5" />
+              </motion.div>
+            </motion.button>
           </Link>
-        </div>
+        </motion.div>
       </div>
 
       {/* Custom Swiper Navigation Styling */}
       <style jsx>{`
         .featured-products-swiper .swiper-button-next,
         .featured-products-swiper .swiper-button-prev {
-          background: white;
-          color: #374151 !important;
-          width: 48px;
-          height: 48px;
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          color: white !important;
+          width: 50px;
+          height: 50px;
           border-radius: 50%;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
           transition: all 0.3s ease;
-          border: 1px solid #e5e7eb;
         }
         
         .featured-products-swiper .swiper-button-next:hover,
         .featured-products-swiper .swiper-button-prev:hover {
-          background: #f9fafb;
-          transform: scale(1.05);
-          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+          background: rgba(59, 130, 246, 0.2);
+          border-color: rgba(59, 130, 246, 0.4);
+          transform: scale(1.1);
+          box-shadow: 0 12px 40px rgba(59, 130, 246, 0.2);
         }
         
         .featured-products-swiper .swiper-button-next::after,
         .featured-products-swiper .swiper-button-prev::after {
-          font-size: 16px !important;
+          font-size: 18px !important;
           font-weight: 600;
         }
         
         .featured-products-swiper .swiper-button-next {
-          right: -24px;
+          right: -25px;
         }
         
         .featured-products-swiper .swiper-button-prev {
-          left: -24px;
+          left: -25px;
         }
         
         @media (max-width: 1024px) {
