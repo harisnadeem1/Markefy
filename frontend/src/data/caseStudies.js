@@ -185,69 +185,69 @@ export const caseStudiesData = [
 
 ,
 
-{
-  id: "treasury-management",
-  client: "FinEdge Solutions",
-  title: "End-to-End Treasury Management System with Hierarchical Approval & Real-Time Automation.",
-  description: "Delivered a secure, enterprise-grade financial management platform that automates payroll, bill tracking, and internal approvals with real-time dashboards and role-based access.",
-  longDescription: "We developed a powerful treasury management solution for FinEdge Solutions, designed to centralize all financial operations within the organization. The system streamlines tasks like payroll processing, bill approvals, real-time expense tracking, and task delegation—all within a secure and easy-to-use interface. With a built-in hierarchical approval system, every transaction and financial decision goes through the right chain of command. The platform is scalable, multilingual-ready, and tailored for finance and HR teams. Built on the robust MERN stack, it provides high performance and security for enterprise-grade usage.",
-  image: "/projects/treasury/dashboard.png",
-  heroImage: "/projects/treasury/dashboard.png",
-  tags: ["Finance Automation", "Enterprise App", "MERN Stack"],
-  duration: "2 weeks",
-  teamSize: "2 people",
-  timeline: "Q1 2025",
-  challenge: "FinEdge Solutions needed a scalable platform to manage treasury operations efficiently. They were dealing with delays in approvals, scattered expense tracking, and manual payroll processing—leading to operational inefficiencies and data loss risks.",
-  solution: "We engineered a centralized treasury management system using the MERN stack. The platform brings together real-time dashboards, automated payroll calculations, bill approvals, and task delegation. With granular user permissions and hierarchical role control, every action is tracked, authorized, and recorded. We also implemented alerts, audit logs, and export-ready reports for financial transparency.",
-  features: [
-    {
-      icon: LineChart,
-      title: "Real-Time Financial Dashboard",
-      description: "Live visualization of cash flow, pending approvals, and expense distribution."
-    },
-    {
-      icon: BadgeDollarSign,
-      title: "Automated Payroll Engine",
-      description: "Auto-generate salaries based on attendance, role, advances, and allowances."
-    },
-    {
-      icon: FileStack,
-      title: "Bill Submission & Approval",
-      description: "Submit bills, upload receipts, and get approvals through role-based workflows."
-    },
-    {
-      icon: UserCheck,
-      title: "Hierarchical Role-Based Approvals",
-      description: "Multi-level approval system based on user roles and departments."
-    },
-    {
-      icon: ClipboardList,
-      title: "Task Delegation System",
-      description: "Assign and track financial and operational tasks department-wise."
-    },
-    {
-      icon: ShieldCheck,
-      title: "Security & Audit Logs",
-      description: "All actions logged and tracked for accountability and auditing."
-    }
-  ],
-  techStack: [
-    { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-    { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-    { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-    { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
-  ],
-  projectImages: [
-    { url: "/projects/treasury/dashboard.png", title: "Live Dashboard", description: "Track all financial operations and KPIs in one place." },
+// {
+//   id: "treasury-management",
+//   client: "FinEdge Solutions",
+//   title: "End-to-End Treasury Management System with Hierarchical Approval & Real-Time Automation.",
+//   description: "Delivered a secure, enterprise-grade financial management platform that automates payroll, bill tracking, and internal approvals with real-time dashboards and role-based access.",
+//   longDescription: "We developed a powerful treasury management solution for FinEdge Solutions, designed to centralize all financial operations within the organization. The system streamlines tasks like payroll processing, bill approvals, real-time expense tracking, and task delegation—all within a secure and easy-to-use interface. With a built-in hierarchical approval system, every transaction and financial decision goes through the right chain of command. The platform is scalable, multilingual-ready, and tailored for finance and HR teams. Built on the robust MERN stack, it provides high performance and security for enterprise-grade usage.",
+//   image: "/projects/treasury/dashboard.png",
+//   heroImage: "/projects/treasury/dashboard.png",
+//   tags: ["Finance Automation", "Enterprise App", "MERN Stack"],
+//   duration: "2 weeks",
+//   teamSize: "2 people",
+//   timeline: "Q1 2025",
+//   challenge: "FinEdge Solutions needed a scalable platform to manage treasury operations efficiently. They were dealing with delays in approvals, scattered expense tracking, and manual payroll processing—leading to operational inefficiencies and data loss risks.",
+//   solution: "We engineered a centralized treasury management system using the MERN stack. The platform brings together real-time dashboards, automated payroll calculations, bill approvals, and task delegation. With granular user permissions and hierarchical role control, every action is tracked, authorized, and recorded. We also implemented alerts, audit logs, and export-ready reports for financial transparency.",
+//   features: [
+//     {
+//       icon: LineChart,
+//       title: "Real-Time Financial Dashboard",
+//       description: "Live visualization of cash flow, pending approvals, and expense distribution."
+//     },
+//     {
+//       icon: BadgeDollarSign,
+//       title: "Automated Payroll Engine",
+//       description: "Auto-generate salaries based on attendance, role, advances, and allowances."
+//     },
+//     {
+//       icon: FileStack,
+//       title: "Bill Submission & Approval",
+//       description: "Submit bills, upload receipts, and get approvals through role-based workflows."
+//     },
+//     {
+//       icon: UserCheck,
+//       title: "Hierarchical Role-Based Approvals",
+//       description: "Multi-level approval system based on user roles and departments."
+//     },
+//     {
+//       icon: ClipboardList,
+//       title: "Task Delegation System",
+//       description: "Assign and track financial and operational tasks department-wise."
+//     },
+//     {
+//       icon: ShieldCheck,
+//       title: "Security & Audit Logs",
+//       description: "All actions logged and tracked for accountability and auditing."
+//     }
+//   ],
+//   techStack: [
+//     { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+//     { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+//     { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+//     { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
+//   ],
+//   projectImages: [
+//     { url: "/projects/treasury/dashboard.png", title: "Live Dashboard", description: "Track all financial operations and KPIs in one place." },
     
-    { url: "/projects/treasury/tasks.png", title: "Task Management", description: "Assign and monitor treasury-related tasks across teams." }
-  ],
-  results: [
-    { metric: "100%", title: "Digital Transformation", description: "Replaced spreadsheets and manual approvals with a modern web system." },
-    { metric: "Real-Time", title: "Instant Insights", description: "No more waiting for monthly summaries—live data at a glance." },
-    { metric: "5+", title: "Departments Connected", description: "HR, Finance, and Admin now operate on a single shared system." }
-  ]
-},
+//     { url: "/projects/treasury/tasks.png", title: "Task Management", description: "Assign and monitor treasury-related tasks across teams." }
+//   ],
+//   results: [
+//     { metric: "100%", title: "Digital Transformation", description: "Replaced spreadsheets and manual approvals with a modern web system." },
+//     { metric: "Real-Time", title: "Instant Insights", description: "No more waiting for monthly summaries—live data at a glance." },
+//     { metric: "5+", title: "Departments Connected", description: "HR, Finance, and Admin now operate on a single shared system." }
+//   ]
+// },
 
 {
   id: "sklepoll-ecommerce",

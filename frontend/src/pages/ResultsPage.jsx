@@ -25,7 +25,9 @@ const ResultsPage = () => {
     };
 
     // Get case studies data from translations
-    const caseStudiesIds = ['fst-trading', 'treasury-management', 'sklepoll-ecommerce'];
+    // const caseStudiesIds = ['fst-trading', 'treasury-management', 'sklepoll-ecommerce'];
+    const caseStudiesIds = ['fst-trading',  'sklepoll-ecommerce'];
+
     
     // Image data mapping
     const imageData = {
