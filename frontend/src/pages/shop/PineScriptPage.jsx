@@ -187,12 +187,13 @@ const PineScriptPage = () => {
             icon: Eye,
             title: "Live Dashboard",
             description: "Real-time status panel showing all module states"
-        },
-        {
-            icon: AlertCircle,
-            title: "Smart Alerts",
-            description: "6 customizable alert conditions for automated trading"
         }
+        // ,
+        // {
+        //     icon: AlertCircle,
+        //     title: "Smart Alerts",
+        //     description: "6 customizable alert conditions for automated trading"
+        // }
     ];
 
     const alerts = [
@@ -728,7 +729,7 @@ const PineScriptPage = () => {
             </section>
 
             {/* ================= ALERTS ================= */}
-            <section className="py-16 sm:py-24 bg-white">
+            {/* <section className="py-16 sm:py-24 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -776,7 +777,7 @@ const PineScriptPage = () => {
                         </div>
                     </motion.div>
                 </div>
-            </section>
+            </section> */}
 
             {/* ================= SPECIFICATIONS ================= */}
             <section className="py-16 sm:py-24 bg-gray-50">
