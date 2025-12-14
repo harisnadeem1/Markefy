@@ -212,6 +212,24 @@ const Header = () => {
                                             </NavigationMenuContent>
                                         </NavigationMenuItem>
 
+
+                                        {/* <NavigationMenuItem>
+                                            <NavigationMenuLink asChild>
+                                                <Link
+                                                    to="/"
+                                                    className={cn(
+                                                        navigationMenuTriggerStyle(), 
+                                                        "bg-transparent transition-colors",
+                                                        isDarkHeader ? "text-white hover:text-gray-300 hover:bg-gray-800" : ""
+                                                    )}
+                                                >
+                                                    Pine Script
+                                                </Link>
+                                            </NavigationMenuLink>
+                                        </NavigationMenuItem> */}
+
+                                        
+
                                         <NavigationMenuItem>
                                             <NavigationMenuLink asChild>
                                                 <Link
@@ -226,6 +244,10 @@ const Header = () => {
                                                 </Link>
                                             </NavigationMenuLink>
                                         </NavigationMenuItem>
+
+                                        
+
+
                                     </NavigationMenuList>
                                 </NavigationMenu>
                             </nav>
@@ -244,7 +266,17 @@ const Header = () => {
                             </div>
 
                             {/* RIGHT */}
-                            <div className="flex justify-end items-center gap-4">
+                            <div className="flex justify-end items-center gap-0">
+
+
+                                <Link to="/shop/pine-script" className={cn(
+                                    navigationMenuTriggerStyle(), 
+                                    "bg-transparent transition-colors",
+                                    isDarkHeader ? "text-white hover:text-gray-300 hover:bg-gray-800" : ""
+                                )}>
+                                    Pine Script
+                                </Link>
+
                                 <Link to="/shop/contact" className={cn(
                                     navigationMenuTriggerStyle(), 
                                     "bg-transparent transition-colors",

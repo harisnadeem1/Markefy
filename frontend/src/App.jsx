@@ -31,6 +31,7 @@ import Orders from '@/pages/shop/Orders';
 import CustomWebsiteRequest from '@/pages/shop/CustomWebsiteRequest'
 import SuggestionForm from '@/pages/shop/SuggestionForm'
 import ShopContactPage from '@/pages/shop/ShopContactPage';
+import PineScriptPage from '@/pages/shop/PineScriptPage';
 
 
 
@@ -83,6 +84,7 @@ function App() {
         <Route path="/shop/cart" element={<CartPage />} />
         <Route path="/shop/checkout" element={<CheckoutPage />} />
         <Route path="/shop/thankyou/:orderId" element={<ThankyouPage />} />
+        <Route path="/shop/pine-script" element={<PineScriptPage />} />
 
         {/* Admin Routes */}
         <Route path="/shop/admin/login" element={<AdminLogin />} />
