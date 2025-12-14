@@ -445,6 +445,13 @@ const Header = () => {
                                     "border-t mt-4",
                                     isDarkHeader ? "border-gray-700" : "border-gray-100"
                                 )}>
+
+                                    <Link to="/shop/pine-script" onClick={closeMobileMenu} className={cn(
+                                        "block py-4 px-6 transition-colors",
+                                        isDarkHeader ? "text-white hover:bg-gray-800" : "text-gray-900 hover:bg-gray-50"
+                                    )}>
+                                        Pine Script
+                                    </Link>
                                     <Link to="/" onClick={closeMobileMenu} className={cn(
                                         "block py-4 px-6 transition-colors",
                                         isDarkHeader ? "text-white hover:bg-gray-800" : "text-gray-900 hover:bg-gray-50"
