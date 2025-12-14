@@ -442,7 +442,7 @@ const Header = () => {
                                 />
 
                                 <div className={cn(
-                                    "border-t mt-4",
+                                    " mt-4",
                                     isDarkHeader ? "border-gray-700" : "border-gray-100"
                                 )}>
 
